@@ -8,15 +8,8 @@ namespace BE
 {
     public class Repartidor : Usuario
     {
-        private string legajo;
         private string telefono;
         private bool disponible;
-
-        public string Legajo
-        {
-            get { return legajo; }
-            set { legajo = value; }
-        }
 
         public string Telefono
         {
