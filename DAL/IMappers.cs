@@ -4,9 +4,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BE
+namespace DAL
 {
-    public class Class1
+    internal interface IMappers
     {
+
+        int Agregar();
+        int Editar();
+        int Eliminar();
+
     }
 }

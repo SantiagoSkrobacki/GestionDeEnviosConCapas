@@ -46,14 +46,125 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="AltasUsuarios\AltaAdministrador.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="AltasUsuarios\AltaAdministrador.Designer.cs">
+      <DependentUpon>AltaAdministrador.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AltasUsuarios\AltaCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AltasUsuarios\AltaCliente.Designer.cs">
+      <DependentUpon>AltaCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AltasUsuarios\AltaRepartidor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AltasUsuarios\AltaRepartidor.Designer.cs">
+      <DependentUpon>AltaRepartidor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AltasUsuarios\AltaUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AltasUsuarios\AltaUsuario.Designer.cs">
+      <DependentUpon>AltaUsuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AsignarRepartidorEnvio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AsignarRepartidorEnvio.Designer.cs">
+      <DependentUpon>AsignarRepartidorEnvio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Bajas\BajaAdministrador.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Bajas\BajaAdministrador.Designer.cs">
+      <DependentUpon>BajaAdministrador.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Bajas\BajaCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Bajas\BajaCliente.Designer.cs">
+      <DependentUpon>BajaCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Bajas\BajaEnvio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Bajas\BajaEnvio.Designer.cs">
+      <DependentUpon>BajaEnvio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Bajas\BajaRepartidor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Bajas\BajaRepartidor.Designer.cs">
+      <DependentUpon>BajaRepartidor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Bajas\BajaUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Bajas\BajaUsuario.Designer.cs">
+      <DependentUpon>BajaUsuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConsultarEnviosCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConsultarEnviosCliente.Designer.cs">
+      <DependentUpon>ConsultarEnviosCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConsultarEnviosRepartidor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConsultarEnviosRepartidor.Designer.cs">
+      <DependentUpon>ConsultarEnviosRepartidor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CrearEnvio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CrearEnvio.Designer.cs">
+      <DependentUpon>CrearEnvio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modificaciones\ModificarAdministrador.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modificaciones\ModificarAdministrador.Designer.cs">
+      <DependentUpon>ModificarAdministrador.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modificaciones\ModificarCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modificaciones\ModificarCliente.Designer.cs">
+      <DependentUpon>ModificarCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modificaciones\ModificarEnvio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modificaciones\ModificarEnvio.Designer.cs">
+      <DependentUpon>ModificarEnvio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modificaciones\ModificarRepartidor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modificaciones\ModificarRepartidor.Designer.cs">
+      <DependentUpon>ModificarRepartidor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modificaciones\ModificarUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modificaciones\ModificarUsuario.Designer.cs">
+      <DependentUpon>ModificarUsuario.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="AltasUsuarios\AltaAdministrador.resx">
+      <DependentUpon>AltaAdministrador.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -75,6 +186,16 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BE\BE.csproj">
+      <Project>{c3a575dd-e700-449c-b932-5dfea17374c0}</Project>
+      <Name>BE</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BLL\BLL.csproj">
+      <Project>{85da7b70-2f82-4537-b835-92f38a6973b6}</Project>
+      <Name>BLL</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

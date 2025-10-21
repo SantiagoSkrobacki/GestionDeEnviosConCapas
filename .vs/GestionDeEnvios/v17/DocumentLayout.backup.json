@@ -1,10 +1,22 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\SantiagoSkrobacki\\Desktop\\GestionDeEnvios\\",
+  "WorkspaceRootPath": "E:\\Facu\\DAS\\TP Integrador\\GestionDeEnviosConCapas\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{4A4C17C6-033E-4A21-958D-3520E1F3769A}|GestionDeEnvios\\GestionDeEnvios.csproj|c:\\users\\santiagoskrobacki\\desktop\\gestiondeenvios\\gestiondeenvios\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{4A4C17C6-033E-4A21-958D-3520E1F3769A}|GestionDeEnvios\\GestionDeEnvios.csproj|solutionrelative:gestiondeenvios\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{4A4C17C6-033E-4A21-958D-3520E1F3769A}|GestionDeEnvios\\GUI.csproj|e:\\facu\\das\\tp integrador\\gestiondeenviosconcapas\\gestiondeenvios\\crearenvio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{4A4C17C6-033E-4A21-958D-3520E1F3769A}|GestionDeEnvios\\GUI.csproj|solutionrelative:gestiondeenvios\\crearenvio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{85DA7B70-2F82-4537-B835-92F38A6973B6}|BLL\\BLL.csproj|e:\\facu\\das\\tp integrador\\gestiondeenviosconcapas\\bll\\administrador.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{85DA7B70-2F82-4537-B835-92F38A6973B6}|BLL\\BLL.csproj|solutionrelative:bll\\administrador.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C3A575DD-E700-449C-B932-5DFEA17374C0}|BE\\BE.csproj|E:\\Facu\\DAS\\TP Integrador\\GestionDeEnviosConCapas\\be\\envio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C3A575DD-E700-449C-B932-5DFEA17374C0}|BE\\BE.csproj|solutionrelative:be\\envio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C3A575DD-E700-449C-B932-5DFEA17374C0}|BE\\BE.csproj|E:\\Facu\\DAS\\TP Integrador\\GestionDeEnviosConCapas\\be\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C3A575DD-E700-449C-B932-5DFEA17374C0}|BE\\BE.csproj|solutionrelative:be\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -19,14 +31,51 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Form1.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\SantiagoSkrobacki\\Desktop\\GestionDeEnvios\\GestionDeEnvios\\Form1.cs",
-              "RelativeDocumentMoniker": "GestionDeEnvios\\Form1.cs",
-              "ToolTip": "C:\\Users\\SantiagoSkrobacki\\Desktop\\GestionDeEnvios\\GestionDeEnvios\\Form1.cs [Dise\u00F1o]",
-              "RelativeToolTip": "GestionDeEnvios\\Form1.cs [Dise\u00F1o]",
+              "Title": "CrearEnvio.cs [Design]",
+              "DocumentMoniker": "E:\\Facu\\DAS\\TP Integrador\\GestionDeEnviosConCapas\\GestionDeEnvios\\CrearEnvio.cs",
+              "RelativeDocumentMoniker": "GestionDeEnvios\\CrearEnvio.cs",
+              "ToolTip": "E:\\Facu\\DAS\\TP Integrador\\GestionDeEnviosConCapas\\GestionDeEnvios\\CrearEnvio.cs [Design]",
+              "RelativeToolTip": "GestionDeEnvios\\CrearEnvio.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-17T16:13:13.289Z",
-              "EditorCaption": " [Dise\u00F1o]"
+              "WhenOpened": "2025-10-21T02:10:36.521Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Administrador.cs",
+              "DocumentMoniker": "E:\\Facu\\DAS\\TP Integrador\\GestionDeEnviosConCapas\\BLL\\Administrador.cs",
+              "RelativeDocumentMoniker": "BLL\\Administrador.cs",
+              "ToolTip": "E:\\Facu\\DAS\\TP Integrador\\GestionDeEnviosConCapas\\BLL\\Administrador.cs",
+              "RelativeToolTip": "BLL\\Administrador.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-21T02:08:07.588Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Envio.cs",
+              "DocumentMoniker": "E:\\Facu\\DAS\\TP Integrador\\GestionDeEnviosConCapas\\BE\\Envio.cs",
+              "RelativeDocumentMoniker": "BE\\Envio.cs",
+              "ToolTip": "E:\\Facu\\DAS\\TP Integrador\\GestionDeEnviosConCapas\\BE\\Envio.cs",
+              "RelativeToolTip": "BE\\Envio.cs",
+              "ViewState": "AgIAADAAAAAAAAAAAAAowAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-21T02:07:59.94Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Usuario.cs",
+              "DocumentMoniker": "E:\\Facu\\DAS\\TP Integrador\\GestionDeEnviosConCapas\\BE\\Usuario.cs",
+              "RelativeDocumentMoniker": "BE\\Usuario.cs",
+              "ToolTip": "E:\\Facu\\DAS\\TP Integrador\\GestionDeEnviosConCapas\\BE\\Usuario.cs",
+              "RelativeToolTip": "BE\\Usuario.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-21T02:07:55.148Z"
             }
           ]
         }

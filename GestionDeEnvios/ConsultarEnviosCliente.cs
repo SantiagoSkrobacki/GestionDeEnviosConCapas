@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace GestionDeEnvios
 {
-    public partial class Form1 : Form
+    public partial class ConsultarEnviosCliente : Form
     {
-        public Form1()
+        public ConsultarEnviosCliente()
         {
             InitializeComponent();
         }
