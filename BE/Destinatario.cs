@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BE
 {
-    public class Administrador : Usuario
+    public class Destinatario : Cliente
     {
     }
 }
