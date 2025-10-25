@@ -23,6 +23,5 @@ namespace BLL
             throw new NotImplementedException();
         }
     }
-    {
-    }
+   
 }

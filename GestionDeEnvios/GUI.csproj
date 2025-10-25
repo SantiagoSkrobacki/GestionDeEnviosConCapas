@@ -46,29 +46,35 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AltasUsuarios\AltaAdministrador.cs">
+    <Compile Include="Altas\AltaAdministrador.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AltasUsuarios\AltaAdministrador.Designer.cs">
+    <Compile Include="Altas\AltaAdministrador.Designer.cs">
       <DependentUpon>AltaAdministrador.cs</DependentUpon>
     </Compile>
-    <Compile Include="AltasUsuarios\AltaCliente.cs">
+    <Compile Include="Altas\AltaCliente.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AltasUsuarios\AltaCliente.Designer.cs">
+    <Compile Include="Altas\AltaCliente.Designer.cs">
       <DependentUpon>AltaCliente.cs</DependentUpon>
     </Compile>
-    <Compile Include="AltasUsuarios\AltaRepartidor.cs">
+    <Compile Include="Altas\AltaRepartidor.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AltasUsuarios\AltaRepartidor.Designer.cs">
+    <Compile Include="Altas\AltaRepartidor.Designer.cs">
       <DependentUpon>AltaRepartidor.cs</DependentUpon>
     </Compile>
-    <Compile Include="AltasUsuarios\AltaUsuario.cs">
+    <Compile Include="Altas\AltaUsuario.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AltasUsuarios\AltaUsuario.Designer.cs">
+    <Compile Include="Altas\AltaUsuario.Designer.cs">
       <DependentUpon>AltaUsuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Altas\AltaEnvio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Altas\AltaEnvio.Designer.cs">
+      <DependentUpon>AltaEnvio.cs</DependentUpon>
     </Compile>
     <Compile Include="AsignarRepartidorEnvio.cs">
       <SubType>Form</SubType>
@@ -124,11 +130,11 @@
     <Compile Include="CrearEnvio.Designer.cs">
       <DependentUpon>CrearEnvio.cs</DependentUpon>
     </Compile>
-    <Compile Include="Login.cs">
+    <Compile Include="FormPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Login.Designer.cs">
-      <DependentUpon>Login.cs</DependentUpon>
+    <Compile Include="FormPrincipal.Designer.cs">
+      <DependentUpon>FormPrincipal.cs</DependentUpon>
     </Compile>
     <Compile Include="Modificaciones\ModificarAdministrador.cs">
       <SubType>Form</SubType>
@@ -162,8 +168,11 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="AltasUsuarios\AltaAdministrador.resx">
+    <EmbeddedResource Include="Altas\AltaAdministrador.resx">
       <DependentUpon>AltaAdministrador.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormPrincipal.resx">
+      <DependentUpon>FormPrincipal.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
