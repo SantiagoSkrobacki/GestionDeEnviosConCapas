@@ -124,6 +124,18 @@
     <Compile Include="ConsultarEnviosRepartidor.Designer.cs">
       <DependentUpon>ConsultarEnviosRepartidor.cs</DependentUpon>
     </Compile>
+    <Compile Include="Controles\ControlEmail.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controles\ControlEmail.Designer.cs">
+      <DependentUpon>ControlEmail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\MiControlNumerico.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controles\MiControlNumerico.Designer.cs">
+      <DependentUpon>MiControlNumerico.cs</DependentUpon>
+    </Compile>
     <Compile Include="CrearEnvio.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -168,14 +180,23 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="UserControl1.cs">
+    <Compile Include="Controles\MiControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UserControl1.Designer.cs">
-      <DependentUpon>UserControl1.cs</DependentUpon>
+    <Compile Include="Controles\MiControl.Designer.cs">
+      <DependentUpon>MiControl.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Altas\AltaAdministrador.resx">
       <DependentUpon>AltaAdministrador.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Altas\AltaUsuario.resx">
+      <DependentUpon>AltaUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controles\ControlEmail.resx">
+      <DependentUpon>ControlEmail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controles\MiControlNumerico.resx">
+      <DependentUpon>MiControlNumerico.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormPrincipal.resx">
       <DependentUpon>FormPrincipal.cs</DependentUpon>
@@ -189,8 +210,8 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="UserControl1.resx">
-      <DependentUpon>UserControl1.cs</DependentUpon>
+    <EmbeddedResource Include="Controles\MiControl.resx">
+      <DependentUpon>MiControl.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

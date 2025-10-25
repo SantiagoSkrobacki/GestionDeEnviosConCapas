@@ -8,13 +8,18 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace GestionDeEnvios
+namespace GestionDeEnvios.Controles
 {
-    public partial class UserControl1 : UserControl
+    public partial class ControlEmail : MiControl
     {
-        public UserControl1()
+        public ControlEmail()
         {
             InitializeComponent();
+        }
+
+        private void ControlId_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

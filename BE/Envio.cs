@@ -9,7 +9,7 @@ namespace BE
     public class Envio
     {
         private List<ItemPaquete> paquetes;
-        private string codigoSeguimiento;
+        private int codigoSeguimiento;
         private EnumEstados estado;
         private DateTime fechaCreacion;
         private DateTime fechaAsignacion;
@@ -25,7 +25,7 @@ namespace BE
             set { paquetes = value; }
         }
 
-        public string CodigoSeguimiento
+        public int CodigoSeguimiento
         {
             get { return codigoSeguimiento; }
             set { codigoSeguimiento = value; }

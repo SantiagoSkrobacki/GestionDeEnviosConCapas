@@ -1,6 +1,6 @@
-﻿namespace GestionDeEnvios
+﻿namespace GestionDeEnvios.Controles
 {
-    partial class UserControl1
+    partial class MiControlNumerico
     {
         /// <summary> 
         /// Variable del diseñador necesaria.
@@ -30,12 +30,13 @@
         {
             this.SuspendLayout();
             // 
-            // UserControl1
+            // MiControlNumerico
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Name = "UserControl1";
-            this.Size = new System.Drawing.Size(275, 150);
+            this.Name = "MiControlNumerico";
+            this.Size = new System.Drawing.Size(350, 56);
+            this.Load += new System.EventHandler(this.MiControlNumerico_Load);
             this.ResumeLayout(false);
 
         }
