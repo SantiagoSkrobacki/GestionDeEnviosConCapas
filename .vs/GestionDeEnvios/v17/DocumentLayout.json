@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "C:\\Users\\SantiagoSkrobacki\\Desktop\\GestionDeEnvios\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{4A4C17C6-033E-4A21-958D-3520E1F3769A}|GestionDeEnvios\\GUI.csproj|c:\\users\\santiagoskrobacki\\desktop\\gestiondeenvios\\gestiondeenvios\\usercontrol1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{4A4C17C6-033E-4A21-958D-3520E1F3769A}|GestionDeEnvios\\GUI.csproj|solutionrelative:gestiondeenvios\\usercontrol1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{4A4C17C6-033E-4A21-958D-3520E1F3769A}|GestionDeEnvios\\GUI.csproj|c:\\users\\santiagoskrobacki\\desktop\\gestiondeenvios\\gestiondeenvios\\formprincipal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{4A4C17C6-033E-4A21-958D-3520E1F3769A}|GestionDeEnvios\\GUI.csproj|solutionrelative:gestiondeenvios\\formprincipal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
@@ -70,11 +74,23 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
+              "Title": "UserControl1.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\SantiagoSkrobacki\\Desktop\\GestionDeEnvios\\GestionDeEnvios\\UserControl1.cs",
+              "RelativeDocumentMoniker": "GestionDeEnvios\\UserControl1.cs",
+              "ToolTip": "C:\\Users\\SantiagoSkrobacki\\Desktop\\GestionDeEnvios\\GestionDeEnvios\\UserControl1.cs [Dise\u00F1o]",
+              "RelativeToolTip": "GestionDeEnvios\\UserControl1.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-25T16:57:47.504Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "AltaEnvio.cs [Dise\u00F1o]",
               "DocumentMoniker": "C:\\Users\\SantiagoSkrobacki\\Desktop\\GestionDeEnvios\\GestionDeEnvios\\Altas\\AltaEnvio.cs",
               "RelativeDocumentMoniker": "GestionDeEnvios\\Altas\\AltaEnvio.cs",
@@ -86,7 +102,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "FormPrincipal.cs",
               "DocumentMoniker": "C:\\Users\\SantiagoSkrobacki\\Desktop\\GestionDeEnvios\\GestionDeEnvios\\FormPrincipal.cs",
               "RelativeDocumentMoniker": "GestionDeEnvios\\FormPrincipal.cs",
@@ -99,7 +115,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "FormPrincipal.cs [Dise\u00F1o]",
               "DocumentMoniker": "C:\\Users\\SantiagoSkrobacki\\Desktop\\GestionDeEnvios\\GestionDeEnvios\\FormPrincipal.cs",
               "RelativeDocumentMoniker": "GestionDeEnvios\\FormPrincipal.cs",
@@ -111,7 +127,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "CrearEnvio.cs [Dise\u00F1o]",
               "DocumentMoniker": "C:\\Users\\SantiagoSkrobacki\\Desktop\\GestionDeEnvios\\GestionDeEnvios\\CrearEnvio.cs",
               "RelativeDocumentMoniker": "GestionDeEnvios\\CrearEnvio.cs",
@@ -122,7 +138,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "Usuario.cs",
               "DocumentMoniker": "C:\\Users\\SantiagoSkrobacki\\Desktop\\GestionDeEnvios\\BLL\\Usuario.cs",
               "RelativeDocumentMoniker": "BLL\\Usuario.cs",
@@ -134,7 +150,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "Repartidor.cs",
               "DocumentMoniker": "C:\\Users\\SantiagoSkrobacki\\Desktop\\GestionDeEnvios\\BLL\\Repartidor.cs",
               "RelativeDocumentMoniker": "BLL\\Repartidor.cs",
@@ -146,7 +162,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "Envio.cs",
               "DocumentMoniker": "C:\\Users\\SantiagoSkrobacki\\Desktop\\GestionDeEnvios\\BLL\\Envio.cs",
               "RelativeDocumentMoniker": "BLL\\Envio.cs",
@@ -158,7 +174,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 10,
               "Title": "EnumEstados.cs",
               "DocumentMoniker": "C:\\Users\\SantiagoSkrobacki\\Desktop\\GestionDeEnvios\\BE\\EnumEstados.cs",
               "RelativeDocumentMoniker": "BE\\EnumEstados.cs",
@@ -170,7 +186,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 13,
               "Title": "ItemPaquete.cs",
               "DocumentMoniker": "C:\\Users\\SantiagoSkrobacki\\Desktop\\GestionDeEnvios\\BE\\ItemPaquete.cs",
               "RelativeDocumentMoniker": "BE\\ItemPaquete.cs",
@@ -182,7 +198,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 11,
               "Title": "Destinatario.cs",
               "DocumentMoniker": "C:\\Users\\SantiagoSkrobacki\\Desktop\\GestionDeEnvios\\BE\\Destinatario.cs",
               "RelativeDocumentMoniker": "BE\\Destinatario.cs",
@@ -194,7 +210,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 15,
               "Title": "Envio.cs",
               "DocumentMoniker": "C:\\Users\\SantiagoSkrobacki\\Desktop\\GestionDeEnvios\\BE\\Envio.cs",
               "RelativeDocumentMoniker": "BE\\Envio.cs",
@@ -206,7 +222,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 14,
               "Title": "Administrador.cs",
               "DocumentMoniker": "C:\\Users\\SantiagoSkrobacki\\Desktop\\GestionDeEnvios\\BE\\Administrador.cs",
               "RelativeDocumentMoniker": "BE\\Administrador.cs",
@@ -218,7 +234,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 12,
               "Title": "Cliente.cs",
               "DocumentMoniker": "C:\\Users\\SantiagoSkrobacki\\Desktop\\GestionDeEnvios\\BE\\Cliente.cs",
               "RelativeDocumentMoniker": "BE\\Cliente.cs",
@@ -230,7 +246,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 8,
               "Title": "Usuario.cs",
               "DocumentMoniker": "C:\\Users\\SantiagoSkrobacki\\Desktop\\GestionDeEnvios\\BE\\Usuario.cs",
               "RelativeDocumentMoniker": "BE\\Usuario.cs",
@@ -242,7 +258,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 9,
               "Title": "Repartidor.cs",
               "DocumentMoniker": "C:\\Users\\SantiagoSkrobacki\\Desktop\\GestionDeEnvios\\BE\\Repartidor.cs",
               "RelativeDocumentMoniker": "BE\\Repartidor.cs",
