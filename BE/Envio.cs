@@ -18,6 +18,7 @@ namespace BE
         private string destino;
         private Cliente cliente;
         private Repartidor repartidor;
+        private Destinatario destinatario;
 
         public List<ItemPaquete> Paquetes
         {
@@ -79,7 +80,11 @@ namespace BE
             set { repartidor = value; }
         }
 
-
+        public Destinatario Destinatario
+        {
+            get { return destinatario; }
+            set { destinatario = value; }
+        }
 
     }
 }

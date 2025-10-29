@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace BLL
 {
-    internal interface IBll
+    internal interface IBll <T>
     {
-        int Agregar();
-        int Editar();
-        int Eliminar();
+        int Agregar(T parametro);
+        int Editar(T parametro);
+        int Eliminar(T parametro);
     }
 }

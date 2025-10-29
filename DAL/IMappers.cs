@@ -6,12 +6,12 @@ using System.Threading.Tasks;
 
 namespace DAL
 {
-    internal interface IMappers
+    internal interface IMappers <T>
     {
 
-        int Agregar();
-        int Editar();
-        int Eliminar();
+        int Agregar(T parametro);
+        int Editar(T parametro);
+        int Eliminar(T parametro);
 
     }
 }

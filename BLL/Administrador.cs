@@ -6,21 +6,22 @@ using System.Threading.Tasks;
 
 namespace BLL
 {
-    public class Administrador : IBll
+    public class Administrador : IBll<BE.Administrador>
     {
-        public int Agregar()
+        DAL.MpAdministrador mapper = new DAL.MpAdministrador();
+        public int Agregar(BE.Administrador administrador)
         {
-            throw new NotImplementedException();
+            return mapper.Agregar(administrador);
         }
 
-        public int Editar()
+        public int Editar(BE.Administrador administrador)
         {
-            throw new NotImplementedException();
+            return mapper.Editar(administrador);
         }
 
-        public int Eliminar()
+        public int Eliminar(BE.Administrador administrador)
         {
-            throw new NotImplementedException();
+            return mapper.Eliminar(administrador);
         }
     }
 }

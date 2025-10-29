@@ -6,21 +6,22 @@ using System.Threading.Tasks;
 
 namespace BLL
 {
-    internal class Repartidor : IBll
+    public class Repartidor : IBll <BE.Repartidor>
     {
-        public int Agregar()
+        DAL.MpRepartidor mapper = new DAL.MpRepartidor();
+        public int Agregar(BE.Repartidor repartidor)
         {
-            throw new NotImplementedException();
+            return mapper.Agregar(repartidor);
         }
 
-        public int Editar()
+        public int Editar(BE.Repartidor repartidor)
         {
-            throw new NotImplementedException();
+            return mapper.Editar(repartidor);
         }
 
-        public int Eliminar()
+        public int Eliminar(BE.Repartidor repartidor)
         {
-            throw new NotImplementedException();
+            return mapper.Eliminar(repartidor);
         }
     }
    

@@ -8,10 +8,12 @@ namespace BE
 {
     public class ItemPaquete
     {
+        private int id;
         private string descripcion;
         private decimal peso;
         private bool fragil;
         private decimal costo;
+        private int idEnvio;
 
         public string Descripcion
         {
@@ -37,6 +39,16 @@ namespace BE
             set { costo = value; }
         }
 
+        public int IdEnvio
+        {
+            get { return idEnvio; }
+            set { idEnvio = value; }
+        }
 
+        public int Id
+        {
+            get { return id; }
+            set { id = value; }
+        }
     }
 }

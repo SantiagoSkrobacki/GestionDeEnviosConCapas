@@ -45,6 +45,7 @@
     <Compile Include="IMappers.cs" />
     <Compile Include="MpAdministrador.cs" />
     <Compile Include="MpCliente.cs" />
+    <Compile Include="MpDestinatario.cs" />
     <Compile Include="MpEnvio.cs" />
     <Compile Include="MpItemPaquete.cs" />
     <Compile Include="MpRepartidor.cs" />
