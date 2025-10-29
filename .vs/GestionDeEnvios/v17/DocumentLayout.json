@@ -3,27 +3,11 @@
   "WorkspaceRootPath": "C:\\Users\\SantiagoSkrobacki\\Desktop\\GestionDeEnvios\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{C3A575DD-E700-449C-B932-5DFEA17374C0}|BE\\BE.csproj|c:\\users\\santiagoskrobacki\\desktop\\gestiondeenvios\\be\\envio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C3A575DD-E700-449C-B932-5DFEA17374C0}|BE\\BE.csproj|solutionrelative:be\\envio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{4A4C17C6-033E-4A21-958D-3520E1F3769A}|GestionDeEnvios\\GUI.csproj|c:\\users\\santiagoskrobacki\\desktop\\gestiondeenvios\\gestiondeenvios\\altas\\altausuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{4A4C17C6-033E-4A21-958D-3520E1F3769A}|GestionDeEnvios\\GUI.csproj|solutionrelative:gestiondeenvios\\altas\\altausuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4A4C17C6-033E-4A21-958D-3520E1F3769A}|GestionDeEnvios\\GUI.csproj|c:\\users\\santiagoskrobacki\\desktop\\gestiondeenvios\\gestiondeenvios\\controles\\micontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4A4C17C6-033E-4A21-958D-3520E1F3769A}|GestionDeEnvios\\GUI.csproj|solutionrelative:gestiondeenvios\\controles\\micontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4A4C17C6-033E-4A21-958D-3520E1F3769A}|GestionDeEnvios\\GUI.csproj|C:\\Users\\SantiagoSkrobacki\\Desktop\\GestionDeEnvios\\gestiondeenvios\\controles\\micontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{4A4C17C6-033E-4A21-958D-3520E1F3769A}|GestionDeEnvios\\GUI.csproj|solutionrelative:gestiondeenvios\\controles\\micontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4A4C17C6-033E-4A21-958D-3520E1F3769A}|GestionDeEnvios\\GUI.csproj|C:\\Users\\SantiagoSkrobacki\\Desktop\\GestionDeEnvios\\gestiondeenvios\\controles\\controlemail.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4A4C17C6-033E-4A21-958D-3520E1F3769A}|GestionDeEnvios\\GUI.csproj|solutionrelative:gestiondeenvios\\controles\\controlemail.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4A4C17C6-033E-4A21-958D-3520E1F3769A}|GestionDeEnvios\\GUI.csproj|C:\\Users\\SantiagoSkrobacki\\Desktop\\GestionDeEnvios\\gestiondeenvios\\controles\\controlemail.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{4A4C17C6-033E-4A21-958D-3520E1F3769A}|GestionDeEnvios\\GUI.csproj|solutionrelative:gestiondeenvios\\controles\\controlemail.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C3A575DD-E700-449C-B932-5DFEA17374C0}|BE\\BE.csproj|C:\\Users\\SantiagoSkrobacki\\Desktop\\GestionDeEnvios\\be\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{C3A575DD-E700-449C-B932-5DFEA17374C0}|BE\\BE.csproj|c:\\users\\santiagoskrobacki\\desktop\\gestiondeenvios\\be\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C3A575DD-E700-449C-B932-5DFEA17374C0}|BE\\BE.csproj|solutionrelative:be\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -34,71 +18,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Envio.cs",
-              "DocumentMoniker": "C:\\Users\\SantiagoSkrobacki\\Desktop\\GestionDeEnvios\\BE\\Envio.cs",
-              "RelativeDocumentMoniker": "BE\\Envio.cs",
-              "ToolTip": "C:\\Users\\SantiagoSkrobacki\\Desktop\\GestionDeEnvios\\BE\\Envio.cs",
-              "RelativeToolTip": "BE\\Envio.cs",
-              "ViewState": "AgIAAC4AAAAAAAAAAAAcwBoAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-25T19:24:28.31Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "MiControl.cs",
-              "DocumentMoniker": "C:\\Users\\SantiagoSkrobacki\\Desktop\\GestionDeEnvios\\GestionDeEnvios\\Controles\\MiControl.cs",
-              "RelativeDocumentMoniker": "GestionDeEnvios\\Controles\\MiControl.cs",
-              "ToolTip": "C:\\Users\\SantiagoSkrobacki\\Desktop\\GestionDeEnvios\\GestionDeEnvios\\Controles\\MiControl.cs",
-              "RelativeToolTip": "GestionDeEnvios\\Controles\\MiControl.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAASwDYAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-25T19:06:51.973Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "MiControl.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\SantiagoSkrobacki\\Desktop\\GestionDeEnvios\\GestionDeEnvios\\Controles\\MiControl.cs",
-              "RelativeDocumentMoniker": "GestionDeEnvios\\Controles\\MiControl.cs",
-              "ToolTip": "C:\\Users\\SantiagoSkrobacki\\Desktop\\GestionDeEnvios\\GestionDeEnvios\\Controles\\MiControl.cs [Dise\u00F1o]",
-              "RelativeToolTip": "GestionDeEnvios\\Controles\\MiControl.cs [Dise\u00F1o]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-25T19:06:49.075Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "ControlEmail.cs",
-              "DocumentMoniker": "C:\\Users\\SantiagoSkrobacki\\Desktop\\GestionDeEnvios\\GestionDeEnvios\\Controles\\ControlEmail.cs",
-              "RelativeDocumentMoniker": "GestionDeEnvios\\Controles\\ControlEmail.cs",
-              "ToolTip": "C:\\Users\\SantiagoSkrobacki\\Desktop\\GestionDeEnvios\\GestionDeEnvios\\Controles\\ControlEmail.cs",
-              "RelativeToolTip": "GestionDeEnvios\\Controles\\ControlEmail.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAoAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-25T19:04:08.16Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "ControlEmail.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\SantiagoSkrobacki\\Desktop\\GestionDeEnvios\\GestionDeEnvios\\Controles\\ControlEmail.cs",
-              "RelativeDocumentMoniker": "GestionDeEnvios\\Controles\\ControlEmail.cs",
-              "ToolTip": "C:\\Users\\SantiagoSkrobacki\\Desktop\\GestionDeEnvios\\GestionDeEnvios\\Controles\\ControlEmail.cs [Dise\u00F1o]",
-              "RelativeToolTip": "GestionDeEnvios\\Controles\\ControlEmail.cs [Dise\u00F1o]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-25T19:04:05.276Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
               "Title": "Usuario.cs",
               "DocumentMoniker": "C:\\Users\\SantiagoSkrobacki\\Desktop\\GestionDeEnvios\\BE\\Usuario.cs",
               "RelativeDocumentMoniker": "BE\\Usuario.cs",
@@ -106,7 +30,20 @@
               "RelativeToolTip": "BE\\Usuario.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-25T19:04:28.511Z"
+              "WhenOpened": "2025-10-28T18:47:33.898Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "AltaUsuario.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\SantiagoSkrobacki\\Desktop\\GestionDeEnvios\\GestionDeEnvios\\Altas\\AltaUsuario.cs",
+              "RelativeDocumentMoniker": "GestionDeEnvios\\Altas\\AltaUsuario.cs",
+              "ToolTip": "C:\\Users\\SantiagoSkrobacki\\Desktop\\GestionDeEnvios\\GestionDeEnvios\\Altas\\AltaUsuario.cs [Dise\u00F1o]*",
+              "RelativeToolTip": "GestionDeEnvios\\Altas\\AltaUsuario.cs [Dise\u00F1o]*",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-28T18:47:21.437Z",
+              "EditorCaption": " [Dise\u00F1o]"
             }
           ]
         }
