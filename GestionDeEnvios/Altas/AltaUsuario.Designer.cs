@@ -28,12 +28,32 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.miControl1 = new GestionDeEnvios.MiControl();
+            this.SuspendLayout();
+            // 
+            // miControl1
+            // 
+            this.miControl1.Etiqueta = "label1";
+            this.miControl1.Location = new System.Drawing.Point(12, 12);
+            this.miControl1.Name = "miControl1";
+            this.miControl1.Size = new System.Drawing.Size(360, 49);
+            this.miControl1.TabIndex = 0;
+            this.miControl1.Texto = "";
+            // 
+            // AltaUsuario
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.miControl1);
+            this.Name = "AltaUsuario";
             this.Text = "AltaUsuario";
+            this.ResumeLayout(false);
+
         }
 
         #endregion
+
+        private MiControl miControl1;
     }
 }
