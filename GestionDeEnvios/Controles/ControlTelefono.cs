@@ -8,19 +8,19 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace GestionDeEnvios.Controles
 {
-    public partial class ControlEmail : MiControl
+    public partial class ControlTelefono : MiControl
     {
-        public ControlEmail()
+        public ControlTelefono()
         {
             InitializeComponent();
         }
 
-        string patron = "^[\\w-\\.]+@([\\w-]+\\.)+[\\w-]{2,4}$"; //Formato estándar de correo (ej. usuario@dominio.com).
-        private void ControlId_Load(object sender, EventArgs e)
+        string patron = "^[0-9\\+\\-\\s]{8,20}$"; // Acepta números, espacios, guiones y el símbolo + al inicio.
+
+        private void ControlTelefono_Load(object sender, EventArgs e)
         {
 
         }
@@ -41,6 +41,5 @@ namespace GestionDeEnvios.Controles
                 return false;
             }
         }
-
     }
 }

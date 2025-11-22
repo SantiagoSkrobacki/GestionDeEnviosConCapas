@@ -6,13 +6,21 @@ using System.Threading.Tasks;
 
 namespace BE
 {
-    public abstract class Usuario
+    public class Usuario
     {
         private int id;
         private string email;
         private string password;
         private string nombre;
         private bool activo;
+        private bool disponible; // solo para proveedores
+        private string telefono;
+        private string domicilio;
+        private string localidad;
+        private string provincia;
+        private string codigoPostal;
+        private string documento;
+        private string tipoUsuario;
 
         public int Id
         {
@@ -44,6 +52,52 @@ namespace BE
             set { activo = value; }
         }
 
+        public string Telefono
+        {
+            get { return telefono; }
+            set { telefono = value; }
+        }
 
+        public bool Disponible        // solo para proveedores
+        {
+            get { return disponible; }
+            set { disponible = value; }
+        }
+
+        public string Domicilio
+        {
+            get { return domicilio; }
+            set { domicilio = value; }
+        }
+
+        public string Localidad
+        {
+            get { return localidad; }
+            set { localidad = value; }
+        }
+
+        public string Provincia
+        {
+            get { return provincia; }
+            set { provincia = value; }
+        }
+
+        public string CodigoPostal
+        {
+            get { return codigoPostal; }
+            set { codigoPostal = value; }
+        }
+
+        public string Documento
+        {
+            get { return documento; }
+            set { documento = value; }
+        }
+
+        public string TipoUsuario
+        {
+            get { return tipoUsuario; }
+            set { tipoUsuario = value; }
+        }
     }
 }

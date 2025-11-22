@@ -8,23 +8,21 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace GestionDeEnvios.Controles
 {
-    public partial class ControlEmail : MiControl
+    public partial class ControlCodigoPostal : MiControl
     {
-        public ControlEmail()
+        public ControlCodigoPostal()
         {
             InitializeComponent();
         }
 
-        string patron = "^[\\w-\\.]+@([\\w-]+\\.)+[\\w-]{2,4}$"; //Formato estándar de correo (ej. usuario@dominio.com).
-        private void ControlId_Load(object sender, EventArgs e)
+        private void ControlCodigoPostal_Load(object sender, EventArgs e)
         {
 
         }
-
+        string patron = "^[a-zA-Z0-9]{4,8}$"; // Alfanumérico de 4 a 8 caracteres (sirve para CP viejo de 4 números o el nuevo CPA con letras)...
         public bool ValidarRegex()
         {
             Regex regex = new Regex(patron);
@@ -41,6 +39,5 @@ namespace GestionDeEnvios.Controles
                 return false;
             }
         }
-
     }
 }

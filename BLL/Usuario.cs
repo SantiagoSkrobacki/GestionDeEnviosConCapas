@@ -6,22 +6,24 @@ using System.Threading.Tasks;
 
 namespace BLL
 {
-    internal class Usuario : IBll
+    public class Usuario : IBll<BE.Usuario>
     {
-        public int Agregar()
+
+        DAL.MpUsuario mapper = new DAL.MpUsuario();
+        public int Agregar(BE.Usuario usuario)
         {
-            throw new NotImplementedException();
+            return mapper.Agregar(usuario);
         }
 
-        public int Editar()
+        public int Editar(BE.Usuario usuario)
         {
-            throw new NotImplementedException();
+            return mapper.Editar(usuario);
         }
 
-        public int Eliminar()
+        public int Eliminar(BE.Usuario usuario)
         {
-            throw new NotImplementedException();
+            return mapper.Eliminar(usuario);
         }
     }
-    
+
 }

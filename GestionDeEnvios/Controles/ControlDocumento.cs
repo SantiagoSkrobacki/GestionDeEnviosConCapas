@@ -8,23 +8,22 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace GestionDeEnvios.Controles
 {
-    public partial class ControlEmail : MiControl
+    public partial class ControlDocumento : MiControl
     {
-        public ControlEmail()
+        public ControlDocumento()
         {
             InitializeComponent();
         }
 
-        string patron = "^[\\w-\\.]+@([\\w-]+\\.)+[\\w-]{2,4}$"; //Formato estándar de correo (ej. usuario@dominio.com).
-        private void ControlId_Load(object sender, EventArgs e)
+        private void ControlDocumento_Load(object sender, EventArgs e)
         {
 
         }
 
+        string patron = "^[0-9]{7,11}$"; // Solo números. Longitud de 7 a 11 (sirve para DNI, CUIT o Pasaporte).
         public bool ValidarRegex()
         {
             Regex regex = new Regex(patron);
@@ -41,6 +40,5 @@ namespace GestionDeEnvios.Controles
                 return false;
             }
         }
-
     }
 }

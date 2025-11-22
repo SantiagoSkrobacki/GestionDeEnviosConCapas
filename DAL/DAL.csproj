@@ -43,12 +43,8 @@
   <ItemGroup>
     <Compile Include="Acceso.cs" />
     <Compile Include="IMappers.cs" />
-    <Compile Include="MpAdministrador.cs" />
-    <Compile Include="MpCliente.cs" />
-    <Compile Include="MpDestinatario.cs" />
     <Compile Include="MpEnvio.cs" />
     <Compile Include="MpItemPaquete.cs" />
-    <Compile Include="MpRepartidor.cs" />
     <Compile Include="MpUsuario.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
