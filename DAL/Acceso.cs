@@ -51,19 +51,18 @@ namespace DAL
                 fa = cmd.ExecuteNonQuery();
 
                 TR.Commit();
-
+                return fa;
             }
-            catch
+            catch(Exception ex)
             {
                 TR.Rollback();
-                throw new Exception("Rollback en transaccion");
+                 throw ex;
             }
             finally
             {
                 Desconectar();
             }
 
-            return fa;
 
         }
 
@@ -86,6 +85,7 @@ namespace DAL
 
                 adaptador.SelectCommand = cmd;
                 adaptador.Fill(dt);
+                return dt;
             }
             finally
             {

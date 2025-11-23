@@ -29,7 +29,7 @@ namespace DAL
             parametros[10] = new SqlParameter("Documento", usuario.Documento);
             parametros[11] = new SqlParameter("TipoUsuario", usuario.TipoUsuario);
 
-            return acc.Escribir("sp_AgregarUsuario", parametros);
+            return acc.Escribir("AgregarUsuario", parametros);
         }
 
         public int Editar(Usuario parametro)

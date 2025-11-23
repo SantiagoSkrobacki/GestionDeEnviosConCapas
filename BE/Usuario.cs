@@ -22,6 +22,26 @@ namespace BE
         private string documento;
         private string tipoUsuario;
 
+        public Usuario() { }
+
+       
+        public Usuario(string email, string password, string nombre, bool activo, bool disponible,
+                       string telefono, string domicilio, string localidad, string provincia,
+                       string codigoPostal, string documento, string tipoUsuario)
+        {
+            this.Email = email;
+            this.Password = password;
+            this.Nombre = nombre;
+            this.Activo = activo;
+            this.Disponible = disponible;
+            this.Telefono = telefono;
+            this.Domicilio = domicilio;
+            this.Localidad = localidad;
+            this.Provincia = provincia;
+            this.CodigoPostal = codigoPostal;
+            this.Documento = documento;
+            this.TipoUsuario = tipoUsuario;
+        }
         public int Id
         {
             get { return id; }

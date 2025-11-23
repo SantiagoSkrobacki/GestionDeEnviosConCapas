@@ -41,6 +41,8 @@
             this.controlContraseña1 = new GestionDeEnvios.Controles.ControlContraseña();
             this.controlEmail1 = new GestionDeEnvios.Controles.ControlEmail();
             this.agregarUsuarioBTN = new System.Windows.Forms.Button();
+            this.disponibleBOX = new System.Windows.Forms.CheckBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // activoBOX
@@ -167,11 +169,32 @@
             this.agregarUsuarioBTN.UseVisualStyleBackColor = true;
             this.agregarUsuarioBTN.Click += new System.EventHandler(this.agregarUsuarioBTN_Click);
             // 
+            // disponibleBOX
+            // 
+            this.disponibleBOX.AutoSize = true;
+            this.disponibleBOX.Location = new System.Drawing.Point(33, 421);
+            this.disponibleBOX.Name = "disponibleBOX";
+            this.disponibleBOX.Size = new System.Drawing.Size(75, 17);
+            this.disponibleBOX.TabIndex = 13;
+            this.disponibleBOX.Text = "Disponible";
+            this.disponibleBOX.UseVisualStyleBackColor = true;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(127, 422);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(118, 13);
+            this.label2.TabIndex = 14;
+            this.label2.Text = "(solo para proveedores)";
+            // 
             // AltaUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.disponibleBOX);
             this.Controls.Add(this.agregarUsuarioBTN);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.tipoUsuarioCOMBOBOX);
@@ -207,5 +230,7 @@
         private System.Windows.Forms.ComboBox tipoUsuarioCOMBOBOX;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button agregarUsuarioBTN;
+        private System.Windows.Forms.CheckBox disponibleBOX;
+        private System.Windows.Forms.Label label2;
     }
 }

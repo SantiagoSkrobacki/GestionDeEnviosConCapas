@@ -10,6 +10,8 @@ namespace BLL
     {
 
         DAL.MpUsuario mapper = new DAL.MpUsuario();
+
+   
         public int Agregar(BE.Usuario usuario)
         {
             return mapper.Agregar(usuario);
