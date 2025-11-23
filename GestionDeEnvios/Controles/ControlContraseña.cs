@@ -8,23 +8,21 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace GestionDeEnvios.Controles
 {
-    public partial class ControlEmail : MiControl
+    public partial class ControlContraseña : MiControl
     {
-        public ControlEmail()
+        public ControlContraseña()
         {
             InitializeComponent();
         }
 
-        string patron = "^[\\w-\\.]+@([\\w-]+\\.)+[\\w-]{2,4}$"; //Formato estándar de correo (ej. usuario@dominio.com).
-        private void ControlId_Load(object sender, EventArgs e)
+        private void ControlContraseña_Load(object sender, EventArgs e)
         {
 
         }
-
+        string patron = "^.{6,20}$"; //Mínimo 6 caracteres, máximo 20. Acepta cualquier caracter.
         public bool ValidarRegex()
         {
             Regex regex = new Regex(patron);
@@ -37,10 +35,9 @@ namespace GestionDeEnvios.Controles
             else
             {
                 textBox1.BackColor = Color.LightPink;
-                errorLBL.Text = "Formato incorrecto";
+                errorLBL.Text = "Formato incorrecto. Maximo 20 caracteres";
                 return false;
             }
         }
-
     }
 }

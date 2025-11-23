@@ -16,9 +16,9 @@ namespace BE
         private DateTime fechaDespacho;
         private DateTime fechaEntrega;
         private string destino;
-        private Cliente cliente;
-        private Repartidor repartidor;
-        private Destinatario destinatario;
+        private Usuario cliente;
+        private Usuario repartidor;
+        private Usuario destinatario;
 
         public List<ItemPaquete> Paquetes
         {
@@ -68,19 +68,19 @@ namespace BE
             set { destino = value; }
         }
 
-        public Cliente Cliente
+        public Usuario Cliente
         {
             get { return cliente; }
             set { cliente = value; }
         }
 
-        public Repartidor Repartidor
+        public Usuario Repartidor
         {
             get { return repartidor; }
             set { repartidor = value; }
         }
 
-        public Destinatario Destinatario
+        public Usuario Destinatario
         {
             get { return destinatario; }
             set { destinatario = value; }

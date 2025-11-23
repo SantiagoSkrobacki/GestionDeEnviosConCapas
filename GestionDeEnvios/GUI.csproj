@@ -46,18 +46,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Altas\AltaAdministrador.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Altas\AltaAdministrador.Designer.cs">
-      <DependentUpon>AltaAdministrador.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Altas\AltaCliente.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Altas\AltaCliente.Designer.cs">
-      <DependentUpon>AltaCliente.cs</DependentUpon>
-    </Compile>
     <Compile Include="Altas\AltaRepartidor.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -82,29 +70,11 @@
     <Compile Include="AsignarRepartidorEnvio.Designer.cs">
       <DependentUpon>AsignarRepartidorEnvio.cs</DependentUpon>
     </Compile>
-    <Compile Include="Bajas\BajaAdministrador.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Bajas\BajaAdministrador.Designer.cs">
-      <DependentUpon>BajaAdministrador.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Bajas\BajaCliente.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Bajas\BajaCliente.Designer.cs">
-      <DependentUpon>BajaCliente.cs</DependentUpon>
-    </Compile>
     <Compile Include="Bajas\BajaEnvio.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Bajas\BajaEnvio.Designer.cs">
       <DependentUpon>BajaEnvio.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Bajas\BajaRepartidor.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Bajas\BajaRepartidor.Designer.cs">
-      <DependentUpon>BajaRepartidor.cs</DependentUpon>
     </Compile>
     <Compile Include="Bajas\BajaUsuario.cs">
       <SubType>Form</SubType>
@@ -124,11 +94,59 @@
     <Compile Include="ConsultarEnviosRepartidor.Designer.cs">
       <DependentUpon>ConsultarEnviosRepartidor.cs</DependentUpon>
     </Compile>
+    <Compile Include="Controles\ControlCodigoPostal.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controles\ControlCodigoPostal.Designer.cs">
+      <DependentUpon>ControlCodigoPostal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\ControlContraseña.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controles\ControlContraseña.Designer.cs">
+      <DependentUpon>ControlContraseña.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\ControlDocumento.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controles\ControlDocumento.Designer.cs">
+      <DependentUpon>ControlDocumento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\ControlDomicilio.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controles\ControlDomicilio.Designer.cs">
+      <DependentUpon>ControlDomicilio.cs</DependentUpon>
+    </Compile>
     <Compile Include="Controles\ControlEmail.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Controles\ControlEmail.Designer.cs">
       <DependentUpon>ControlEmail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\ControlLocalidad.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controles\ControlLocalidad.Designer.cs">
+      <DependentUpon>ControlLocalidad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\ControlNombre.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controles\ControlNombre.Designer.cs">
+      <DependentUpon>ControlNombre.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\ControlProvincia.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controles\ControlProvincia.Designer.cs">
+      <DependentUpon>ControlProvincia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\ControlTelefono.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controles\ControlTelefono.Designer.cs">
+      <DependentUpon>ControlTelefono.cs</DependentUpon>
     </Compile>
     <Compile Include="Controles\MiControlNumerico.cs">
       <SubType>UserControl</SubType>
@@ -148,29 +166,11 @@
     <Compile Include="FormPrincipal.Designer.cs">
       <DependentUpon>FormPrincipal.cs</DependentUpon>
     </Compile>
-    <Compile Include="Modificaciones\ModificarAdministrador.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Modificaciones\ModificarAdministrador.Designer.cs">
-      <DependentUpon>ModificarAdministrador.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Modificaciones\ModificarCliente.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Modificaciones\ModificarCliente.Designer.cs">
-      <DependentUpon>ModificarCliente.cs</DependentUpon>
-    </Compile>
     <Compile Include="Modificaciones\ModificarEnvio.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Modificaciones\ModificarEnvio.Designer.cs">
       <DependentUpon>ModificarEnvio.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Modificaciones\ModificarRepartidor.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Modificaciones\ModificarRepartidor.Designer.cs">
-      <DependentUpon>ModificarRepartidor.cs</DependentUpon>
     </Compile>
     <Compile Include="Modificaciones\ModificarUsuario.cs">
       <SubType>Form</SubType>
@@ -186,14 +186,35 @@
     <Compile Include="Controles\MiControl.Designer.cs">
       <DependentUpon>MiControl.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Altas\AltaAdministrador.resx">
-      <DependentUpon>AltaAdministrador.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Altas\AltaUsuario.resx">
       <DependentUpon>AltaUsuario.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Controles\ControlCodigoPostal.resx">
+      <DependentUpon>ControlCodigoPostal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controles\ControlContraseña.resx">
+      <DependentUpon>ControlContraseña.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controles\ControlDocumento.resx">
+      <DependentUpon>ControlDocumento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controles\ControlDomicilio.resx">
+      <DependentUpon>ControlDomicilio.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Controles\ControlEmail.resx">
       <DependentUpon>ControlEmail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controles\ControlLocalidad.resx">
+      <DependentUpon>ControlLocalidad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controles\ControlNombre.resx">
+      <DependentUpon>ControlNombre.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controles\ControlProvincia.resx">
+      <DependentUpon>ControlProvincia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controles\ControlTelefono.resx">
+      <DependentUpon>ControlTelefono.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Controles\MiControlNumerico.resx">
       <DependentUpon>MiControlNumerico.cs</DependentUpon>

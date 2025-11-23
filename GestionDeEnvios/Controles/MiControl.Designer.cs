@@ -30,6 +30,7 @@
         {
             this.lblEtiqueta = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.errorLBL = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lblEtiqueta
@@ -49,14 +50,25 @@
             this.textBox1.Size = new System.Drawing.Size(193, 20);
             this.textBox1.TabIndex = 1;
             // 
-            // UserControl1
+            // errorLBL
+            // 
+            this.errorLBL.AutoSize = true;
+            this.errorLBL.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.errorLBL.Location = new System.Drawing.Point(375, 13);
+            this.errorLBL.Name = "errorLBL";
+            this.errorLBL.Size = new System.Drawing.Size(14, 20);
+            this.errorLBL.TabIndex = 2;
+            this.errorLBL.Text = "-";
+            // 
+            // MiControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.errorLBL);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.lblEtiqueta);
-            this.Name = "UserControl1";
-            this.Size = new System.Drawing.Size(360, 49);
+            this.Name = "MiControl";
+            this.Size = new System.Drawing.Size(496, 49);
             this.Load += new System.EventHandler(this.UserControl1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -66,6 +78,7 @@
         #endregion
 
         private System.Windows.Forms.Label lblEtiqueta;
-        private System.Windows.Forms.TextBox textBox1;
+        protected System.Windows.Forms.TextBox textBox1;
+        protected System.Windows.Forms.Label errorLBL;
     }
 }

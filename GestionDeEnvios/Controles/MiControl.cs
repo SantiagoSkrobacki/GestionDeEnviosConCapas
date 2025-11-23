@@ -42,9 +42,11 @@ namespace GestionDeEnvios
             {
                 ok = false;
                 SetearColor(Color.Red);
+                errorLBL.Text = "Formato Incorrecto";
             }
             else
             {
+                errorLBL.Visible = false;
                 SetearColor(Color.Black);
             }
             return ok;

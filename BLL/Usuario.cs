@@ -6,42 +6,26 @@ using System.Threading.Tasks;
 
 namespace BLL
 {
-    internal class Usuario : IBll<Usuario>
+    public class Usuario : IBll<BE.Usuario>
     {
-        DAL.MpUsuario mpusuario = new DAL.MpUsuario();
 
+        DAL.MpUsuario mapper = new DAL.MpUsuario();
 
-        public int Agregar(Usuario parametro)
+   
+        public int Agregar(BE.Usuario usuario)
         {
-            throw new NotImplementedException();
+            return mapper.Agregar(usuario);
         }
 
-        public int Editar(Usuario parametro)
+        public int Editar(BE.Usuario usuario)
         {
-            throw new NotImplementedException();
+            return mapper.Editar(usuario);
         }
 
-        public int Eliminar(Usuario parametro)
+        public int Eliminar(BE.Usuario usuario)
         {
-            throw new NotImplementedException();
-        }
-
-        public Usuario Get(String userName)
-        {
-            // El usuario deberia venir de la BD y su password estar hasheada 
-            return mpusuario.Get(userName);
-        }
-
-        public bool Validar(string username, string password)
-        {
-            if (username != null && password != null)
-            {
-                Usuario user = Get(username);
-                
-                return user.password == Cripto.ComputeSha256Hash(password);
-            }
-            return false;
+            return mapper.Eliminar(usuario);
         }
     }
-    
+
 }
