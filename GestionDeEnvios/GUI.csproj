@@ -124,6 +124,12 @@
     <Compile Include="Controles\ControlEmail.Designer.cs">
       <DependentUpon>ControlEmail.cs</DependentUpon>
     </Compile>
+    <Compile Include="Controles\ControlId.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controles\ControlId.Designer.cs">
+      <DependentUpon>ControlId.cs</DependentUpon>
+    </Compile>
     <Compile Include="Controles\ControlLocalidad.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -198,8 +204,14 @@
     <Compile Include="Controles\MiControl.Designer.cs">
       <DependentUpon>MiControl.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Altas\AltaEnvio.resx">
+      <DependentUpon>AltaEnvio.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Altas\AltaUsuario.resx">
       <DependentUpon>AltaUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Bajas\BajaUsuario.resx">
+      <DependentUpon>BajaUsuario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Controles\ControlCodigoPostal.resx">
       <DependentUpon>ControlCodigoPostal.cs</DependentUpon>
@@ -215,6 +227,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Controles\ControlEmail.resx">
       <DependentUpon>ControlEmail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controles\ControlId.resx">
+      <DependentUpon>ControlId.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Controles\ControlLocalidad.resx">
       <DependentUpon>ControlLocalidad.cs</DependentUpon>
@@ -239,6 +254,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Login\Registrarse.resx">
       <DependentUpon>Registrarse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modificaciones\ModificarUsuario.resx">
+      <DependentUpon>ModificarUsuario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

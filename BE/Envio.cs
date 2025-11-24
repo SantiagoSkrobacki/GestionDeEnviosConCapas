@@ -13,7 +13,7 @@ namespace BE
         private EnumEstados estado;
         private DateTime fechaCreacion;
         private DateTime fechaAsignacion;
-        private DateTime fechaDespacho;
+ //       private DateTime fechaDespacho;
         private DateTime fechaEntrega;
         private string destino;
         private Usuario cliente;
@@ -50,11 +50,11 @@ namespace BE
             set { fechaAsignacion = value; }
         }
 
-        public DateTime FechaDespacho
+     /*   public DateTime FechaDespacho
         {
             get { return fechaDespacho; }
             set { fechaDespacho = value; }
-        }
+        }*/
 
         public DateTime FechaEntrega
         {

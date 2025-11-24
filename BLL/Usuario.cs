@@ -20,6 +20,7 @@ namespace BLL
 
         public int Editar(BE.Usuario usuario)
         {
+            usuario.Password = Cripto.ComputeSha256Hash(usuario.Password);
             return mapper.Editar(usuario);
         }
 
