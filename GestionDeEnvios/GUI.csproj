@@ -166,6 +166,18 @@
     <Compile Include="FormPrincipal.Designer.cs">
       <DependentUpon>FormPrincipal.cs</DependentUpon>
     </Compile>
+    <Compile Include="Login\Iniciar Sesion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login\Iniciar Sesion.Designer.cs">
+      <DependentUpon>Iniciar Sesion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login\Registrarse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login\Registrarse.Designer.cs">
+      <DependentUpon>Registrarse.cs</DependentUpon>
+    </Compile>
     <Compile Include="Modificaciones\ModificarEnvio.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -221,6 +233,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormPrincipal.resx">
       <DependentUpon>FormPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login\Iniciar Sesion.resx">
+      <DependentUpon>Iniciar Sesion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login\Registrarse.resx">
+      <DependentUpon>Registrarse.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

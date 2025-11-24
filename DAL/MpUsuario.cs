@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
@@ -56,6 +57,21 @@ namespace DAL
             SqlParameter[] parametros = new SqlParameter[1];
             parametros[0] = new SqlParameter("Id", parametro.Id);
             return acc.Escribir("EliminarUsuario", parametros);
+        }
+
+        public BE.Usuario ObtenerUsuarioPorMail(string email)
+        {
+            DataTable dataTable = new DataTable();
+            SqlParameter[] parametros = new SqlParameter[1];
+            parametros[0] = new SqlParameter ("email", email);
+            BE.Usuario usuario = new BE.Usuario();
+            dataTable = acc.Leer("ObtenerUsuarioPorMail",parametros);
+            foreach(DataRow row in dataTable.Rows)
+            {
+                usuario.Password = row["Password"].ToString();
+                usuario.TipoUsuario = row["TipoUsuario"].ToString();
+            }
+            return usuario;
         }
     }
 }

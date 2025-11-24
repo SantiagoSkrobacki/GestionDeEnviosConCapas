@@ -210,6 +210,7 @@
             this.Controls.Add(this.controlEmail1);
             this.Name = "AltaUsuario";
             this.Text = "AltaUsuario";
+            this.Load += new System.EventHandler(this.AltaUsuario_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

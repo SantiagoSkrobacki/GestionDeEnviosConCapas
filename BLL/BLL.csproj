@@ -41,6 +41,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Cripto.cs" />
     <Compile Include="Envio.cs" />
     <Compile Include="IBll.cs" />
     <Compile Include="ItemPaquete.cs" />

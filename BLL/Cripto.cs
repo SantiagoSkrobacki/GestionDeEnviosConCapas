@@ -9,18 +9,21 @@ namespace BLL
 {
     public class Cripto
     {
-        public static string ComputeSha256Hash(string rawData)
+        public static string ComputeSha256Hash(string password)
         {
             using (SHA256 sha256Hash = SHA256.Create())
             {
-                byte[] bytes = sha256Hash.ComputeHash(Encoding.UTF8.GetBytes(rawData));
+                string contraHasheada;
+                byte[] bytes = sha256Hash.ComputeHash(Encoding.UTF8.GetBytes(password));
 
                 // Convert byte array to a string
                 StringBuilder builder = new StringBuilder();
                 foreach (byte b in bytes)
                     builder.Append(b.ToString("x2"));
 
-                return builder.ToString();
+                contraHasheada = builder.ToString();
+                password = contraHasheada;
+                return password;
             }
         }
     }

@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using GestionDeEnvios.Altas;
 using GestionDeEnvios.Bajas;
+using GestionDeEnvios.Login;
 using GestionDeEnvios.Modificaciones;
 
 namespace GestionDeEnvios
@@ -74,6 +75,59 @@ namespace GestionDeEnvios
             ConsultarEnviosRepartidor consultarEnvioRepartidor = new ConsultarEnviosRepartidor();
             consultarEnvioRepartidor.MdiParent = this;
             consultarEnvioRepartidor.Show();
+        }
+
+        private void FormPrincipal_Load(object sender, EventArgs e)
+        {
+            OcultarBotones();
+        }
+
+        private void iniciarSesionToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Iniciar_Sesion iniciar_Sesion = new Iniciar_Sesion();
+            iniciar_Sesion.MdiParent = this;
+            iniciar_Sesion.Show();
+            iniciar_Sesion.OnLoginExitoso += ConfigurarPermisos;
+        }
+
+        private void ConfigurarPermisos(BE.Usuario usuario)
+        {
+
+            // SWITCH POR ROLES
+            switch (usuario.TipoUsuario)
+            {
+                case "Administrador":
+                    envioToolStripMenuItem.Visible = true;
+                    usuariosToolStripMenuItem.Visible = true;
+                    clienteToolStripMenuItem.Visible = true;
+                    repartidorToolStripMenuItem.Visible = true;
+                    break;
+
+                case "Cliente":
+                    clienteToolStripMenuItem.Visible = true;
+                    break;
+
+                case "Repartidor":
+                    repartidorToolStripMenuItem.Visible = true;
+                    break;
+                case "Destinatario":
+                    destinatarioToolStripMenuItem.Visible = true;
+                    break;
+            }
+        }
+
+        private void OcultarBotones()
+        {
+            envioToolStripMenuItem.Visible = false;
+            usuariosToolStripMenuItem.Visible = false;
+            clienteToolStripMenuItem.Visible = false;
+            repartidorToolStripMenuItem.Visible = false;
+            destinatarioToolStripMenuItem.Visible = false;
+        }
+
+        private void envioToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

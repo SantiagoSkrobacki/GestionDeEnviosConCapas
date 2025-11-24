@@ -46,5 +46,10 @@ namespace GestionDeEnvios
                 throw;
             }
         }
+
+        private void AltaUsuario_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
