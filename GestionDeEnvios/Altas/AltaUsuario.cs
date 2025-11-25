@@ -11,6 +11,7 @@ using System.Windows.Forms;
 using System.Xml.Linq;
 using GestionDeEnvios.Controles;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
+using BE;
 
 namespace GestionDeEnvios
 {
@@ -28,7 +29,7 @@ namespace GestionDeEnvios
             {
                 if (ValiacionesUtils.ValidarEntradaUsuario(this) && tipoUsuarioCOMBOBOX.Items != null)
                 {
-                    int fa = 0;
+                    
 
                     BE.Usuario usuario = new BE.Usuario()
                     {
@@ -53,10 +54,14 @@ namespace GestionDeEnvios
                     MessageBox.Show("Usuario agregado con exito"); // No uso int fa porque un insert no puede devolver 0, devuelve error unicamente
                     
                 }
+                else
+                {
+                    MessageBox.Show("Campos completados incorrectamente...\nPor favor vuelva a intentar.");
+                }
             }
             catch (Exception ex)
             {
-                if(ex is SqlException sqlEx && sqlEx.Number == (int)ValiacionesUtils.SqlErrorCode.UniqueConstraint)
+                if(ex is SqlException sqlEx && sqlEx.Number == (int)SqlErrorCode.UniqueConstraint)
                 {
                     MessageBox.Show("Error, el mail utilizado ya posee un usuario asociado");
                 }

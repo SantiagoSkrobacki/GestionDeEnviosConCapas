@@ -32,14 +32,14 @@ namespace GestionDeEnvios.Bajas
 
                 if (fa == 0)
                 {
-                    MessageBox.Show("Error");
+                    MessageBox.Show("Error: no se encontró usuario con el id = " + usuario.Id);
                 }
                 else
                 {
-                    MessageBox.Show("Usuario modificado con exito");
+                    MessageBox.Show("Usuario eliminado exitosamente");
                 }
 
-                MessageBox.Show("Usuario eliminado");
+                
             }
             else
             {

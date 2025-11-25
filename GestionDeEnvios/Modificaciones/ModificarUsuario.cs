@@ -2,12 +2,14 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml.Linq;
+using BE;
 using GestionDeEnvios.Controles;
 
 namespace GestionDeEnvios.Modificaciones
@@ -60,7 +62,14 @@ namespace GestionDeEnvios.Modificaciones
             catch (Exception ex)
             {
 
-                throw;
+                if (ex is SqlException sqlEx && sqlEx.Number == (int)SqlErrorCode.UniqueConstraint)
+                {
+                    MessageBox.Show("Error, el mail utilizado ya posee un usuario asociado");
+                }
+                else
+                {
+                    MessageBox.Show($"EROR: {ex}");
+                }
             }
         }
     }

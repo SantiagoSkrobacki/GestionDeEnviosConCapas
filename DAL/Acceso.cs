@@ -5,6 +5,7 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using BE;
 
 namespace DAL
 {
@@ -53,10 +54,17 @@ namespace DAL
                 TR.Commit();
                 return fa;
             }
-            catch(Exception ex)
+            catch(SqlException ex)
             {
                 TR.Rollback();
-                 throw ex;
+                if (EsErrorConocido(ex))
+                {
+                    
+                    throw; 
+                }
+
+     
+                throw new Exception("Error inesperado en la base de datos.", ex);
             }
             finally
             {
@@ -87,12 +95,23 @@ namespace DAL
                 adaptador.Fill(dt);
                 return dt;
             }
+            catch (SqlException ex)
+            {
+                if (EsErrorConocido(ex))
+                {
+                    
+                    throw;  
+                }
+
+                
+                throw new Exception("Error inesperado en la base de datos.", ex);
+            }
             finally
             {
                 Desconectar();
             }
 
-            return dt;
+           
         }
 
         public object ObtenerDato(string sp, SqlParameter[] parametro)
@@ -111,14 +130,37 @@ namespace DAL
                 result = cmd.ExecuteScalar();
 
                 if (result == null || result == DBNull.Value)
+                {
                     result = null;
+                }
+                    
+                return result;
+            }
+            catch (SqlException ex)
+            {
+                if (EsErrorConocido(ex))
+                {
+                    throw; 
+                }
+
+                throw new Exception("Error inesperado en la base de datos.", ex);
             }
             finally
             {
                 Desconectar();
             }
 
-            return result;
+            
+        }
+
+
+        private bool EsErrorConocido(SqlException ex)
+        {
+            return ex.Number == (int)SqlErrorCode.UniqueConstraint ||
+                   ex.Number == (int)SqlErrorCode.UniqueIndex ||
+                   ex.Number == (int)SqlErrorCode.ForeignKeyViolation ||
+                   ex.Number == (int)SqlErrorCode.CheckConstraint ||
+                   ex.Number == (int)SqlErrorCode.Timeout;
         }
 
 

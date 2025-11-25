@@ -15,6 +15,7 @@ namespace BE
         private DateTime fechaAsignacion;
         private DateTime fechaDespacho;
         private DateTime fechaEntrega;
+        private DateTime fechaCancelacion;
         private string destino;
         private Usuario cliente;
         private Usuario repartidor;
@@ -61,7 +62,11 @@ namespace BE
             get { return fechaEntrega; }
             set { fechaEntrega = value; }
         }
-
+        public DateTime FechaCancelacion
+        {
+            get { return fechaCancelacion; }
+            set { fechaCancelacion = value; }
+        }
         public string Destino
         {
             get { return destino; }

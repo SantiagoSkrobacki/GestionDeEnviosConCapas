@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using BE;
 using GestionDeEnvios.Controles;
 
 namespace GestionDeEnvios.Login
@@ -52,10 +53,14 @@ namespace GestionDeEnvios.Login
                     MessageBox.Show("Usuario agregado con exito");
 
                 }
+                else
+                {
+                    MessageBox.Show("Campos completados incorrectamente...\nPor favor vuelva a intentar.");
+                }
             }
             catch (Exception ex)
             {
-                if (ex is SqlException sqlEx && sqlEx.Number == (int)ValiacionesUtils.SqlErrorCode.UniqueConstraint)
+                if (ex is SqlException sqlEx && sqlEx.Number == (int)SqlErrorCode.UniqueConstraint)
                 {
                     MessageBox.Show("Error, el mail utilizado ya posee un usuario asociado");
                 }
