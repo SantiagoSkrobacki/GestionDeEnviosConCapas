@@ -15,7 +15,7 @@ using BE;
 
 namespace GestionDeEnvios
 {
-    public partial class AltaUsuario : Form
+    public partial class AltaUsuario : FormBase
     {
         public AltaUsuario()
         {

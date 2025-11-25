@@ -13,7 +13,7 @@ using GestionDeEnvios.Controles;
 
 namespace GestionDeEnvios.Login
 {
-    public partial class Registrarse : Form
+    public partial class Registrarse : FormBase
     {
         public Registrarse()
         {

@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace GestionDeEnvios.Modificaciones
 {
-    public partial class ModificarEnvio : Form
+    public partial class ModificarEnvio : FormBase
     {
         public ModificarEnvio()
         {

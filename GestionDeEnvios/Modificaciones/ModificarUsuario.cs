@@ -14,7 +14,7 @@ using GestionDeEnvios.Controles;
 
 namespace GestionDeEnvios.Modificaciones
 {
-    public partial class ModificarUsuario : Form
+    public partial class ModificarUsuario : FormBase
     {
         public ModificarUsuario()
         {

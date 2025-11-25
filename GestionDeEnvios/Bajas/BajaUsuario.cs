@@ -11,7 +11,7 @@ using GestionDeEnvios.Controles;
 
 namespace GestionDeEnvios.Bajas
 {
-    public partial class BajaUsuario : Form
+    public partial class BajaUsuario : FormBase
     {
         public BajaUsuario()
         {

@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace GestionDeEnvios.Bajas
 {
-    public partial class BajaEnvio : Form
+    public partial class BajaEnvio : FormBase
     {
         public BajaEnvio()
         {

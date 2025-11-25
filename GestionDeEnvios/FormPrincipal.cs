@@ -14,11 +14,12 @@ using GestionDeEnvios.Modificaciones;
 
 namespace GestionDeEnvios
 {
-    public partial class FormPrincipal : Form
+    public partial class FormPrincipal : FormBase
     {
         public FormPrincipal()
         {
             InitializeComponent();
+            
         }
 
         private void agregarToolStripMenuItem_Click(object sender, EventArgs e)
@@ -126,6 +127,11 @@ namespace GestionDeEnvios
         }
 
         private void envioToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void kryptonGroup1_Panel_Paint(object sender, PaintEventArgs e)
         {
 
         }

@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace GestionDeEnvios
 {
-    public partial class AltaRepartidor : Form
+    public partial class AltaRepartidor : FormBase
     {
         public AltaRepartidor()
         {

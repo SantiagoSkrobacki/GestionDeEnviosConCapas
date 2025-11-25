@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace GestionDeEnvios.Login
 {
-    public partial class Iniciar_Sesion : Form
+    public partial class Iniciar_Sesion : FormBase
     {
         public Iniciar_Sesion()
         {

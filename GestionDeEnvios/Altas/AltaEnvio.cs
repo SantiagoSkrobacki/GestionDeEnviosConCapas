@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace GestionDeEnvios.Altas
 {
-    public partial class AltaEnvio : Form
+    public partial class AltaEnvio : FormBase
     {
         public AltaEnvio()
         {
