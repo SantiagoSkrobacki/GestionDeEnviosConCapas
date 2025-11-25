@@ -35,7 +35,7 @@ namespace GestionDeEnvios
 
         protected void SetearColorTextBox(Color unColor)
         {
-            textBox1.BackColor = unColor;
+            textBox1.StateCommon.Back.Color1 = unColor;
         }
 
         protected void SetearColorLabel(Color color)
@@ -59,21 +59,23 @@ namespace GestionDeEnvios
         public virtual bool Validar()
         {
 
-            bool ok = true;
-            if (string.IsNullOrWhiteSpace(Texto) && !ValidarRegex(Texto))
+            
+            if (!ValidarRegex(Texto) || string.IsNullOrWhiteSpace(Texto))
             {
-                ok = false;
+                
                 SetearColorTextBox(Color.LightCoral);
                 SetearColorLabel(Color.Red);
                 errorLBL.Text = "Formato Incorrecto";
+                return false;
             }
             else
             {
                 errorLBL.Visible = false;
                 SetearColorTextBox(Color.White);
                 SetearColorLabel(Color.Black);
+                return true;
             }
-            return ok;
+            
         }
 
         private void UserControl1_Load(object sender, EventArgs e)

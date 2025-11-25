@@ -23,13 +23,21 @@ namespace GestionDeEnvios
         }
 
         BLL.Usuario bllusuario = new BLL.Usuario();
-        private void agregarUsuarioBTN_Click(object sender, EventArgs e)
+ 
+                
+        
+        private void AltaUsuario_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void agregarUsuarioBTN_Click_1(object sender, EventArgs e)
         {
             try
             {
                 if (ValiacionesUtils.ValidarEntradaUsuario(this) && tipoUsuarioCOMBOBOX.Items != null)
                 {
-                    
+
 
                     BE.Usuario usuario = new BE.Usuario()
                     {
@@ -50,9 +58,9 @@ namespace GestionDeEnvios
 
 
                     bllusuario.Agregar(usuario);
-                  
+
                     MessageBox.Show("Usuario agregado con exito"); // No uso int fa porque un insert no puede devolver 0, devuelve error unicamente
-                    
+
                 }
                 else
                 {
@@ -61,7 +69,7 @@ namespace GestionDeEnvios
             }
             catch (Exception ex)
             {
-                if(ex is SqlException sqlEx && sqlEx.Number == (int)SqlErrorCode.UniqueConstraint)
+                if (ex is SqlException sqlEx && sqlEx.Number == (int)SqlErrorCode.UniqueConstraint)
                 {
                     MessageBox.Show("Error, el mail utilizado ya posee un usuario asociado");
                 }
@@ -70,12 +78,6 @@ namespace GestionDeEnvios
                     MessageBox.Show($"EROR: {ex}");
                 }
             }
-
-        }
-                
-        
-        private void AltaUsuario_Load(object sender, EventArgs e)
-        {
 
         }
     }

@@ -24,6 +24,8 @@ namespace GestionDeEnvios
             manager.GlobalPalette = kryptonPalette1;
             manager.GlobalPaletteMode = PaletteModeManager.Custom;
             this.BackColor = Color.FromArgb(250, 252, 252);
+           
+
 
             ConfigurarPalette();
 
@@ -41,6 +43,9 @@ namespace GestionDeEnvios
                
         }
 
+        private void FormBase_Load(object sender, EventArgs e)
+        {
 
+        }
     }
 }

@@ -40,16 +40,16 @@
             this.controlNombre1 = new GestionDeEnvios.Controles.ControlNombre();
             this.controlContraseña1 = new GestionDeEnvios.Controles.ControlContraseña();
             this.controlEmail1 = new GestionDeEnvios.Controles.ControlEmail();
-            this.agregarUsuarioBTN = new System.Windows.Forms.Button();
             this.disponibleBOX = new System.Windows.Forms.CheckBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.agregarUsuarioBTN = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.SuspendLayout();
             // 
             // activoBOX
             // 
             this.activoBOX.AutoSize = true;
-            this.activoBOX.Location = new System.Drawing.Point(44, 486);
-            this.activoBOX.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.activoBOX.Location = new System.Drawing.Point(45, 576);
+            this.activoBOX.Margin = new System.Windows.Forms.Padding(4);
             this.activoBOX.Name = "activoBOX";
             this.activoBOX.Size = new System.Drawing.Size(66, 20);
             this.activoBOX.TabIndex = 9;
@@ -64,8 +64,8 @@
             "Cliente",
             "Repartidor",
             "Destinatario"});
-            this.tipoUsuarioCOMBOBOX.Location = new System.Drawing.Point(235, 597);
-            this.tipoUsuarioCOMBOBOX.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tipoUsuarioCOMBOBOX.Location = new System.Drawing.Point(296, 687);
+            this.tipoUsuarioCOMBOBOX.Margin = new System.Windows.Forms.Padding(4);
             this.tipoUsuarioCOMBOBOX.Name = "tipoUsuarioCOMBOBOX";
             this.tipoUsuarioCOMBOBOX.Size = new System.Drawing.Size(160, 24);
             this.tipoUsuarioCOMBOBOX.TabIndex = 10;
@@ -74,7 +74,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(260, 568);
+            this.label1.Location = new System.Drawing.Point(321, 658);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(104, 20);
@@ -84,8 +84,8 @@
             // controlDocumento1
             // 
             this.controlDocumento1.Etiqueta = "Documento";
-            this.controlDocumento1.Location = new System.Drawing.Point(16, 412);
-            this.controlDocumento1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.controlDocumento1.Location = new System.Drawing.Point(16, 514);
+            this.controlDocumento1.Margin = new System.Windows.Forms.Padding(5);
             this.controlDocumento1.Name = "controlDocumento1";
             this.controlDocumento1.Size = new System.Drawing.Size(721, 53);
             this.controlDocumento1.TabIndex = 8;
@@ -94,8 +94,8 @@
             // controlCodigoPostal1
             // 
             this.controlCodigoPostal1.Etiqueta = "Codigo Postal";
-            this.controlCodigoPostal1.Location = new System.Drawing.Point(16, 367);
-            this.controlCodigoPostal1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.controlCodigoPostal1.Location = new System.Drawing.Point(16, 451);
+            this.controlCodigoPostal1.Margin = new System.Windows.Forms.Padding(5);
             this.controlCodigoPostal1.Name = "controlCodigoPostal1";
             this.controlCodigoPostal1.Size = new System.Drawing.Size(721, 53);
             this.controlCodigoPostal1.TabIndex = 7;
@@ -104,8 +104,8 @@
             // controlProvincia1
             // 
             this.controlProvincia1.Etiqueta = "Provincia";
-            this.controlProvincia1.Location = new System.Drawing.Point(16, 311);
-            this.controlProvincia1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.controlProvincia1.Location = new System.Drawing.Point(16, 388);
+            this.controlProvincia1.Margin = new System.Windows.Forms.Padding(5);
             this.controlProvincia1.Name = "controlProvincia1";
             this.controlProvincia1.Size = new System.Drawing.Size(721, 53);
             this.controlProvincia1.TabIndex = 6;
@@ -114,8 +114,8 @@
             // controlLocalidad1
             // 
             this.controlLocalidad1.Etiqueta = "Localidad";
-            this.controlLocalidad1.Location = new System.Drawing.Point(16, 262);
-            this.controlLocalidad1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.controlLocalidad1.Location = new System.Drawing.Point(16, 325);
+            this.controlLocalidad1.Margin = new System.Windows.Forms.Padding(5);
             this.controlLocalidad1.Name = "controlLocalidad1";
             this.controlLocalidad1.Size = new System.Drawing.Size(721, 53);
             this.controlLocalidad1.TabIndex = 5;
@@ -124,8 +124,8 @@
             // controlDomicilio1
             // 
             this.controlDomicilio1.Etiqueta = "Domicilio";
-            this.controlDomicilio1.Location = new System.Drawing.Point(16, 213);
-            this.controlDomicilio1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.controlDomicilio1.Location = new System.Drawing.Point(16, 262);
+            this.controlDomicilio1.Margin = new System.Windows.Forms.Padding(5);
             this.controlDomicilio1.Name = "controlDomicilio1";
             this.controlDomicilio1.Size = new System.Drawing.Size(721, 53);
             this.controlDomicilio1.TabIndex = 4;
@@ -134,8 +134,8 @@
             // controlTelefono1
             // 
             this.controlTelefono1.Etiqueta = "Telefono";
-            this.controlTelefono1.Location = new System.Drawing.Point(16, 165);
-            this.controlTelefono1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.controlTelefono1.Location = new System.Drawing.Point(16, 199);
+            this.controlTelefono1.Margin = new System.Windows.Forms.Padding(5);
             this.controlTelefono1.Name = "controlTelefono1";
             this.controlTelefono1.Size = new System.Drawing.Size(721, 53);
             this.controlTelefono1.TabIndex = 3;
@@ -144,8 +144,8 @@
             // controlNombre1
             // 
             this.controlNombre1.Etiqueta = "Nombre";
-            this.controlNombre1.Location = new System.Drawing.Point(16, 111);
-            this.controlNombre1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.controlNombre1.Location = new System.Drawing.Point(16, 136);
+            this.controlNombre1.Margin = new System.Windows.Forms.Padding(5);
             this.controlNombre1.Name = "controlNombre1";
             this.controlNombre1.Size = new System.Drawing.Size(721, 53);
             this.controlNombre1.TabIndex = 2;
@@ -154,8 +154,8 @@
             // controlContraseña1
             // 
             this.controlContraseña1.Etiqueta = "Contraseña";
-            this.controlContraseña1.Location = new System.Drawing.Point(16, 65);
-            this.controlContraseña1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.controlContraseña1.Location = new System.Drawing.Point(16, 73);
+            this.controlContraseña1.Margin = new System.Windows.Forms.Padding(5);
             this.controlContraseña1.Name = "controlContraseña1";
             this.controlContraseña1.Size = new System.Drawing.Size(721, 53);
             this.controlContraseña1.TabIndex = 1;
@@ -165,28 +165,17 @@
             // 
             this.controlEmail1.Etiqueta = "Email";
             this.controlEmail1.Location = new System.Drawing.Point(16, 15);
-            this.controlEmail1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.controlEmail1.Margin = new System.Windows.Forms.Padding(5);
             this.controlEmail1.Name = "controlEmail1";
             this.controlEmail1.Size = new System.Drawing.Size(721, 53);
             this.controlEmail1.TabIndex = 0;
             this.controlEmail1.Texto = "";
             // 
-            // agregarUsuarioBTN
-            // 
-            this.agregarUsuarioBTN.Location = new System.Drawing.Point(184, 650);
-            this.agregarUsuarioBTN.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.agregarUsuarioBTN.Name = "agregarUsuarioBTN";
-            this.agregarUsuarioBTN.Size = new System.Drawing.Size(267, 76);
-            this.agregarUsuarioBTN.TabIndex = 12;
-            this.agregarUsuarioBTN.Text = "Agregar Usuario";
-            this.agregarUsuarioBTN.UseVisualStyleBackColor = true;
-            this.agregarUsuarioBTN.Click += new System.EventHandler(this.agregarUsuarioBTN_Click);
-            // 
             // disponibleBOX
             // 
             this.disponibleBOX.AutoSize = true;
-            this.disponibleBOX.Location = new System.Drawing.Point(44, 518);
-            this.disponibleBOX.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.disponibleBOX.Location = new System.Drawing.Point(45, 608);
+            this.disponibleBOX.Margin = new System.Windows.Forms.Padding(4);
             this.disponibleBOX.Name = "disponibleBOX";
             this.disponibleBOX.Size = new System.Drawing.Size(94, 20);
             this.disponibleBOX.TabIndex = 13;
@@ -196,21 +185,46 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(169, 519);
+            this.label2.Location = new System.Drawing.Point(147, 609);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(153, 16);
             this.label2.TabIndex = 14;
             this.label2.Text = "(solo para proveedores)";
             // 
+            // agregarUsuarioBTN
+            // 
+            this.agregarUsuarioBTN.Location = new System.Drawing.Point(264, 730);
+            this.agregarUsuarioBTN.Name = "agregarUsuarioBTN";
+            this.agregarUsuarioBTN.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.ProfessionalSystem;
+            this.agregarUsuarioBTN.Size = new System.Drawing.Size(220, 82);
+            this.agregarUsuarioBTN.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
+            this.agregarUsuarioBTN.StateCommon.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
+            this.agregarUsuarioBTN.StateCommon.Back.ColorAngle = 45F;
+            this.agregarUsuarioBTN.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
+            this.agregarUsuarioBTN.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
+            this.agregarUsuarioBTN.StateCommon.Border.ColorAngle = 45F;
+            this.agregarUsuarioBTN.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.agregarUsuarioBTN.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.agregarUsuarioBTN.StateCommon.Border.Rounding = 20;
+            this.agregarUsuarioBTN.StateCommon.Border.Width = 1;
+            this.agregarUsuarioBTN.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.White;
+            this.agregarUsuarioBTN.StateCommon.Content.ShortText.Color2 = System.Drawing.Color.White;
+            this.agregarUsuarioBTN.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.agregarUsuarioBTN.TabIndex = 15;
+            this.agregarUsuarioBTN.Values.Text = "Agregar Usuario";
+            this.agregarUsuarioBTN.Click += new System.EventHandler(this.agregarUsuarioBTN_Click_1);
+            // 
             // AltaUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1067, 785);
+            this.ClientSize = new System.Drawing.Size(833, 856);
+            this.Controls.Add(this.agregarUsuarioBTN);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.disponibleBOX);
-            this.Controls.Add(this.agregarUsuarioBTN);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.tipoUsuarioCOMBOBOX);
             this.Controls.Add(this.activoBOX);
@@ -223,7 +237,7 @@
             this.Controls.Add(this.controlNombre1);
             this.Controls.Add(this.controlContraseña1);
             this.Controls.Add(this.controlEmail1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "AltaUsuario";
             this.Text = "AltaUsuario";
             this.Load += new System.EventHandler(this.AltaUsuario_Load);
@@ -246,8 +260,8 @@
         private System.Windows.Forms.CheckBox activoBOX;
         private System.Windows.Forms.ComboBox tipoUsuarioCOMBOBOX;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button agregarUsuarioBTN;
         private System.Windows.Forms.CheckBox disponibleBOX;
         private System.Windows.Forms.Label label2;
+        private ComponentFactory.Krypton.Toolkit.KryptonButton agregarUsuarioBTN;
     }
 }

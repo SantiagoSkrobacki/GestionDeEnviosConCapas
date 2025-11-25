@@ -18,13 +18,10 @@ namespace GestionDeEnvios.Login
         }
 
         BLL.Usuario bllusuario = new BLL.Usuario();
-        private void registrarseBTN_Click(object sender, EventArgs e)
-        {
-            Registrarse registrarse = new Registrarse();
-            registrarse.Show();
-        }
+   
         public event Action<BE.Usuario> OnLoginExitoso;
-        private void iniciarSesionBTN_Click(object sender, EventArgs e)
+    
+        private void iniciarSesionBTN_Click_1(object sender, EventArgs e)
         {
             BE.Usuario usuario = bllusuario.Login(controlEmail1.Texto, controlContraseña1.Texto);
 
@@ -40,6 +37,12 @@ namespace GestionDeEnvios.Login
             {
                 MessageBox.Show("Credenciales incorrectas");
             }
+        }
+
+        private void registrarseBTN_Click_1(object sender, EventArgs e)
+        {
+            Registrarse registrarse = new Registrarse();
+            registrarse.Show();
         }
     }
 }

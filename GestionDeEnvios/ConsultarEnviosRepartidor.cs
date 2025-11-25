@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace GestionDeEnvios
 {
-    public partial class ConsultarEnviosRepartidor : Form
+    public partial class ConsultarEnviosRepartidor : FormBase
     {
         public ConsultarEnviosRepartidor()
         {

@@ -25,27 +25,28 @@ namespace GestionDeEnvios.Login
 
         }
         BLL.Usuario bllusuario = new BLL.Usuario();
-        private void registrarseBTN_Click(object sender, EventArgs e)
+    
+        private void registrarseBTN_Click_1(object sender, EventArgs e)
         {
             try
             {
                 if (ValiacionesUtils.ValidarEntradaUsuario(this))
                 {
-                    
+
                     BE.Usuario usuario = new BE.Usuario()
                     {
-                        Email = controlEmail1.Texto, 
+                        Email = controlEmail1.Texto,
                         Password = controlContraseña1.Texto,
                         Nombre = controlNombre1.Texto,
-                        Activo = true ,
-                        Disponible = true , 
-                        Telefono = controlTelefono1.Texto, 
+                        Activo = true,
+                        Disponible = true,
+                        Telefono = controlTelefono1.Texto,
                         Domicilio = controlDomicilio1.Texto,
                         Localidad = controlLocalidad1.Texto,
                         Provincia = controlProvincia1.Texto,
                         CodigoPostal = controlCodigoPostal1.Texto,
                         Documento = controlDocumento1.Texto,
-                        TipoUsuario = "Cliente" 
+                        TipoUsuario = "Cliente"
                     };
 
                     bllusuario.Agregar(usuario);
@@ -69,6 +70,11 @@ namespace GestionDeEnvios.Login
                     MessageBox.Show($"EROR: {ex}");
                 }
             }
+        }
+
+        private void controlEmail1_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

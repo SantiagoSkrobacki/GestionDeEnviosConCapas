@@ -38,6 +38,11 @@
             this.kryptonPalette1.ButtonSpecs.FormClose.ImageStates.ImagePressed = global::GestionDeEnvios.Properties.Resources.close;
             this.kryptonPalette1.ButtonSpecs.FormClose.ImageStates.ImageTracking = global::GestionDeEnvios.Properties.Resources.close;
             this.kryptonPalette1.ButtonSpecs.FormMax.Image = global::GestionDeEnvios.Properties.Resources.maximizar;
+            this.kryptonPalette1.ButtonSpecs.FormMax.ImageStates.ImageCheckedNormal = global::GestionDeEnvios.Properties.Resources.maximizar;
+            this.kryptonPalette1.ButtonSpecs.FormMax.ImageStates.ImageCheckedPressed = global::GestionDeEnvios.Properties.Resources.maximizar;
+            this.kryptonPalette1.ButtonSpecs.FormMax.ImageStates.ImageCheckedTracking = global::GestionDeEnvios.Properties.Resources.maximizar;
+            this.kryptonPalette1.ButtonSpecs.FormMax.ImageStates.ImageDisabled = global::GestionDeEnvios.Properties.Resources.maximizar;
+            this.kryptonPalette1.ButtonSpecs.FormMax.ImageStates.ImageNormal = global::GestionDeEnvios.Properties.Resources.maximizar;
             this.kryptonPalette1.ButtonSpecs.FormMax.ImageStates.ImagePressed = global::GestionDeEnvios.Properties.Resources.maximizar;
             this.kryptonPalette1.ButtonSpecs.FormMax.ImageStates.ImageTracking = global::GestionDeEnvios.Properties.Resources.maximizar;
             this.kryptonPalette1.ButtonSpecs.FormMin.Image = global::GestionDeEnvios.Properties.Resources.minimizar;
@@ -51,6 +56,7 @@
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.kryptonPalette1.FormStyles.FormMain.StateCommon.Back.Color1 = System.Drawing.Color.GhostWhite;
+            this.kryptonPalette1.FormStyles.FormMain.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(252)))), ((int)(((byte)(250)))));
             this.kryptonPalette1.FormStyles.FormMain.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
@@ -71,6 +77,7 @@
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Sistema de Gestión de Envíos";
+            this.Load += new System.EventHandler(this.FormBase_Load);
             this.ResumeLayout(false);
 
         }

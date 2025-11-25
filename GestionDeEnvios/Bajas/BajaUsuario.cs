@@ -19,9 +19,10 @@ namespace GestionDeEnvios.Bajas
         }
 
         BLL.Usuario bllusuario = new BLL.Usuario();
-        private void eliminarBTN_Click(object sender, EventArgs e)
-        {
+ 
 
+        private void eliminarBTN_Click_1(object sender, EventArgs e)
+        {
             if (ValiacionesUtils.ValidarEntradaUsuario(this))
             {
                 BE.Usuario usuario = new BE.Usuario();
@@ -39,15 +40,12 @@ namespace GestionDeEnvios.Bajas
                     MessageBox.Show("Usuario eliminado exitosamente");
                 }
 
-                
+
             }
             else
             {
                 MessageBox.Show("Campos completados incorrectamente...\nPor favor vuelva a intentar.");
             }
-             
-            
-           
         }
     }
 }

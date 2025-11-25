@@ -21,7 +21,9 @@ namespace GestionDeEnvios.Modificaciones
             InitializeComponent();
         }
         BLL.Usuario bllusuario = new BLL.Usuario();
-        private void modificarUsuarioBTN_Click(object sender, EventArgs e)
+  
+
+        private void modificarUsuarioBTN_Click_1(object sender, EventArgs e)
         {
             try
             {
@@ -45,9 +47,9 @@ namespace GestionDeEnvios.Modificaciones
                         Documento = controlDocumento1.Texto,
                         TipoUsuario = tipoUsuarioCOMBOBOX.Text
                     };
-                      
-                   
-                    
+
+
+
                     fa = bllusuario.Editar(usuario);
                     if (fa == 0)
                     {
