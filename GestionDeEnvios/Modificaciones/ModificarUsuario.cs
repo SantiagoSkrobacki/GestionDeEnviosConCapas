@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml.Linq;
+using GestionDeEnvios.Controles;
 
 namespace GestionDeEnvios.Modificaciones
 {
@@ -21,16 +23,31 @@ namespace GestionDeEnvios.Modificaciones
         {
             try
             {
-                if (controlId1.ValidarRegex() && controlCodigoPostal1.ValidarRegex() && controlContraseña1.ValidarRegex() && controlDocumento1.ValidarRegex() && controlDomicilio1.ValidarRegex()
-                    && controlEmail1.ValidarRegex() && controlLocalidad1.ValidarRegex() && controlNombre1.ValidarRegex() && controlProvincia1.ValidarRegex() && controlTelefono1.ValidarRegex() &&
-                    tipoUsuarioCOMBOBOX.Items != null)
+                if (ValiacionesUtils.ValidarEntradaUsuario(this) && tipoUsuarioCOMBOBOX.Items != null)
                 {
                     int fa = 0;
-                    BE.Usuario usuario = new BE.Usuario(controlEmail1.Texto, controlContraseña1.Texto, controlNombre1.Texto, activoBOX.Checked, disponibleBOX.Checked, controlTelefono1.Texto, controlDomicilio1.Texto,
-                        controlLocalidad1.Texto, controlProvincia1.Texto, controlCodigoPostal1.Texto, controlDocumento1.Texto, tipoUsuarioCOMBOBOX.Text);
-                    usuario.Id = Convert.ToInt32(controlId1.Texto);
+
+                    BE.Usuario usuario = new BE.Usuario()
+                    {
+                        Id = int.Parse(controlId1.Texto),
+                        Email = controlEmail1.Texto,
+                        Password = controlContraseña1.Texto,
+                        Nombre = controlNombre1.Texto,
+                        Activo = activoBOX.Checked,
+                        Disponible = disponibleBOX.Checked,
+                        Telefono = controlTelefono1.Texto,
+                        Domicilio = controlDomicilio1.Texto,
+                        Localidad = controlLocalidad1.Texto,
+                        Provincia = controlProvincia1.Texto,
+                        CodigoPostal = controlCodigoPostal1.Texto,
+                        Documento = controlDocumento1.Texto,
+                        TipoUsuario = tipoUsuarioCOMBOBOX.Text
+                    };
+                      
+                   
+                    
                     fa = bllusuario.Editar(usuario);
-                    if (fa == -1)
+                    if (fa == 0)
                     {
                         MessageBox.Show("Error");
                     }
@@ -40,7 +57,7 @@ namespace GestionDeEnvios.Modificaciones
                     }
                 }
             }
-            catch (Exception)
+            catch (Exception ex)
             {
 
                 throw;

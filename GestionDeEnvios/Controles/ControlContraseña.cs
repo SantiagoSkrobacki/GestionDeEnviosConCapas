@@ -16,28 +16,14 @@ namespace GestionDeEnvios.Controles
         public ControlContraseña()
         {
             InitializeComponent();
+            patronRegex = "^.{6,20}$"; //Mínimo 6 caracteres, máximo 20. Acepta cualquier caracter.
         }
 
         private void ControlContraseña_Load(object sender, EventArgs e)
         {
 
         }
-        string patron = "^.{6,20}$"; //Mínimo 6 caracteres, máximo 20. Acepta cualquier caracter.
-        public bool ValidarRegex()
-        {
-            Regex regex = new Regex(patron);
-            if (regex.IsMatch(Texto))
-            {
-                this.textBox1.BackColor = Color.White;
-                errorLBL.Visible = false;
-                return true;
-            }
-            else
-            {
-                textBox1.BackColor = Color.LightPink;
-                errorLBL.Text = "Formato incorrecto. Maximo 20 caracteres";
-                return false;
-            }
-        }
+
+
     }
 }

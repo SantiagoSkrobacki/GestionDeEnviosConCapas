@@ -16,28 +16,14 @@ namespace GestionDeEnvios.Controles
         public ControlDomicilio()
         {
             InitializeComponent();
+            patronRegex = "^[a-zA-Z0-9ñÑáéíóúÁÉÍÓÚ\\s\\.,#-]+$"; // Letras, números, espacios, puntos, comas, guiones y #.
         }
 
         private void ControlDomicilio_Load(object sender, EventArgs e)
         {
 
         }
-        string patron = "^[a-zA-Z0-9ñÑáéíóúÁÉÍÓÚ\\s\\.,#-]+$"; // Letras, números, espacios, puntos, comas, guiones y #.
-        public bool ValidarRegex()
-        {
-            Regex regex = new Regex(patron);
-            if (regex.IsMatch(Texto))
-            {
-                this.textBox1.BackColor = Color.White;
-                errorLBL.Visible = false;
-                return true;
-            }
-            else
-            {
-                textBox1.BackColor = Color.LightPink;
-                errorLBL.Text = "Formato incorrecto";
-                return false;
-            }
-        }
+
+
     }
 }

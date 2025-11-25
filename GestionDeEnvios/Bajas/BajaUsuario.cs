@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using GestionDeEnvios.Controles;
 
 namespace GestionDeEnvios.Bajas
 {
@@ -20,21 +21,33 @@ namespace GestionDeEnvios.Bajas
         BLL.Usuario bllusuario = new BLL.Usuario();
         private void eliminarBTN_Click(object sender, EventArgs e)
         {
-            try
+
+            if (ValiacionesUtils.ValidarEntradaUsuario(this))
             {
-                if (controlId1.ValidarRegex())
+                BE.Usuario usuario = new BE.Usuario();
+                usuario.Id = Convert.ToInt32(controlId1.Texto);
+
+                int fa = 0;
+                fa = bllusuario.Eliminar(usuario);
+
+                if (fa == 0)
                 {
-                    BE.Usuario usuario = new BE.Usuario();
-                    usuario.Id = Convert.ToInt32(controlId1.Texto);
-                    bllusuario.Eliminar(usuario);
-                    MessageBox.Show("Usuario eliminado");
+                    MessageBox.Show("Error");
                 }
+                else
+                {
+                    MessageBox.Show("Usuario modificado con exito");
+                }
+
+                MessageBox.Show("Usuario eliminado");
             }
-            catch (Exception)
+            else
             {
-                MessageBox.Show("Error");
-                throw;
+                MessageBox.Show("Campos completados incorrectamente...\nPor favor vuelva a intentar.");
             }
+             
+            
+           
         }
     }
 }

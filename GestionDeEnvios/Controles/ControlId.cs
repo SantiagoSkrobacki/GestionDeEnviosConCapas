@@ -16,28 +16,14 @@ namespace GestionDeEnvios.Controles
         public ControlId()
         {
             InitializeComponent();
+            patronRegex = "^[1-9][0-9]*$"; // Mayor a 1
         }
-        string patron = "^[1-9][0-9]*$"; // Mayor a 1
+
         private void ControlId_Load(object sender, EventArgs e)
         {
 
         }
 
-        public bool ValidarRegex()
-        {
-            Regex regex = new Regex(patron);
-            if (regex.IsMatch(Texto))
-            {
-                this.textBox1.BackColor = Color.White;
-                errorLBL.Visible = false;
-                return true;
-            }
-            else
-            {
-                textBox1.BackColor = Color.LightPink;
-                errorLBL.Text = "El id debe ser mayor a 1";
-                return false;
-            }
-        }
+
     }
 }

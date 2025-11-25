@@ -16,28 +16,13 @@ namespace GestionDeEnvios.Controles
         public ControlNombre()
         {
             InitializeComponent();
+            patronRegex = "^[a-zA-ZñÑáéíóúÁÉÍÓÚ\\s]+$"; //Solo letras (incluye tildes y ñ) y espacios. Sin números ni símbolos.
         }
 
         private void ControlNombre_Load(object sender, EventArgs e)
         {
 
         }
-        string patron = "^[a-zA-ZñÑáéíóúÁÉÍÓÚ\\s]+$"; //Solo letras (incluye tildes y ñ) y espacios. Sin números ni símbolos.
-        public bool ValidarRegex()
-        {
-            Regex regex = new Regex(patron);
-            if (regex.IsMatch(Texto))
-            {
-                this.textBox1.BackColor = Color.White;
-                errorLBL.Visible = false;
-                return true;
-            }
-            else
-            {
-                textBox1.BackColor = Color.LightPink;
-                errorLBL.Text = "Formato incorrecto. Solo se permiten letras";
-                return false;
-            }
-        }
+
     }
 }

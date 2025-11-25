@@ -16,28 +16,12 @@ namespace GestionDeEnvios.Controles
         public ControlCodigoPostal()
         {
             InitializeComponent();
+            patronRegex = "^[a-zA-Z0-9]{4,8}$"; // Alfanumérico de 4 a 8 caracteres (sirve para CP viejo de 4 números o el nuevo CPA con letras)...
         }
 
         private void ControlCodigoPostal_Load(object sender, EventArgs e)
         {
 
         }
-        string patron = "^[a-zA-Z0-9]{4,8}$"; // Alfanumérico de 4 a 8 caracteres (sirve para CP viejo de 4 números o el nuevo CPA con letras)...
-        public bool ValidarRegex()
-        {
-            Regex regex = new Regex(patron);
-            if (regex.IsMatch(Texto))
-            {
-                this.textBox1.BackColor = Color.White;
-                errorLBL.Visible = false;
-                return true;
-            }
-            else
-            {
-                textBox1.BackColor = Color.LightPink;
-                errorLBL.Text = "Formato incorrecto";
-                return false;
-            }
-        }
     }
-}
+ }

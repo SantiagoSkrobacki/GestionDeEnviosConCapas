@@ -28,9 +28,9 @@ namespace GestionDeEnvios.Controles
                 if (!ok)
                 {
 
-                    this.SetearColor(System.Drawing.Color.Red);
+                    this.SetearColorTextBox(System.Drawing.Color.Red);
                 }
-                else { this.SetearColor(System.Drawing.Color.Black); }
+                else { this.SetearColorTextBox(System.Drawing.Color.Black); }
             }
 
             return ok;

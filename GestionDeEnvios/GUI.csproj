@@ -160,12 +160,7 @@
     <Compile Include="Controles\MiControlNumerico.Designer.cs">
       <DependentUpon>MiControlNumerico.cs</DependentUpon>
     </Compile>
-    <Compile Include="CrearEnvio.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="CrearEnvio.Designer.cs">
-      <DependentUpon>CrearEnvio.cs</DependentUpon>
-    </Compile>
+    <Compile Include="Controles\ValiacionesUtils.cs" />
     <Compile Include="FormPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>

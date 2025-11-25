@@ -16,6 +16,7 @@ namespace GestionDeEnvios.Controles
         public ControlProvincia()
         {
             InitializeComponent();
+            patronRegex = "^[a-zA-ZñÑáéíóúÁÉÍÓÚ\\s]+$"; // Solo letras y espacios..
         }
 
         private void ControlProvincia_Load(object sender, EventArgs e)
@@ -23,22 +24,6 @@ namespace GestionDeEnvios.Controles
 
         }
 
-        string patron = "^[a-zA-ZñÑáéíóúÁÉÍÓÚ\\s]+$"; // Solo letras y espacios..
-        public bool ValidarRegex()
-        {
-            Regex regex = new Regex(patron);
-            if (regex.IsMatch(Texto))
-            {
-                this.textBox1.BackColor = Color.White;
-                errorLBL.Visible = false;
-                return true;
-            }
-            else
-            {
-                textBox1.BackColor = Color.LightPink;
-                errorLBL.Text = "Formato incorrecto";
-                return false;
-            }
-        }
+
     }
 }

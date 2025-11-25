@@ -17,30 +17,15 @@ namespace GestionDeEnvios.Controles
         public ControlEmail()
         {
             InitializeComponent();
+            patronRegex = "^[\\w-\\.]+@([\\w-]+\\.)+[\\w-]{2,4}$"; //Formato estándar de correo (ej. usuario@dominio.com).
         }
 
-        string patron = "^[\\w-\\.]+@([\\w-]+\\.)+[\\w-]{2,4}$"; //Formato estándar de correo (ej. usuario@dominio.com).
+
         private void ControlId_Load(object sender, EventArgs e)
         {
 
         }
 
-        public bool ValidarRegex()
-        {
-            Regex regex = new Regex(patron);
-            if (regex.IsMatch(Texto))
-            {
-                this.textBox1.BackColor = Color.White;
-                errorLBL.Visible = false;
-                return true;
-            }
-            else
-            {
-                textBox1.BackColor = Color.LightPink;
-                errorLBL.Text = "Formato incorrecto";
-                return false;
-            }
-        }
 
     }
 }

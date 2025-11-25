@@ -2,11 +2,13 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using GestionDeEnvios.Controles;
 
 namespace GestionDeEnvios.Login
 {
@@ -26,27 +28,41 @@ namespace GestionDeEnvios.Login
         {
             try
             {
-                if (controlCodigoPostal1.ValidarRegex() && controlContraseña1.ValidarRegex() && controlDocumento1.ValidarRegex() && controlDomicilio1.ValidarRegex()
-                    && controlEmail1.ValidarRegex() && controlLocalidad1.ValidarRegex() && controlNombre1.ValidarRegex() && controlProvincia1.ValidarRegex() && controlTelefono1.ValidarRegex())
+                if (ValiacionesUtils.ValidarEntradaUsuario(this))
                 {
-                    int fa = 0;
-                    BE.Usuario usuario = new BE.Usuario(controlEmail1.Texto, controlContraseña1.Texto, controlNombre1.Texto, true , true , controlTelefono1.Texto, controlDomicilio1.Texto,
-                        controlLocalidad1.Texto, controlProvincia1.Texto, controlCodigoPostal1.Texto, controlDocumento1.Texto, "Cliente");
-                    fa = bllusuario.Agregar(usuario);
-                    if (fa == -1)
+                    
+                    BE.Usuario usuario = new BE.Usuario()
                     {
-                        MessageBox.Show("Error, ese mail ya existe");
-                    }
-                    else
-                    {
-                        MessageBox.Show("Usuario agregado con exito");
-                    }
+                        Email = controlEmail1.Texto, 
+                        Password = controlContraseña1.Texto,
+                        Nombre = controlNombre1.Texto,
+                        Activo = true ,
+                        Disponible = true , 
+                        Telefono = controlTelefono1.Texto, 
+                        Domicilio = controlDomicilio1.Texto,
+                        Localidad = controlLocalidad1.Texto,
+                        Provincia = controlProvincia1.Texto,
+                        CodigoPostal = controlCodigoPostal1.Texto,
+                        Documento = controlDocumento1.Texto,
+                        TipoUsuario = "Cliente" 
+                    };
+
+                    bllusuario.Agregar(usuario);
+
+                    MessageBox.Show("Usuario agregado con exito");
+
                 }
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-
-                throw;
+                if (ex is SqlException sqlEx && sqlEx.Number == (int)ValiacionesUtils.SqlErrorCode.UniqueConstraint)
+                {
+                    MessageBox.Show("Error, el mail utilizado ya posee un usuario asociado");
+                }
+                else
+                {
+                    MessageBox.Show($"EROR: {ex}");
+                }
             }
         }
     }
