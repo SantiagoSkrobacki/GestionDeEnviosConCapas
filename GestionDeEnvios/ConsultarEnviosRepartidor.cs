@@ -29,6 +29,11 @@ namespace GestionDeEnvios
             listaEnvios = bllusuario.ObtenerEnviosPorIdRepartidor(usuarioActual);
             enviosDGV.DataSource = listaEnvios;
             RefrescarDataGrid();
+            estado0FOT.Visible = false;
+            estado1FOT.Visible = false;
+            estado2FOT.Visible = false;
+            estadoFOT3.Visible = false;
+            estadoFOT4.Visible = false;
         }
 
         BE.Envio envioSeleccionado;
@@ -57,19 +62,30 @@ namespace GestionDeEnvios
                 case BE.EnumEstados.Asignado:
                     kryptonComboBox1.Items.Add(BE.EnumEstados.EnCamino.ToString());
                     kryptonComboBox1.Items.Add(BE.EnumEstados.Cancelado.ToString());
+                    estado1FOT.Visible = true;
+                    estado2FOT.Visible = false;
+                    estadoFOT3.Visible = false;
+                    estadoFOT4.Visible = false;
+
                     break;
 
                 case BE.EnumEstados.EnCamino:
                     kryptonComboBox1.Items.Add(BE.EnumEstados.Entregado.ToString());
                     kryptonComboBox1.Items.Add(BE.EnumEstados.Cancelado.ToString());
+                    estado2FOT.Visible = true;
+                    estadoFOT3.Visible = false;
+                    estadoFOT4.Visible = false;
                     break;
 
                 case BE.EnumEstados.Entregado:
                     kryptonComboBox1.Items.Add(BE.EnumEstados.Cancelado.ToString());
+                    estadoFOT3.Visible = true;
+                    estadoFOT4.Visible = false;
                     break;
 
                 case BE.EnumEstados.Cancelado:
-                    kryptonComboBox1.Enabled = false; 
+                    kryptonComboBox1.Enabled = false;
+                    estadoFOT4.Visible = true;
                     break;
             }
         }

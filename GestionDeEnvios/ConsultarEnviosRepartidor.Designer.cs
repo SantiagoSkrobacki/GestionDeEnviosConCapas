@@ -33,8 +33,18 @@
             this.estadoLBL = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.kryptonComboBox1 = new ComponentFactory.Krypton.Toolkit.KryptonComboBox();
             this.cambiarEstadoBTN = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.estado2FOT = new System.Windows.Forms.PictureBox();
+            this.estado1FOT = new System.Windows.Forms.PictureBox();
+            this.estado0FOT = new System.Windows.Forms.PictureBox();
+            this.estadoFOT3 = new System.Windows.Forms.PictureBox();
+            this.estadoFOT4 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.enviosDGV)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonComboBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.estado2FOT)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.estado1FOT)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.estado0FOT)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.estadoFOT3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.estadoFOT4)).BeginInit();
             this.SuspendLayout();
             // 
             // enviosDGV
@@ -111,11 +121,71 @@
             this.cambiarEstadoBTN.Values.Text = "Cambiar Estado";
             this.cambiarEstadoBTN.Click += new System.EventHandler(this.cambiarEstadoBTN_Click);
             // 
+            // estado2FOT
+            // 
+            this.estado2FOT.ErrorImage = global::GestionDeEnvios.Properties.Resources.estado0;
+            this.estado2FOT.Image = global::GestionDeEnvios.Properties.Resources.estado2;
+            this.estado2FOT.Location = new System.Drawing.Point(553, 332);
+            this.estado2FOT.Name = "estado2FOT";
+            this.estado2FOT.Size = new System.Drawing.Size(170, 90);
+            this.estado2FOT.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.estado2FOT.TabIndex = 10;
+            this.estado2FOT.TabStop = false;
+            // 
+            // estado1FOT
+            // 
+            this.estado1FOT.ErrorImage = global::GestionDeEnvios.Properties.Resources.estado0;
+            this.estado1FOT.Image = global::GestionDeEnvios.Properties.Resources.estado1;
+            this.estado1FOT.Location = new System.Drawing.Point(553, 332);
+            this.estado1FOT.Name = "estado1FOT";
+            this.estado1FOT.Size = new System.Drawing.Size(170, 90);
+            this.estado1FOT.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.estado1FOT.TabIndex = 9;
+            this.estado1FOT.TabStop = false;
+            // 
+            // estado0FOT
+            // 
+            this.estado0FOT.ErrorImage = global::GestionDeEnvios.Properties.Resources.estado0;
+            this.estado0FOT.Image = global::GestionDeEnvios.Properties.Resources.estado0;
+            this.estado0FOT.Location = new System.Drawing.Point(553, 332);
+            this.estado0FOT.Name = "estado0FOT";
+            this.estado0FOT.Size = new System.Drawing.Size(170, 90);
+            this.estado0FOT.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.estado0FOT.TabIndex = 8;
+            this.estado0FOT.TabStop = false;
+            // 
+            // estadoFOT3
+            // 
+            this.estadoFOT3.ErrorImage = global::GestionDeEnvios.Properties.Resources.estado0;
+            this.estadoFOT3.Image = global::GestionDeEnvios.Properties.Resources.estado3;
+            this.estadoFOT3.Location = new System.Drawing.Point(553, 332);
+            this.estadoFOT3.Name = "estadoFOT3";
+            this.estadoFOT3.Size = new System.Drawing.Size(170, 90);
+            this.estadoFOT3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.estadoFOT3.TabIndex = 11;
+            this.estadoFOT3.TabStop = false;
+            // 
+            // estadoFOT4
+            // 
+            this.estadoFOT4.ErrorImage = global::GestionDeEnvios.Properties.Resources.estado0;
+            this.estadoFOT4.Image = global::GestionDeEnvios.Properties.Resources.estado4;
+            this.estadoFOT4.Location = new System.Drawing.Point(553, 332);
+            this.estadoFOT4.Name = "estadoFOT4";
+            this.estadoFOT4.Size = new System.Drawing.Size(170, 90);
+            this.estadoFOT4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.estadoFOT4.TabIndex = 12;
+            this.estadoFOT4.TabStop = false;
+            // 
             // ConsultarEnviosRepartidor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.estadoFOT4);
+            this.Controls.Add(this.estadoFOT3);
+            this.Controls.Add(this.estado2FOT);
+            this.Controls.Add(this.estado1FOT);
+            this.Controls.Add(this.estado0FOT);
             this.Controls.Add(this.cambiarEstadoBTN);
             this.Controls.Add(this.kryptonComboBox1);
             this.Controls.Add(this.estadoLBL);
@@ -126,6 +196,11 @@
             this.Load += new System.EventHandler(this.ConsultarEnviosRepartidor_Load);
             ((System.ComponentModel.ISupportInitialize)(this.enviosDGV)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonComboBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.estado2FOT)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.estado1FOT)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.estado0FOT)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.estadoFOT3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.estadoFOT4)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -138,5 +213,10 @@
         private ComponentFactory.Krypton.Toolkit.KryptonLabel estadoLBL;
         private ComponentFactory.Krypton.Toolkit.KryptonComboBox kryptonComboBox1;
         private ComponentFactory.Krypton.Toolkit.KryptonButton cambiarEstadoBTN;
+        private System.Windows.Forms.PictureBox estado0FOT;
+        private System.Windows.Forms.PictureBox estado1FOT;
+        private System.Windows.Forms.PictureBox estado2FOT;
+        private System.Windows.Forms.PictureBox estadoFOT3;
+        private System.Windows.Forms.PictureBox estadoFOT4;
     }
 }

@@ -337,5 +337,23 @@
       <Name>BLL</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Image1.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\estado0.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\estado1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\estado2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\estado3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\estado4.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
