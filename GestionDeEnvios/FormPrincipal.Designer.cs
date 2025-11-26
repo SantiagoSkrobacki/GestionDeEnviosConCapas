@@ -34,8 +34,9 @@
             this.cerrarSesionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.envioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.agregarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.modificarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.eliminarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.agregarPaquetesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.asignarEnvioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.usuariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.agregarToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.modificarToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
@@ -45,6 +46,7 @@
             this.repartidorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.consultarEnvioToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.destinatarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.eliminarPaqueteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.consultarEnvioToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.generarXMLToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
@@ -94,8 +96,10 @@
             // 
             this.envioToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.agregarToolStripMenuItem,
-            this.modificarToolStripMenuItem,
-            this.eliminarToolStripMenuItem});
+            this.eliminarToolStripMenuItem,
+            this.agregarPaquetesToolStripMenuItem,
+            this.asignarEnvioToolStripMenuItem,
+            this.eliminarPaqueteToolStripMenuItem});
             this.envioToolStripMenuItem.Name = "envioToolStripMenuItem";
             this.envioToolStripMenuItem.Size = new System.Drawing.Size(48, 20);
             this.envioToolStripMenuItem.Text = "Envio";
@@ -104,7 +108,7 @@
             // agregarToolStripMenuItem
             // 
             this.agregarToolStripMenuItem.Name = "agregarToolStripMenuItem";
-            this.agregarToolStripMenuItem.Size = new System.Drawing.Size(125, 22);
+            this.agregarToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.agregarToolStripMenuItem.Text = "Agregar";
             this.agregarToolStripMenuItem.Click += new System.EventHandler(this.agregarToolStripMenuItem_Click);
             // 
@@ -118,9 +122,22 @@
             // eliminarToolStripMenuItem
             // 
             this.eliminarToolStripMenuItem.Name = "eliminarToolStripMenuItem";
-            this.eliminarToolStripMenuItem.Size = new System.Drawing.Size(125, 22);
-            this.eliminarToolStripMenuItem.Text = "Eliminar";
+            this.eliminarToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.eliminarToolStripMenuItem.Text = "Eliminar Envio";
             this.eliminarToolStripMenuItem.Click += new System.EventHandler(this.eliminarToolStripMenuItem_Click);
+            // 
+            // agregarPaquetesToolStripMenuItem
+            // 
+            this.agregarPaquetesToolStripMenuItem.Name = "agregarPaquetesToolStripMenuItem";
+            this.agregarPaquetesToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.agregarPaquetesToolStripMenuItem.Text = "Agregar Paquetes";
+            this.agregarPaquetesToolStripMenuItem.Click += new System.EventHandler(this.agregarPaquetesToolStripMenuItem_Click);
+            // 
+            // asignarEnvioToolStripMenuItem
+            // 
+            this.asignarEnvioToolStripMenuItem.Name = "asignarEnvioToolStripMenuItem";
+            this.asignarEnvioToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.asignarEnvioToolStripMenuItem.Text = "Asignar Envio";
             // 
             // usuariosToolStripMenuItem
             // 
@@ -207,6 +224,13 @@
             this.generarXMLToolStripMenuItem.Text = "Generar XML";
             this.generarXMLToolStripMenuItem.Click += new System.EventHandler(this.generarXMLToolStripMenuItem_Click);
             // 
+            // eliminarPaqueteToolStripMenuItem
+            // 
+            this.eliminarPaqueteToolStripMenuItem.Name = "eliminarPaqueteToolStripMenuItem";
+            this.eliminarPaqueteToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.eliminarPaqueteToolStripMenuItem.Text = "Eliminar Paquete";
+            this.eliminarPaqueteToolStripMenuItem.Click += new System.EventHandler(this.eliminarPaqueteToolStripMenuItem_Click);
+            // 
             // FormPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -232,7 +256,6 @@
         private System.Windows.Forms.ToolStripMenuItem envioToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem agregarToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem usuariosToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem modificarToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem eliminarToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem agregarToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem modificarToolStripMenuItem1;
@@ -246,6 +269,9 @@
         private System.Windows.Forms.ToolStripMenuItem cerrarSesionToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem destinatarioToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem agregarPaquetesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem asignarEnvioToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem eliminarPaqueteToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem consultarEnvioToolStripMenuItem2;
         private System.Windows.Forms.ToolStripMenuItem generarXMLToolStripMenuItem;
     }

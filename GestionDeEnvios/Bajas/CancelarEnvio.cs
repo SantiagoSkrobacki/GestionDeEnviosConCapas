@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace GestionDeEnvios.Modificaciones
+namespace GestionDeEnvios.Bajas
 {
-    public partial class ModificarEnvio : FormBase
+    public partial class CancelarEnvio : FormBase
     {
-        public ModificarEnvio()
+        public CancelarEnvio()
         {
             InitializeComponent();
         }

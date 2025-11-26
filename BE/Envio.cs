@@ -16,9 +16,9 @@ namespace BE
         private DateTime fechaDespacho;
         private DateTime fechaEntrega;
         private DateTime fechaCancelacion;
-        private Usuario cliente;
-        private Usuario repartidor;
-        private Usuario destinatario;
+        private Usuario cliente = new Usuario();
+        private Usuario repartidor = new Usuario();
+        private Usuario destinatario = new Usuario();
         private string documentoDestinatario;
         private string telefonoDestinatario;
         private string nombreDestinatario;
@@ -29,7 +29,7 @@ namespace BE
         public decimal Costo
         {
             get { return costo; }
-            set { costo = value; }
+            set { costo = value; } 
         }
         public string DocumentoDestinatario
         {
@@ -37,11 +37,10 @@ namespace BE
             set { documentoDestinatario = value; }
         }
 
-
         public string TelefonoDestinatario
         {
             get { return destinatario.Telefono; }
-            set { telefonoDestinatario = value; }
+            set { destinatario.Telefono = value; }
         }
 
         public string NombreDestinatario
@@ -67,11 +66,13 @@ namespace BE
             set { paquetes = value; }
         }
 
+
         public int CodigoSeguimiento
         {
             get { return codigoSeguimiento; }
             set { codigoSeguimiento = value; }
         }
+     
 
         public EnumEstados Estado
         {
@@ -107,13 +108,7 @@ namespace BE
             get { return fechaCancelacion; }
             set { fechaCancelacion = value; }
         }
-     /*   public string Destino
-        {
-            get { return destino; }
-            set { destino = value; }
-        }*/
-
-        public Usuario Cliente
+        public Usuario Cliente 
         {
             get { return cliente; }
             set { cliente = value; }

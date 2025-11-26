@@ -13,7 +13,6 @@ namespace BE
         private string password;
         private string nombre;
         private bool activo;
-   
         private string telefono;
         private string domicilio;
         private string localidad;
@@ -25,7 +24,7 @@ namespace BE
         public Usuario() { }
 
        
-        public Usuario(string email, string password, string nombre, bool activo,
+        public Usuario(string email, string password, string nombre, bool activo, 
                        string telefono, string domicilio, string localidad, string provincia,
                        string codigoPostal, string documento, string tipoUsuario)
         {
@@ -77,7 +76,7 @@ namespace BE
             set { telefono = value; }
         }
 
-  
+
         public string Domicilio
         {
             get { return domicilio; }

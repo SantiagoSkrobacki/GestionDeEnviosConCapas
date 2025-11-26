@@ -1,6 +1,6 @@
 ﻿namespace GestionDeEnvios.Modificaciones
 {
-    partial class ModificarEnvio
+    partial class ModificarEstadoEnvio
     {
         /// <summary>
         /// Required designer variable.
@@ -28,10 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.SuspendLayout();
+            // 
+            // ModificarEstadoEnvio
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "ModificarEnvio";
+            this.Name = "ModificarEstadoEnvio";
+            this.Text = "Modificar Estado Envio";
+            this.ResumeLayout(false);
+
         }
 
         #endregion

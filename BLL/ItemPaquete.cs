@@ -10,6 +10,9 @@ namespace BLL
 {
     public class ItemPaquete : IBll<BE.ItemPaquete>
     {
+        private const decimal PRECIO_POR_KILO = 1200;
+        private const decimal PRECIO_POR_KILO_FRAGIL = 2000;
+
         DAL.MpItemPaquete mapper = new DAL.MpItemPaquete();
 
         public int Agregar(BE.ItemPaquete itempaquete)
@@ -27,6 +30,22 @@ namespace BLL
             return mapper.Eliminar(itempaquete);
         }
 
-   
+        public decimal CalcularCosto(BE.ItemPaquete paquete)
+        {
+            if (paquete.Fragil)
+            {
+                return paquete.Peso * PRECIO_POR_KILO_FRAGIL;
+            }
+            else
+            {
+                return paquete.Peso * PRECIO_POR_KILO;
+            }
+
+        }
+
+        public List<BE.ItemPaquete> ObtenerPaquetesEnvio(int envioId)
+        {
+            return mapper.ObtenerPaquetesEnvio(envioId);
+        }
     }
 }

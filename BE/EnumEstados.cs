@@ -12,6 +12,7 @@ namespace BE
             Asignado = 1,
             EnCamino = 2,
             Entregado = 3,
-            Cancelado = 4
+            Cancelado = 4,
+            Empaquetable = 5
         }
 }

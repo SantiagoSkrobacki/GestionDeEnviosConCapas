@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
@@ -47,6 +48,31 @@ namespace DAL
             return fa;
         }
 
-      
+        public List<BE.ItemPaquete> ObtenerPaquetesEnvio(int envioId)
+        {
+            DataTable dataTable = new DataTable();
+            List<BE.ItemPaquete> paquetes = new List<BE.ItemPaquete>();
+            SqlParameter[] parametros = new SqlParameter[1];
+            parametros[0] = new SqlParameter("EnvioId", envioId);
+
+            dataTable = acc.Leer("ObtenerPaquetesEnvio", parametros);
+
+            foreach (DataRow row in dataTable.Rows)
+            {
+                BE.ItemPaquete paquete = new BE.ItemPaquete();
+
+                paquete.Id = Convert.ToInt32(row["Id"]);
+                paquete.IdEnvio = Convert.ToInt32(row["EnvioId"]);
+                paquete.Descripcion = row["Descripcion"].ToString();
+                paquete.Peso = Convert.ToDecimal(row["Peso"]);
+                paquete.Costo = Convert.ToDecimal(row["Costo"]);
+                paquete.Fragil = (bool)row["Fragil"];
+             
+
+                paquetes.Add(paquete);
+            }
+
+            return paquetes;
+        }
     }
 }

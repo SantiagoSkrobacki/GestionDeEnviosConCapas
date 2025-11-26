@@ -1,6 +1,6 @@
 ﻿namespace GestionDeEnvios.Bajas
 {
-    partial class BajaEnvio
+    partial class CancelarEnvio
     {
         /// <summary>
         /// Required designer variable.

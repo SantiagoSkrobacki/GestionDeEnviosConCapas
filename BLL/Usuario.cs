@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using DAL;
 
 namespace BLL
 {
@@ -45,6 +46,15 @@ namespace BLL
             {
                 return null; 
             }
+        }
+
+        public List<BE.Usuario> ObtenerClientesActivos()
+        {
+            return  mapper.ObtenerClientesActivos();
+        }
+        public List<BE.Usuario> ObtenerDestinatariosActivos()
+        {
+            return mapper.ObtenerDestinatariosActivos();
         }
 
         public List<BE.Envio> ObtenerEnviosPorIdRepartidor(BE.Usuario usuario)

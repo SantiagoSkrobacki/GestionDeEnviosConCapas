@@ -42,6 +42,7 @@ namespace GestionDeEnvios.Login
         private void registrarseBTN_Click_1(object sender, EventArgs e)
         {
             Registrarse registrarse = new Registrarse();
+            registrarse.MdiParent = this.MdiParent;
             registrarse.Show();
         }
     }

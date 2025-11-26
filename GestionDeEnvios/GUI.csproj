@@ -61,6 +61,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Altas\AltaItemPaquete.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Altas\AltaItemPaquete.Designer.cs">
+      <DependentUpon>AltaItemPaquete.cs</DependentUpon>
+    </Compile>
     <Compile Include="Altas\AltaRepartidor.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -85,11 +91,17 @@
     <Compile Include="AsignarRepartidorEnvio.Designer.cs">
       <DependentUpon>AsignarRepartidorEnvio.cs</DependentUpon>
     </Compile>
-    <Compile Include="Bajas\BajaEnvio.cs">
+    <Compile Include="Bajas\CancelarEnvio.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Bajas\BajaEnvio.Designer.cs">
-      <DependentUpon>BajaEnvio.cs</DependentUpon>
+    <Compile Include="Bajas\CancelarEnvio.Designer.cs">
+      <DependentUpon>CancelarEnvio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Bajas\BajaItemPaquete.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Bajas\BajaItemPaquete.Designer.cs">
+      <DependentUpon>BajaItemPaquete.cs</DependentUpon>
     </Compile>
     <Compile Include="Bajas\BajaUsuario.cs">
       <SubType>Form</SubType>
@@ -212,11 +224,11 @@
     <Compile Include="Login\Registrarse.Designer.cs">
       <DependentUpon>Registrarse.cs</DependentUpon>
     </Compile>
-    <Compile Include="Modificaciones\ModificarEnvio.cs">
+    <Compile Include="Modificaciones\ModificarEstadoEnvio.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Modificaciones\ModificarEnvio.Designer.cs">
-      <DependentUpon>ModificarEnvio.cs</DependentUpon>
+    <Compile Include="Modificaciones\ModificarEstadoEnvio.Designer.cs">
+      <DependentUpon>ModificarEstadoEnvio.cs</DependentUpon>
     </Compile>
     <Compile Include="Modificaciones\ModificarUsuario.cs">
       <SubType>Form</SubType>
@@ -235,8 +247,14 @@
     <EmbeddedResource Include="Altas\AltaEnvio.resx">
       <DependentUpon>AltaEnvio.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Altas\AltaItemPaquete.resx">
+      <DependentUpon>AltaItemPaquete.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Altas\AltaUsuario.resx">
       <DependentUpon>AltaUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Bajas\BajaItemPaquete.resx">
+      <DependentUpon>BajaItemPaquete.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Bajas\BajaUsuario.resx">
       <DependentUpon>BajaUsuario.cs</DependentUpon>
@@ -297,6 +315,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Login\Registrarse.resx">
       <DependentUpon>Registrarse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modificaciones\ModificarEstadoEnvio.resx">
+      <DependentUpon>ModificarEstadoEnvio.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Modificaciones\ModificarUsuario.resx">
       <DependentUpon>ModificarUsuario.cs</DependentUpon>

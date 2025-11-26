@@ -32,14 +32,14 @@ namespace GestionDeEnvios
 
         private void modificarToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            ModificarEnvio modificarEnvio = new ModificarEnvio();
+            ModificarEstadoEnvio modificarEnvio = new ModificarEstadoEnvio();
             modificarEnvio.MdiParent = this;
             modificarEnvio.Show();
         }
 
         private void eliminarToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            BajaEnvio bajaEnvio = new BajaEnvio();
+            CancelarEnvio bajaEnvio = new CancelarEnvio();
             bajaEnvio.MdiParent = this;
             bajaEnvio.Show();
         }
@@ -136,6 +136,20 @@ namespace GestionDeEnvios
         private void kryptonGroup1_Panel_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void agregarPaquetesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AltaItemPaquete altaItemPaquete = new AltaItemPaquete();
+            altaItemPaquete.MdiParent = this;
+            altaItemPaquete.Show();
+        }
+
+        private void eliminarPaqueteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            BajaItemPaquete bajaItemPaquete = new BajaItemPaquete();
+            bajaItemPaquete.MdiParent = this;
+            bajaItemPaquete.Show();
         }
 
         private void clienteToolStripMenuItem_Click(object sender, EventArgs e)

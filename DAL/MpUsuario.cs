@@ -5,6 +5,7 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Linq;
 using BE;
 
 namespace DAL
@@ -34,18 +35,19 @@ namespace DAL
 
         public int Editar(Usuario parametro)
         {
-            SqlParameter[] parametros = new SqlParameter[13];
+            SqlParameter[] parametros = new SqlParameter[12];
             parametros[0] = new SqlParameter("Id", parametro.Id);
             parametros[1] = new SqlParameter("Email", parametro.Email);
             parametros[2] = new SqlParameter("Password", parametro.Password);
             parametros[3] = new SqlParameter("Nombre", parametro.Nombre);
             parametros[4] = new SqlParameter("Activo", parametro.Activo);
-            parametros[6] = new SqlParameter("Telefono", parametro.Telefono);
-            parametros[7] = new SqlParameter("Domicilio", parametro.Domicilio);
-            parametros[8] = new SqlParameter("Localidad", parametro.Localidad);
-            parametros[9] = new SqlParameter("Provincia", parametro.Provincia);
-            parametros[10] = new SqlParameter("CodigoPostal", parametro.CodigoPostal);
-            parametros[11] = new SqlParameter("Documento", parametro.Documento);
+            parametros[5] = new SqlParameter("Telefono", parametro.Telefono);
+            parametros[6] = new SqlParameter("Domicilio", parametro.Domicilio);
+            parametros[7] = new SqlParameter("Localidad", parametro.Localidad);
+            parametros[8] = new SqlParameter("Provincia", parametro.Provincia);
+            parametros[9] = new SqlParameter("CodigoPostal", parametro.CodigoPostal);
+            parametros[10] = new SqlParameter("Documento", parametro.Documento);
+            parametros[11] = new SqlParameter("TipoUsuario", parametro.TipoUsuario);
             parametros[12] = new SqlParameter("TipoUsuario", parametro.TipoUsuario);
             return acc.Escribir("ModificarUsuario", parametros);
         }
@@ -71,6 +73,58 @@ namespace DAL
                 usuario.Id = Convert.ToInt32(row["Id"]);
             }
             return usuario;
+
+
+        public List<BE.Usuario>  ObtenerClientesActivos()
+        {
+            DataTable dataTable = new DataTable();
+            List<BE.Usuario> usuarios = new List<BE.Usuario>();
+            dataTable = acc.Leer("ObtenerClientesActivos", null);
+
+            foreach (DataRow row in dataTable.Rows)
+            {
+                BE.Usuario usuario = new BE.Usuario();
+                usuario.Id = Convert.ToInt32(row["Id"]);
+                usuario.Email = row["Email"].ToString();
+                usuario.Password = row["Password"].ToString();
+                usuario.Nombre = row["Nombre"].ToString();
+                usuario.Activo = Convert.ToBoolean(row["Activo"]);
+                usuario.Telefono = row["Telefono"].ToString();
+                usuario.Domicilio = row["Domicilio"].ToString();
+                usuario.Localidad = row["Localidad"].ToString();
+                usuario.Provincia = row["Provincia"].ToString();
+                usuario.CodigoPostal = row["CodigoPostal"].ToString();
+                usuario.Documento = row["Documento"].ToString();
+                usuario.TipoUsuario = row["TipoUsuario"].ToString();
+                usuarios.Add(usuario);
+            }
+            return usuarios;
+        }
+
+        public List<BE.Usuario> ObtenerDestinatariosActivos()
+        {
+            DataTable dataTable = new DataTable();
+            List<BE.Usuario> usuarios = new List<BE.Usuario>();
+            dataTable = acc.Leer("ObtenerDestinatariosActivos", null);
+
+            foreach (DataRow row in dataTable.Rows)
+            {
+                BE.Usuario usuario = new BE.Usuario();
+                usuario.Id = Convert.ToInt32(row["Id"]);
+                usuario.Email = row["Email"].ToString();
+                usuario.Password = row["Password"].ToString();
+                usuario.Nombre = row["Nombre"].ToString();
+                usuario.Activo = Convert.ToBoolean(row["Activo"]);
+                usuario.Telefono = row["Telefono"].ToString();
+                usuario.Domicilio = row["Domicilio"].ToString();
+                usuario.Localidad = row["Localidad"].ToString();
+                usuario.Provincia = row["Provincia"].ToString();
+                usuario.CodigoPostal = row["CodigoPostal"].ToString();
+                usuario.Documento = row["Documento"].ToString();
+                usuario.TipoUsuario = row["TipoUsuario"].ToString();
+                usuarios.Add(usuario);
+            }
+            return usuarios;
         }
 
         public BE.Usuario ObtenerUsuarioPorId(int id)
@@ -211,5 +265,6 @@ namespace DAL
             acc.EscribirUsuariosEnXML(dt);
         }
 
+        }
     }
 }

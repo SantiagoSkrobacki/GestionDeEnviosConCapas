@@ -29,6 +29,17 @@ namespace BLL
         {
             return mapper.Eliminar(envio);
         }
+
+        public List<BE.Envio> ObtenerEnviosCreados()
+        {
+            return mapper.ObtenerEnviosCreados();
+        }
+
+        public List<BE.Envio> ObtenerEnviosConPaquetes()
+        {
+            return mapper.ObtenerEnviosConPaquetes();
+        }
+
     }
 
 }
