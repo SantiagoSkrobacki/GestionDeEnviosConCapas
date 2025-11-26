@@ -30,12 +30,14 @@
         {
             this.controlIdEnvio = new GestionDeEnvios.Controles.ControlId();
             this.btnEliminar = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.enviosDGV = new ComponentFactory.Krypton.Toolkit.KryptonDataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.enviosDGV)).BeginInit();
             this.SuspendLayout();
             // 
             // controlIdEnvio
             // 
             this.controlIdEnvio.Etiqueta = "ID Envio";
-            this.controlIdEnvio.Location = new System.Drawing.Point(315, 45);
+            this.controlIdEnvio.Location = new System.Drawing.Point(376, 40);
             this.controlIdEnvio.Margin = new System.Windows.Forms.Padding(4);
             this.controlIdEnvio.Name = "controlIdEnvio";
             this.controlIdEnvio.Size = new System.Drawing.Size(828, 69);
@@ -44,7 +46,7 @@
             // 
             // btnEliminar
             // 
-            this.btnEliminar.Location = new System.Drawing.Point(548, 139);
+            this.btnEliminar.Location = new System.Drawing.Point(609, 134);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.OverrideDefault.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
             this.btnEliminar.OverrideDefault.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
@@ -80,15 +82,30 @@
             this.btnEliminar.Values.Text = "Eliminar";
             this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
+            // enviosDGV
+            // 
+            this.enviosDGV.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.enviosDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.enviosDGV.Location = new System.Drawing.Point(12, 221);
+            this.enviosDGV.Name = "enviosDGV";
+            this.enviosDGV.RowHeadersWidth = 51;
+            this.enviosDGV.RowTemplate.Height = 24;
+            this.enviosDGV.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.enviosDGV.Size = new System.Drawing.Size(1458, 456);
+            this.enviosDGV.TabIndex = 7;
+            this.enviosDGV.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.enviosDGV_CellClick);
+            // 
             // BajaEnvio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1482, 801);
+            this.ClientSize = new System.Drawing.Size(1482, 699);
+            this.Controls.Add(this.enviosDGV);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.controlIdEnvio);
             this.Name = "BajaEnvio";
             this.Text = "BajaEnvio";
+            ((System.ComponentModel.ISupportInitialize)(this.enviosDGV)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -97,5 +114,6 @@
 
         private Controles.ControlId controlIdEnvio;
         private ComponentFactory.Krypton.Toolkit.KryptonButton btnEliminar;
+        private ComponentFactory.Krypton.Toolkit.KryptonDataGridView enviosDGV;
     }
 }

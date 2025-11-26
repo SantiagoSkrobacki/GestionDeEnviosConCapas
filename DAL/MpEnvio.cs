@@ -246,6 +246,10 @@ namespace DAL
             foreach(DataRow row in dt.Rows)
             {
                 BE.Envio envio = new BE.Envio();
+                if (row.Table.Columns.Contains("costo"))
+                    envio.Costo = row["costo"] == DBNull.Value ? 0 : Convert.ToDecimal(row["costo"]);
+                envio.CodigoSeguimiento = Convert.ToInt32(row["CodigoSeguimiento"]);
+                envio.Estado = (EnumEstados)Convert.ToInt32(row["Estado"]);
                 envio.Cliente = new BE.Usuario();
                 envio.Cliente.Id = Convert.ToInt32(row["IdCliente"]);
                 envio.Cliente.Nombre = row["ClienteNombre"].ToString(); 

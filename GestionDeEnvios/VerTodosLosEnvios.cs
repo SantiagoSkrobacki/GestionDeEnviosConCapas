@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace GestionDeEnvios
 {
-    public partial class VerTodosLosEnvios : Form
+    public partial class VerTodosLosEnvios : FormBase
     {
         public VerTodosLosEnvios()
         {

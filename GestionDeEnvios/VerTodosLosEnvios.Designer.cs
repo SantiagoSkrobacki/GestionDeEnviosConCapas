@@ -34,19 +34,23 @@
             // 
             // enviosDGV
             // 
+            this.enviosDGV.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.enviosDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.enviosDGV.Location = new System.Drawing.Point(12, 12);
+            this.enviosDGV.Location = new System.Drawing.Point(16, 15);
+            this.enviosDGV.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.enviosDGV.Name = "enviosDGV";
+            this.enviosDGV.RowHeadersWidth = 51;
             this.enviosDGV.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.enviosDGV.Size = new System.Drawing.Size(776, 285);
+            this.enviosDGV.Size = new System.Drawing.Size(1422, 442);
             this.enviosDGV.TabIndex = 3;
             // 
             // VerTodosLosEnvios
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1451, 554);
             this.Controls.Add(this.enviosDGV);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "VerTodosLosEnvios";
             this.Text = "VerTodosLosEnvios";
             this.Load += new System.EventHandler(this.VerTodosLosEnvios_Load);
