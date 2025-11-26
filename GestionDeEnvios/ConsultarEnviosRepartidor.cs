@@ -18,17 +18,12 @@ namespace GestionDeEnvios
         BLL.Envio bllenvio = new BLL.Envio();
         BLL.ItemPaquete bllItempaquete = new BLL.ItemPaquete();
         
+        private BE.Envio envioActual = new BE.Envio();
         public ConsultarEnviosRepartidor(Usuario usuario)
         {
             usuarioActual = usuario;
             InitializeComponent();
-        }
 
-        List<BE.Envio> listaEnvios = new List<BE.Envio>();
-        private void ConsultarEnviosRepartidor_Load(object sender, EventArgs e)
-        {
-            listaEnvios = bllenvio.ObtenerEnviosPorIdRepartidor(usuarioActual);
-            enviosDGV.DataSource = listaEnvios;
             RefrescarDataGrid();
             estado0FOT.Visible = false;
             estado1FOT.Visible = false;
@@ -37,23 +32,24 @@ namespace GestionDeEnvios
             estadoFOT4.Visible = false;
         }
 
-        BE.Envio envioSeleccionado;
+        List<BE.Envio> listaEnvios = new List<BE.Envio>();
+        private void ConsultarEnviosRepartidor_Load(object sender, EventArgs e)
+        {
+
+           
+        }
+
+      
         private void enviosDGV_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.RowIndex >= 0)
-            {
-               
-                envioSeleccionado = (BE.Envio)enviosDGV.Rows[e.RowIndex].DataBoundItem;
-                estadoLBL.Text = envioSeleccionado.Estado.ToString();
-                CargarOpcionesEstado(envioSeleccionado);
-            }
+           
         }
 
         private void CargarOpcionesEstado(BE.Envio envio)
         {
             BE.EnumEstados estadoActual = envio.Estado;
-            kryptonComboBox1.Items.Clear();
-            kryptonComboBox1.Text = "";
+            ComboBoxEstados.Items.Clear();
+            ComboBoxEstados.Text = "";
             estadoLBL.Text = estadoActual.ToString();
 
 
@@ -61,8 +57,8 @@ namespace GestionDeEnvios
             {
                 case BE.EnumEstados.Creado:
                 case BE.EnumEstados.Asignado:
-                    kryptonComboBox1.Items.Add(BE.EnumEstados.EnCamino.ToString());
-                    kryptonComboBox1.Items.Add(BE.EnumEstados.Cancelado.ToString());
+                    ComboBoxEstados.Items.Add(BE.EnumEstados.EnCamino.ToString());
+                    ComboBoxEstados.Items.Add(BE.EnumEstados.Cancelado.ToString());
                     estado1FOT.Visible = true;
                     estado2FOT.Visible = false;
                     estadoFOT3.Visible = false;
@@ -71,21 +67,27 @@ namespace GestionDeEnvios
                     break;
 
                 case BE.EnumEstados.EnCamino:
-                    kryptonComboBox1.Items.Add(BE.EnumEstados.Entregado.ToString());
-                    kryptonComboBox1.Items.Add(BE.EnumEstados.Cancelado.ToString());
+                    ComboBoxEstados.Items.Add(BE.EnumEstados.Entregado.ToString());
+                    ComboBoxEstados.Items.Add(BE.EnumEstados.Cancelado.ToString());
+                    estado1FOT.Visible = false;
                     estado2FOT.Visible = true;
                     estadoFOT3.Visible = false;
                     estadoFOT4.Visible = false;
                     break;
 
                 case BE.EnumEstados.Entregado:
-                    kryptonComboBox1.Items.Add(BE.EnumEstados.Cancelado.ToString());
+                    ComboBoxEstados.Items.Add(BE.EnumEstados.Cancelado.ToString());
+                    estado1FOT.Visible = false;
+                    estado2FOT.Visible = false;
                     estadoFOT3.Visible = true;
                     estadoFOT4.Visible = false;
                     break;
 
                 case BE.EnumEstados.Cancelado:
-                    kryptonComboBox1.Enabled = false;
+                    ComboBoxEstados.Enabled = false;
+                    estado1FOT.Visible = false;
+                    estado2FOT.Visible = false;
+                    estadoFOT3.Visible = false;
                     estadoFOT4.Visible = true;
                     break;
             }
@@ -100,30 +102,57 @@ namespace GestionDeEnvios
         {
             try
             {
-                if (envioSeleccionado == null) return;
+                if (envioActual != null)
+                {
+                   
 
-                // 1. Obtener el estado del combo
-                BE.EnumEstados nuevoEstado = (BE.EnumEstados)Enum.Parse(typeof(BE.EnumEstados), kryptonComboBox1.Text);
+                    if(ComboBoxEstados.Text != "")
+                    {
+                        BE.EnumEstados nuevoEstado = (BE.EnumEstados)Enum.Parse(typeof(BE.EnumEstados), ComboBoxEstados.Text);
 
-                // 2. Mandar la orden 
-                bllenvio.CambiarEstado(envioSeleccionado.CodigoSeguimiento, nuevoEstado);
 
-                MessageBox.Show("Estado actualizado correctamente.");
+                        bllenvio.CambiarEstado(envioActual.CodigoSeguimiento, nuevoEstado);
 
-                // 3. Recargar la grilla 
-                RefrescarDataGrid();
+                        string nuevoEstadoString = nuevoEstado.ToString();
+
+                        estadoLBL.Text = nuevoEstadoString;
+
+                        envioActual.Estado = nuevoEstado;
+
+                        CargarOpcionesEstado(envioActual);
+
+                        if (nuevoEstadoString == "Asignado")
+
+
+
+                            MessageBox.Show("Estado actualizado correctamente.");
+
+                        RefrescarDataGrid();
+                        
+                    }
+                    else
+                    {
+                        MessageBox.Show("Por favor seleccione un Estado primero.");
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Por favor seleccione un envio primero.");
+                }
+                    
+
+
             }
-            catch (Exception)
+            catch (Exception ex)
             {
 
-                throw;
+                MessageBox.Show("ERROR: "+ ex);
             }
         }
 
         private void RefrescarDataGrid()
         {
             enviosDGV.DataSource = null;
-            BLL.Envio bll = new BLL.Envio();
             enviosDGV.DataSource = bllenvio.ObtenerEnviosPorIdRepartidor(usuarioActual);
             enviosDGV.Columns["Cliente"].Visible = false;
             enviosDGV.Columns["Repartidor"].Visible = false;
@@ -138,6 +167,19 @@ namespace GestionDeEnvios
         private void escribirXMLBTN_Click(object sender, EventArgs e)
         {
                        
+        }
+
+        private void enviosDGV_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                BE.Envio envioTmp = new BE.Envio();
+                envioTmp = (BE.Envio)enviosDGV.Rows[e.RowIndex].DataBoundItem;
+                envioActual = envioTmp;
+
+                estadoLBL.Text = envioTmp.Estado.ToString();
+                CargarOpcionesEstado(envioTmp);
+            }
         }
     }
 }

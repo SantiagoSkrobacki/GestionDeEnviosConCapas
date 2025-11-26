@@ -23,20 +23,22 @@ namespace GestionDeEnvios
         {
             usuarioActual = usuario;
             InitializeComponent();
+            refrescarGrid();
         }
 
-        private void ConsultarEnviosCliente_Load(object sender, EventArgs e)
+        private void refrescarGrid()
         {
             listaEnvios = bllenvio.ObtenerEnviosPorIdCliente(usuarioActual);
             enviosDGV.DataSource = listaEnvios;
             enviosDGV.Columns["Cliente"].Visible = false;
             enviosDGV.Columns["Repartidor"].Visible = false;
             enviosDGV.Columns["Destinatario"].Visible = false;
-            enviosDGV.Columns["fechaCreacion"].Visible = false;
-            enviosDGV.Columns["fechaAsignacion"].Visible = false;
-            enviosDGV.Columns["fechaDespacho"].Visible = false;
-            enviosDGV.Columns["fechaEntrega"].Visible = false;
-            enviosDGV.Columns["fechaCancelacion"].Visible = false;
+            enviosDGV.Columns["costo"].Visible = false;
+            //  enviosDGV.Columns["fechaCreacion"].Visible = false;
+             enviosDGV.Columns["fechaAsignacion"].Visible = false;
+            // enviosDGV.Columns["fechaDespacho"].Visible = false;
+            //enviosDGV.Columns["fechaEntrega"].Visible = false;
+            //  enviosDGV.Columns["fechaCancelacion"].Visible = false;
 
             estado0FOT.Visible = false;
             estado1FOT.Visible = false;
@@ -44,16 +46,14 @@ namespace GestionDeEnvios
             estadoFOT3.Visible = false;
             estadoFOT4.Visible = false;
         }
+        private void ConsultarEnviosCliente_Load(object sender, EventArgs e)
+        {
+            
+        }
         BE.Envio envioSeleccionado;
         private void enviosDGV_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.RowIndex >= 0)
-            {
-
-                envioSeleccionado = (BE.Envio)enviosDGV.Rows[e.RowIndex].DataBoundItem;
-                estadoLBL.Text = envioSeleccionado.Estado.ToString();
-                CargarOpcionesEstado(envioSeleccionado);
-            }
+           
         }
 
         private void CargarOpcionesEstado(BE.Envio envio)
@@ -65,35 +65,50 @@ namespace GestionDeEnvios
             switch (estadoActual)
             {
                 case BE.EnumEstados.Creado:
-                    estado0FOT.Visible = true;
-                    estado1FOT.Visible = false;
-                    estado2FOT.Visible = false;
-                    estadoFOT3.Visible = false;
-                    estadoFOT4.Visible = false;
-                    break;
                 case BE.EnumEstados.Asignado:
                     estado1FOT.Visible = true;
                     estado2FOT.Visible = false;
                     estadoFOT3.Visible = false;
                     estadoFOT4.Visible = false;
-
                     break;
 
-                case BE.EnumEstados.EnCamino:
+                case BE.EnumEstados.EnCamino: 
+                    estado1FOT.Visible = false;
                     estado2FOT.Visible = true;
                     estadoFOT3.Visible = false;
                     estadoFOT4.Visible = false;
                     break;
 
-                case BE.EnumEstados.Entregado:
+                case BE.EnumEstados.Entregado:  
+                    estado1FOT.Visible = false;
+                    estado2FOT.Visible = false;
                     estadoFOT3.Visible = true;
                     estadoFOT4.Visible = false;
                     break;
 
                 case BE.EnumEstados.Cancelado:
+                    estado1FOT.Visible = false;
+                    estado2FOT.Visible = false;
+                    estadoFOT3.Visible = false;
                     estadoFOT4.Visible = true;
                     break;
             }
         }
+
+        private void enviosDGV_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                envioSeleccionado = (BE.Envio)enviosDGV.Rows[e.RowIndex].DataBoundItem;
+                estadoLBL.Text = envioSeleccionado.Estado.ToString();
+                CargarOpcionesEstado(envioSeleccionado);
+            }
+        }
+
+        private void btnActualizar_Click(object sender, EventArgs e)
+        {
+            refrescarGrid();
+        }
     }
-}
+    }
+

@@ -153,7 +153,10 @@ namespace DAL
             dataTable = acc.Leer("ObtenerEnviosPorIdRepartidor", parametros);
             foreach (DataRow row in dataTable.Rows)
             {
-                BE.Envio envio = new BE.Envio();                
+                BE.Envio envio = new BE.Envio();
+                envio.CodigoSeguimiento = Convert.ToInt32(row["CodigoSeguimiento"]);
+                envio.Costo = Convert.ToInt32(row["costo"]);
+                envio.Estado = (EnumEstados)Convert.ToInt32(row["Estado"]);
                 envio.Cliente = new BE.Usuario();
                 envio.Cliente.Id = Convert.ToInt32(row["ClienteId"]);
                 envio.Cliente.Nombre = row["ClienteNombre"].ToString();              
@@ -208,6 +211,10 @@ namespace DAL
             foreach (DataRow row in dataTable.Rows)
             {
                 BE.Envio envio = new BE.Envio();
+                envio.CodigoSeguimiento = Convert.ToInt32(row["CodigoSeguimiento"]);
+                if (row.Table.Columns.Contains("costo"))
+                    envio.Costo = row["costo"] == DBNull.Value ? 0 : Convert.ToDecimal(row["costo"]);
+                envio.Estado = (EnumEstados)Convert.ToInt32(row["Estado"]);
                 envio.Cliente = new BE.Usuario();
                 envio.Cliente.Id = Convert.ToInt32(row["ClienteId"]);
                 envio.Cliente.Nombre = usuario.Nombre;
@@ -218,6 +225,13 @@ namespace DAL
                 envio.Destinatario.Telefono = row["DestinatarioTelefono"].ToString();
                 envio.Destinatario.CodigoPostal = row["DestinatarioCodigoPostal"].ToString();
                 envio.Destinatario.Documento = row["DestinatarioDNI"].ToString();
+                envio.FechaAsignacion = row.IsNull("FechaAsignacion") ? DateTime.MinValue : (DateTime)row["FechaAsignacion"];
+                envio.FechaCancelacion = row.IsNull("FechaCancelacion") ? DateTime.MinValue : (DateTime)row["FechaCancelacion"];
+                envio.FechaEntrega = row.IsNull("FechaEntrega") ? DateTime.MinValue : (DateTime)row["FechaEntrega"];
+                envio.FechaDespacho = row.IsNull("FechaDespacho") ? DateTime.MinValue : (DateTime)row["FechaDespacho"];
+                envio.FechaCreacion = row.IsNull("FechaCreacion") ? DateTime.MinValue : (DateTime)row["FechaCreacion"];
+
+
                 listaEnvios.Add(envio);
             }
             return listaEnvios;
