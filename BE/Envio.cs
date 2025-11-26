@@ -29,12 +29,12 @@ namespace BE
         public decimal Costo
         {
             get { return costo; }
-            set { costo = value; } 
+            set { costo = value; }
         }
         public string DocumentoDestinatario
         {
             get { return destinatario.Documento; }
-            set { documentoDestinatario = value; }
+            set { destinatario.Documento = value; }
         }
 
         public string TelefonoDestinatario
@@ -46,19 +46,19 @@ namespace BE
         public string NombreDestinatario
         {
             get { return destinatario.Nombre; }
-            set { nombreDestinatario = value; }
+            set { destinatario.Nombre = value; }
         }
 
         public string DomicilioDestinatario
         {
             get { return destinatario.Domicilio; }
-            set { domicilioDestinatario = value; }
+            set { destinatario.Domicilio = value; }
         }
 
         public string CodigoPostal
         {
             get { return destinatario.CodigoPostal; }
-            set { codigoPostal = value; }
+            set { destinatario.CodigoPostal = value; }
         }
         public List<ItemPaquete> Paquetes
         {

@@ -12,8 +12,6 @@ namespace DAL
     public class MpEnvio : IMappers <BE.Envio>
     {
         Acceso acc = new Acceso();
-        DAL.MpUsuario mapperusuario = new DAL.MpUsuario();
-        DAL.MpItemPaquete mapperitempaquete = new DAL.MpItemPaquete();
         public int Agregar(BE.Envio envio)
         {
             int fa = 0;
@@ -76,7 +74,7 @@ namespace DAL
                 envio.Cliente.Id = Convert.ToInt32(row["IdCliente"]);
                 envio.Destinatario.Id = Convert.ToInt32(row["IdDestinatario"]);
 
-                // costo (SI existe en tu tabla)
+         
                 if (row.Table.Columns.Contains("costo"))
                     envio.Costo = row["costo"] == DBNull.Value ? 0 : Convert.ToDecimal(row["costo"]);
 
@@ -103,7 +101,7 @@ namespace DAL
                 envio.Cliente.Id = Convert.ToInt32(row["IdCliente"]);
                 envio.Destinatario.Id = Convert.ToInt32(row["IdDestinatario"]);
 
-                // costo (SI existe en tu tabla)
+    
                 if (row.Table.Columns.Contains("costo"))
                     envio.Costo = row["costo"] == DBNull.Value ? 0 : Convert.ToDecimal(row["costo"]);
 
@@ -119,18 +117,21 @@ namespace DAL
             DataTable dataTable = new DataTable();
             List<BE.Envio> listaEnvios = new List<BE.Envio>();
             SqlParameter[] parametros = new SqlParameter[1];
-            parametros[0] = new SqlParameter("IdUsuario", usuario.Id);
+            parametros[0] = new SqlParameter("IdRepartidor", usuario.Id);
             dataTable = acc.Leer("ObtenerEnviosPorIdRepartidor", parametros);
             foreach (DataRow row in dataTable.Rows)
             {
-                BE.Envio envio = new BE.Envio();
-                envio.CodigoSeguimiento = Convert.ToInt32(row["CodigoSeguimiento"]);
-                envio.Estado = (EnumEstados)Convert.ToInt32(row["Estado"]);
-                envio.CodigoSeguimiento = Convert.ToInt32(row["CodigoSeguimiento"]);
-                envio.Cliente = mapperusuario.ObtenerUsuarioPorId(Convert.ToInt32(row["IdCliente"]));
-                envio.Repartidor = mapperusuario.ObtenerUsuarioPorId(Convert.ToInt32(row["IdRepartidor"]));
-                envio.Destinatario = mapperusuario.ObtenerUsuarioPorId(Convert.ToInt32(row["IdDestinatario"]));
-                envio.Paquetes = mapperitempaquete.ObtenerItemPaquetesPorIdEnvio(envio.CodigoSeguimiento);
+                BE.Envio envio = new BE.Envio();                
+                envio.Cliente = new BE.Usuario();
+                envio.Cliente.Id = Convert.ToInt32(row["ClienteId"]);
+                envio.Cliente.Nombre = row["ClienteNombre"].ToString();              
+                envio.Destinatario = new BE.Usuario();
+                envio.Destinatario.Id = Convert.ToInt32(row["DestinatarioId"]);
+                envio.Destinatario.Nombre = row["DestinatarioNombre"].ToString();
+                envio.Destinatario.Domicilio = row["DestinatarioDomicilio"].ToString();                               
+                envio.Destinatario.Telefono = row["DestinatarioTelefono"].ToString();
+                envio.Destinatario.CodigoPostal = row["DestinatarioCodigoPostal"].ToString();
+                envio.Destinatario.Documento = row["DestinatarioDNI"].ToString()                                        ;
                 listaEnvios.Add(envio);
             }
             return listaEnvios;
@@ -139,7 +140,7 @@ namespace DAL
 
 
 
-        public List<BE.Envio> ObtenerEnviosPorIdDestinatario(Usuario usuario)
+         public List<BE.Envio> ObtenerEnviosPorIdDestinatario(Usuario usuario)
         {
             DataTable dataTable = new DataTable();
             List<BE.Envio> listaEnvios = new List<BE.Envio>();
@@ -149,13 +150,16 @@ namespace DAL
             foreach (DataRow row in dataTable.Rows)
             {
                 BE.Envio envio = new BE.Envio();
-                envio.CodigoSeguimiento = Convert.ToInt32(row["CodigoSeguimiento"]);
-                envio.Estado = (EnumEstados)Convert.ToInt32(row["Estado"]);
-                envio.CodigoSeguimiento = Convert.ToInt32(row["CodigoSeguimiento"]);
-                envio.Cliente = mapperusuario.ObtenerUsuarioPorId(Convert.ToInt32(row["IdCliente"]));
-                envio.Repartidor = mapperusuario.ObtenerUsuarioPorId(Convert.ToInt32(row["IdRepartidor"]));
-                envio.Destinatario = mapperusuario.ObtenerUsuarioPorId(Convert.ToInt32(row["IdDestinatario"]));
-                envio.Paquetes = mapperitempaquete.ObtenerItemPaquetesPorIdEnvio(envio.CodigoSeguimiento);
+                envio.Cliente = new BE.Usuario();
+                envio.Cliente.Id = Convert.ToInt32(row["ClienteId"]);
+                envio.Cliente.Nombre = row["ClienteNombre"].ToString();
+                envio.Destinatario = new BE.Usuario();
+                envio.Destinatario.Id = usuario.Id;
+                envio.Destinatario.Nombre = usuario.Nombre;
+                envio.Destinatario.Domicilio = usuario.Domicilio;
+                envio.Destinatario.Telefono = usuario.Telefono;
+                envio.Destinatario.CodigoPostal = usuario.CodigoPostal;
+                envio.Destinatario.Documento = usuario.Documento;                                         
                 listaEnvios.Add(envio);
             }
             return listaEnvios;
@@ -172,13 +176,16 @@ namespace DAL
             foreach (DataRow row in dataTable.Rows)
             {
                 BE.Envio envio = new BE.Envio();
-                envio.CodigoSeguimiento = Convert.ToInt32(row["CodigoSeguimiento"]);
-                envio.Estado = (EnumEstados)Convert.ToInt32(row["Estado"]);
-                envio.CodigoSeguimiento = Convert.ToInt32(row["CodigoSeguimiento"]);
-                envio.Cliente = mapperusuario.ObtenerUsuarioPorId(Convert.ToInt32(row["IdCliente"]));
-                envio.Repartidor = mapperusuario.ObtenerUsuarioPorId(Convert.ToInt32(row["IdRepartidor"]));
-                envio.Destinatario = mapperusuario.ObtenerUsuarioPorId(Convert.ToInt32(row["IdDestinatario"]));
-                envio.Paquetes = mapperitempaquete.ObtenerItemPaquetesPorIdEnvio(envio.CodigoSeguimiento);
+                envio.Cliente = new BE.Usuario();
+                envio.Cliente.Id = Convert.ToInt32(row["ClienteId"]);
+                envio.Cliente.Nombre = usuario.Nombre;
+                envio.Destinatario = new BE.Usuario();
+                envio.Destinatario.Id = Convert.ToInt32(row["DestinatarioId"]);
+                envio.Destinatario.Nombre = row["DestinatarioNombre"].ToString();
+                envio.Destinatario.Domicilio = row["DestinatarioDomicilio"].ToString();
+                envio.Destinatario.Telefono = row["DestinatarioTelefono"].ToString();
+                envio.Destinatario.CodigoPostal = row["DestinatarioCodigoPostal"].ToString();
+                envio.Destinatario.Documento = row["DestinatarioDNI"].ToString();
                 listaEnvios.Add(envio);
             }
             return listaEnvios;

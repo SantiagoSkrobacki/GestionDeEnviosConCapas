@@ -56,7 +56,7 @@
             // 
             // estadoLBL
             // 
-            this.estadoLBL.Location = new System.Drawing.Point(424, 303);
+            this.estadoLBL.Location = new System.Drawing.Point(428, 313);
             this.estadoLBL.Name = "estadoLBL";
             this.estadoLBL.Size = new System.Drawing.Size(15, 20);
             this.estadoLBL.TabIndex = 5;
@@ -64,7 +64,7 @@
             // 
             // kryptonLabel1
             // 
-            this.kryptonLabel1.Location = new System.Drawing.Point(325, 303);
+            this.kryptonLabel1.Location = new System.Drawing.Point(329, 313);
             this.kryptonLabel1.Name = "kryptonLabel1";
             this.kryptonLabel1.Size = new System.Drawing.Size(50, 20);
             this.kryptonLabel1.TabIndex = 4;
@@ -73,8 +73,8 @@
             // estadoFOT4
             // 
             this.estadoFOT4.ErrorImage = global::GestionDeEnvios.Properties.Resources.estado0;
-            this.estadoFOT4.Image = global::GestionDeEnvios.Properties.Resources.estado4;
-            this.estadoFOT4.Location = new System.Drawing.Point(303, 339);
+            this.estadoFOT4.Image = global::GestionDeEnvios.Properties.Resources.estado41;
+            this.estadoFOT4.Location = new System.Drawing.Point(301, 339);
             this.estadoFOT4.Name = "estadoFOT4";
             this.estadoFOT4.Size = new System.Drawing.Size(170, 90);
             this.estadoFOT4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -84,8 +84,8 @@
             // estadoFOT3
             // 
             this.estadoFOT3.ErrorImage = global::GestionDeEnvios.Properties.Resources.estado0;
-            this.estadoFOT3.Image = global::GestionDeEnvios.Properties.Resources.estado3;
-            this.estadoFOT3.Location = new System.Drawing.Point(303, 339);
+            this.estadoFOT3.Image = global::GestionDeEnvios.Properties.Resources.estado31;
+            this.estadoFOT3.Location = new System.Drawing.Point(301, 339);
             this.estadoFOT3.Name = "estadoFOT3";
             this.estadoFOT3.Size = new System.Drawing.Size(170, 90);
             this.estadoFOT3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -95,8 +95,8 @@
             // estado2FOT
             // 
             this.estado2FOT.ErrorImage = global::GestionDeEnvios.Properties.Resources.estado0;
-            this.estado2FOT.Image = global::GestionDeEnvios.Properties.Resources.estado2;
-            this.estado2FOT.Location = new System.Drawing.Point(303, 339);
+            this.estado2FOT.Image = global::GestionDeEnvios.Properties.Resources.estado21;
+            this.estado2FOT.Location = new System.Drawing.Point(301, 339);
             this.estado2FOT.Name = "estado2FOT";
             this.estado2FOT.Size = new System.Drawing.Size(170, 90);
             this.estado2FOT.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -106,8 +106,8 @@
             // estado1FOT
             // 
             this.estado1FOT.ErrorImage = global::GestionDeEnvios.Properties.Resources.estado0;
-            this.estado1FOT.Image = global::GestionDeEnvios.Properties.Resources.estado1;
-            this.estado1FOT.Location = new System.Drawing.Point(303, 339);
+            this.estado1FOT.Image = global::GestionDeEnvios.Properties.Resources.estado11;
+            this.estado1FOT.Location = new System.Drawing.Point(301, 339);
             this.estado1FOT.Name = "estado1FOT";
             this.estado1FOT.Size = new System.Drawing.Size(170, 90);
             this.estado1FOT.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -117,8 +117,8 @@
             // estado0FOT
             // 
             this.estado0FOT.ErrorImage = global::GestionDeEnvios.Properties.Resources.estado0;
-            this.estado0FOT.Image = global::GestionDeEnvios.Properties.Resources.estado0;
-            this.estado0FOT.Location = new System.Drawing.Point(303, 339);
+            this.estado0FOT.Image = global::GestionDeEnvios.Properties.Resources.estado01;
+            this.estado0FOT.Location = new System.Drawing.Point(301, 339);
             this.estado0FOT.Name = "estado0FOT";
             this.estado0FOT.Size = new System.Drawing.Size(170, 90);
             this.estado0FOT.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
