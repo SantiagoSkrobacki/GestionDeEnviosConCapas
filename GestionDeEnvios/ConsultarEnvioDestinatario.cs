@@ -11,7 +11,7 @@ using BE;
 
 namespace GestionDeEnvios
 {
-    public partial class ConsultarEnvioDestinatario : Form
+    public partial class ConsultarEnvioDestinatario : FormBase
     {
 
         BE.Usuario usuarioActual = new BE.Usuario();

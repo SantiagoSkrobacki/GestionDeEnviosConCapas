@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace GestionDeEnvios
 {
-    public partial class GenerarXMLUsuario : Form
+    public partial class GenerarXMLUsuario : FormBase
     {
         public GenerarXMLUsuario()
         {

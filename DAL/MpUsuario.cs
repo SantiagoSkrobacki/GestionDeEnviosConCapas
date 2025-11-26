@@ -63,10 +63,10 @@ namespace DAL
         {
             DataTable dataTable = new DataTable();
             SqlParameter[] parametros = new SqlParameter[1];
-            parametros[0] = new SqlParameter ("email", email);
+            parametros[0] = new SqlParameter("email", email);
             BE.Usuario usuario = new BE.Usuario();
-            dataTable = acc.Leer("ObtenerUsuarioPorMail",parametros);
-            foreach(DataRow row in dataTable.Rows)
+            dataTable = acc.Leer("ObtenerUsuarioPorMail", parametros);
+            foreach (DataRow row in dataTable.Rows)
             {
                 usuario.Password = row["Password"].ToString();
                 usuario.TipoUsuario = row["TipoUsuario"].ToString();
@@ -74,7 +74,7 @@ namespace DAL
             }
             return usuario;
 
-
+        }
         public List<BE.Usuario>  ObtenerClientesActivos()
         {
             DataTable dataTable = new DataTable();
@@ -267,4 +267,4 @@ namespace DAL
 
         }
     }
-}
+
