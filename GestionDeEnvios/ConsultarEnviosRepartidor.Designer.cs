@@ -84,7 +84,7 @@
             // 
             // cambiarEstadoBTN
             // 
-            this.cambiarEstadoBTN.Location = new System.Drawing.Point(224, 385);
+            this.cambiarEstadoBTN.Location = new System.Drawing.Point(312, 385);
             this.cambiarEstadoBTN.Margin = new System.Windows.Forms.Padding(2);
             this.cambiarEstadoBTN.Name = "cambiarEstadoBTN";
             this.cambiarEstadoBTN.OverrideDefault.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));

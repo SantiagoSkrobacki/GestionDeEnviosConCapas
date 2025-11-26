@@ -40,6 +40,20 @@ namespace BLL
             return mapper.ObtenerEnviosConPaquetes();
         }
 
+
+        public List<BE.Envio> ObtenerEnviosPorIdRepartidor(BE.Usuario usuario)
+        {
+            return mapper.ObtenerEnviosPorIdRepartidor(usuario);
+        }
+        public List<BE.Envio> ObtenerEnviosPorIdDestinario(BE.Usuario usuario)
+        {
+            return mapper.ObtenerEnviosPorIdDestinatario(usuario);
+        }
+
+        public List<BE.Envio> ObtenerEnviosPorIdCliente(BE.Usuario usuario)
+        {
+            return mapper.ObtenerEnviosPorIdCliente(usuario);
+        }
     }
 
 }

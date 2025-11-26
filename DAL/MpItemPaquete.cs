@@ -74,5 +74,26 @@ namespace DAL
 
             return paquetes;
         }
+
+        public List<ItemPaquete> ObtenerItemPaquetesPorIdEnvio(int idEnvio)
+        {
+            SqlParameter[] parametros = new SqlParameter[1];
+            parametros[0] = new SqlParameter("IdEnvio", idEnvio);
+            List<ItemPaquete> listaItemPaquetes = new List<ItemPaquete>();
+            DataTable dataTable = new DataTable();
+            dataTable = acc.Leer("ObtenerItemPaquetesPorIdEnvio", parametros);
+            foreach (DataRow row in dataTable.Rows)
+            {
+                BE.ItemPaquete itemPaquete = new BE.ItemPaquete();
+                itemPaquete.Id = Convert.ToInt32(row["Id"]);
+                itemPaquete.Descripcion = row["Descripcion"].ToString();
+                itemPaquete.IdEnvio = Convert.ToInt32(row["EnvioId"]);
+                itemPaquete.Fragil = Convert.ToBoolean(row["Fragil"]);
+                itemPaquete.Costo = Convert.ToDecimal(row["Costo"]);
+                itemPaquete.Peso = Convert.ToDecimal(row["Peso"]);
+                listaItemPaquetes.Add(itemPaquete);
+            }
+            return listaItemPaquetes;
+        }
     }
 }

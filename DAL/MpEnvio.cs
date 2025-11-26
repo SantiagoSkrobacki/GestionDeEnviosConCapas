@@ -12,6 +12,8 @@ namespace DAL
     public class MpEnvio : IMappers <BE.Envio>
     {
         Acceso acc = new Acceso();
+        DAL.MpUsuario mapperusuario = new DAL.MpUsuario();
+        DAL.MpItemPaquete mapperitempaquete = new DAL.MpItemPaquete();
         public int Agregar(BE.Envio envio)
         {
             int fa = 0;
@@ -111,7 +113,77 @@ namespace DAL
             return envios;
         }
 
+      
+        public List<BE.Envio> ObtenerEnviosPorIdRepartidor(Usuario usuario)
+        {
+            DataTable dataTable = new DataTable();
+            List<BE.Envio> listaEnvios = new List<BE.Envio>();
+            SqlParameter[] parametros = new SqlParameter[1];
+            parametros[0] = new SqlParameter("IdUsuario", usuario.Id);
+            dataTable = acc.Leer("ObtenerEnviosPorIdRepartidor", parametros);
+            foreach (DataRow row in dataTable.Rows)
+            {
+                BE.Envio envio = new BE.Envio();
+                envio.CodigoSeguimiento = Convert.ToInt32(row["CodigoSeguimiento"]);
+                envio.Estado = (EnumEstados)Convert.ToInt32(row["Estado"]);
+                envio.CodigoSeguimiento = Convert.ToInt32(row["CodigoSeguimiento"]);
+                envio.Cliente = mapperusuario.ObtenerUsuarioPorId(Convert.ToInt32(row["IdCliente"]));
+                envio.Repartidor = mapperusuario.ObtenerUsuarioPorId(Convert.ToInt32(row["IdRepartidor"]));
+                envio.Destinatario = mapperusuario.ObtenerUsuarioPorId(Convert.ToInt32(row["IdDestinatario"]));
+                envio.Paquetes = mapperitempaquete.ObtenerItemPaquetesPorIdEnvio(envio.CodigoSeguimiento);
+                listaEnvios.Add(envio);
+            }
+            return listaEnvios;
 
+        }
+
+
+
+        public List<BE.Envio> ObtenerEnviosPorIdDestinatario(Usuario usuario)
+        {
+            DataTable dataTable = new DataTable();
+            List<BE.Envio> listaEnvios = new List<BE.Envio>();
+            SqlParameter[] parametros = new SqlParameter[1];
+            parametros[0] = new SqlParameter("IdUsuario", usuario.Id);
+            dataTable = acc.Leer("ObtenerEnviosPorIdDestinatario", parametros);
+            foreach (DataRow row in dataTable.Rows)
+            {
+                BE.Envio envio = new BE.Envio();
+                envio.CodigoSeguimiento = Convert.ToInt32(row["CodigoSeguimiento"]);
+                envio.Estado = (EnumEstados)Convert.ToInt32(row["Estado"]);
+                envio.CodigoSeguimiento = Convert.ToInt32(row["CodigoSeguimiento"]);
+                envio.Cliente = mapperusuario.ObtenerUsuarioPorId(Convert.ToInt32(row["IdCliente"]));
+                envio.Repartidor = mapperusuario.ObtenerUsuarioPorId(Convert.ToInt32(row["IdRepartidor"]));
+                envio.Destinatario = mapperusuario.ObtenerUsuarioPorId(Convert.ToInt32(row["IdDestinatario"]));
+                envio.Paquetes = mapperitempaquete.ObtenerItemPaquetesPorIdEnvio(envio.CodigoSeguimiento);
+                listaEnvios.Add(envio);
+            }
+            return listaEnvios;
+
+        }
+
+        public List<BE.Envio> ObtenerEnviosPorIdCliente(Usuario usuario)
+        {
+            DataTable dataTable = new DataTable();
+            List<BE.Envio> listaEnvios = new List<BE.Envio>();
+            SqlParameter[] parametros = new SqlParameter[1];
+            parametros[0] = new SqlParameter("IdUsuario", usuario.Id);
+            dataTable = acc.Leer("ObtenerEnviosPorIdCliente", parametros);
+            foreach (DataRow row in dataTable.Rows)
+            {
+                BE.Envio envio = new BE.Envio();
+                envio.CodigoSeguimiento = Convert.ToInt32(row["CodigoSeguimiento"]);
+                envio.Estado = (EnumEstados)Convert.ToInt32(row["Estado"]);
+                envio.CodigoSeguimiento = Convert.ToInt32(row["CodigoSeguimiento"]);
+                envio.Cliente = mapperusuario.ObtenerUsuarioPorId(Convert.ToInt32(row["IdCliente"]));
+                envio.Repartidor = mapperusuario.ObtenerUsuarioPorId(Convert.ToInt32(row["IdRepartidor"]));
+                envio.Destinatario = mapperusuario.ObtenerUsuarioPorId(Convert.ToInt32(row["IdDestinatario"]));
+                envio.Paquetes = mapperitempaquete.ObtenerItemPaquetesPorIdEnvio(envio.CodigoSeguimiento);
+                listaEnvios.Add(envio);
+            }
+            return listaEnvios;
+
+        }
 
         public void CambiarEstado(int idEnvio, int nuevoEstado)
         {

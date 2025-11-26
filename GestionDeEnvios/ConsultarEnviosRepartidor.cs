@@ -17,6 +17,7 @@ namespace GestionDeEnvios
         BLL.Usuario bllusuario = new BLL.Usuario();
         BLL.Envio bllenvio = new BLL.Envio();
         BLL.ItemPaquete bllItempaquete = new BLL.ItemPaquete();
+        
         public ConsultarEnviosRepartidor(Usuario usuario)
         {
             usuarioActual = usuario;
@@ -26,7 +27,7 @@ namespace GestionDeEnvios
         List<BE.Envio> listaEnvios = new List<BE.Envio>();
         private void ConsultarEnviosRepartidor_Load(object sender, EventArgs e)
         {
-            listaEnvios = bllusuario.ObtenerEnviosPorIdRepartidor(usuarioActual);
+            listaEnvios = bllenvio.ObtenerEnviosPorIdRepartidor(usuarioActual);
             enviosDGV.DataSource = listaEnvios;
             RefrescarDataGrid();
             estado0FOT.Visible = false;
@@ -123,7 +124,7 @@ namespace GestionDeEnvios
         {
             enviosDGV.DataSource = null;
             BLL.Envio bll = new BLL.Envio();
-            enviosDGV.DataSource = bllusuario.ObtenerEnviosPorIdRepartidor(usuarioActual);
+            enviosDGV.DataSource = bllenvio.ObtenerEnviosPorIdRepartidor(usuarioActual);
             enviosDGV.Columns["Cliente"].Visible = false;
             enviosDGV.Columns["Repartidor"].Visible = false;
             enviosDGV.Columns["Destinatario"].Visible = false;

@@ -17,6 +17,7 @@ namespace GestionDeEnvios
         BE.Usuario usuarioActual = new BE.Usuario();    
         public List<BE.Envio> listaEnvios = new List<BE.Envio>();
         BLL.Usuario bllUsuario = new BLL.Usuario();
+        BLL.Envio bllenvio = new BLL.Envio();
         public ConsultarEnviosCliente(BE.Usuario usuario)
         {
             usuarioActual = usuario;
@@ -25,7 +26,7 @@ namespace GestionDeEnvios
 
         private void ConsultarEnviosCliente_Load(object sender, EventArgs e)
         {
-            listaEnvios = bllUsuario.ObtenerEnviosPorIdCliente(usuarioActual);
+            listaEnvios = bllenvio.ObtenerEnviosPorIdCliente(usuarioActual);
             enviosDGV.DataSource = listaEnvios;
             enviosDGV.Columns["Cliente"].Visible = false;
             enviosDGV.Columns["Repartidor"].Visible = false;
