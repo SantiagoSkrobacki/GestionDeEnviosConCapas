@@ -177,5 +177,12 @@ namespace GestionDeEnvios
             asginarRepartidorEnvio.MdiParent = this;
             asginarRepartidorEnvio.Show();
         }
+
+        private void verTodosLosEnviosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            VerTodosLosEnvios verTodosLosEnvios = new VerTodosLosEnvios();
+            verTodosLosEnvios.MdiParent = this;
+            verTodosLosEnvios.Show();
+        }
     }
 }

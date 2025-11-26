@@ -44,7 +44,10 @@ namespace BLL
             return mapper.ObtenerEnviosConPaquetesYDestinatario();
         }
         
-
+        public List<BE.Envio> ObtenerTodosLosEnvios()
+        {
+            return mapper.ObtenerTodosLosEnvios();
+        }
 
         public List<BE.Envio> ObtenerEnviosPorIdRepartidor(BE.Usuario usuario)
         {

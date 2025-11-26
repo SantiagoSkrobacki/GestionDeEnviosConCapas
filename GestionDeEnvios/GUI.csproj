@@ -244,6 +244,12 @@
     <Compile Include="Controles\MiControl.Designer.cs">
       <DependentUpon>MiControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="VerTodosLosEnvios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VerTodosLosEnvios.Designer.cs">
+      <DependentUpon>VerTodosLosEnvios.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Altas\AltaEnvio.resx">
       <DependentUpon>AltaEnvio.cs</DependentUpon>
     </EmbeddedResource>
@@ -340,6 +346,9 @@
     </Compile>
     <EmbeddedResource Include="Controles\MiControl.resx">
       <DependentUpon>MiControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VerTodosLosEnvios.resx">
+      <DependentUpon>VerTodosLosEnvios.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

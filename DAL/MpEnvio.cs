@@ -224,7 +224,28 @@ namespace DAL
 
         }
 
-
+        public List<BE.Envio> ObtenerTodosLosEnvios()
+        {
+            List<BE.Envio> listaEnvios = new List<BE.Envio>();
+            DataTable dt = new DataTable();
+            dt = acc.Leer("ObtenerTodosLosEnvios", null);
+            foreach(DataRow row in dt.Rows)
+            {
+                BE.Envio envio = new BE.Envio();
+                envio.Cliente = new BE.Usuario();
+                envio.Cliente.Id = Convert.ToInt32(row["IdCliente"]);
+                envio.Cliente.Nombre = row["ClienteNombre"].ToString(); 
+                envio.Destinatario = new BE.Usuario();
+                envio.Destinatario.Id = Convert.ToInt32(row["DestinatarioId"]);
+                envio.Destinatario.Nombre = row["DestinatarioNombre"].ToString();
+                envio.Destinatario.Domicilio = row["DestinatarioDomicilio"].ToString();
+                envio.Destinatario.Telefono = row["DestinatarioTelefono"].ToString();
+                envio.Destinatario.CodigoPostal = row["DestinatarioCodigoPostal"].ToString();
+                envio.Destinatario.Documento = row["DestinatarioDNI"].ToString();
+                listaEnvios.Add(envio);
+            }
+            return listaEnvios;
+        }
         public void CambiarEstado(int idEnvio, int nuevoEstado)
         {
             SqlParameter[] parametros = new SqlParameter[2];
