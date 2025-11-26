@@ -177,6 +177,29 @@ namespace DAL
             return usuarios;
         }
 
+        public List<BE.Usuario> ObtenerTodosLosUsuariosActivos()
+        {
+            List<BE.Usuario> usuarios = new List<BE.Usuario>();
+            DataTable dataTable = new DataTable();
+            dataTable = acc.Leer("ObtenerTodosLosUsuariosActivos", null);
+            foreach (DataRow row in dataTable.Rows)
+            {
+                BE.Usuario usuario = new BE.Usuario();
+                usuario.Id = Convert.ToInt32(row["Id"]);
+                usuario.Email = row["Email"].ToString();
+                usuario.Password = "***********";
+                usuario.TipoUsuario = row["TipoUsuario"].ToString();
+                usuario.Domicilio = row["Domicilio"].ToString();
+                usuario.Documento = row["Documento"].ToString();
+                usuario.Provincia = row["Provincia"].ToString();
+                usuario.Localidad = row["Localidad"].ToString();
+                usuario.Telefono = row["Telefono"].ToString();
+                usuario.Nombre = row["Nombre"].ToString();
+                usuario.CodigoPostal = row["CodigoPostal"].ToString();
+                usuarios.Add(usuario);
+            }
+            return usuarios;
+        }
         public List<BE.Usuario> ObtenerRepartidoresActivos()
         {
             List<BE.Usuario> usuarios = new List<BE.Usuario>();

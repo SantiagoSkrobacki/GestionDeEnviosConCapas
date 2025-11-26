@@ -64,6 +64,10 @@ namespace BLL
             return mapper.ObtenerTodosLosUsuarios();
         }
 
+        public List<BE.Usuario> ObtenerTodosLosUsuariosActivos()
+        {
+            return mapper.ObtenerTodosLosUsuariosActivos();
+        }
         public void EscribirUsuariosXML()
         {
             mapper.EscribirXMLUsuarios();

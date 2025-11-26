@@ -30,7 +30,7 @@ namespace GestionDeEnvios.Bajas
 
                 int fa = 0;
                 fa = bllusuario.Eliminar(usuario);
-
+                CargarDGVa();
                 if (fa == 0)
                 {
                     MessageBox.Show("Error: no se encontró usuario con el id = " + usuario.Id);
@@ -46,6 +46,32 @@ namespace GestionDeEnvios.Bajas
             {
                 MessageBox.Show("Campos completados incorrectamente...\nPor favor vuelva a intentar.");
             }
+        }
+
+        private void BajaUsuario_Load(object sender, EventArgs e)
+        {
+            CargarDGVa();
+        }
+
+        private void usuariosDGV_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                DataGridViewRow row = usuariosDGV.Rows[e.RowIndex];
+
+                controlId1.Texto = row.Cells[0].Value.ToString();
+            }
+        }
+
+        private void CargarDGVa()
+        {
+            usuariosDGV.DataSource = null;
+            usuariosDGV.DataSource = bllusuario.ObtenerTodosLosUsuariosActivos();
+        }
+
+        private void controlId1_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
