@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace GestionDeEnvios.Bajas
 {
-    public partial class CancelarEnvio : FormBase
+    public partial class BajaEnvio : FormBase
     {
-        public CancelarEnvio()
+        public BajaEnvio()
         {
             InitializeComponent();
         }

@@ -15,28 +15,9 @@ namespace GestionDeEnvios.Controles
         public MiControlNumerico()
         {
             InitializeComponent();
+            patronRegex = "^[0-9]+$"; // Acepta números
         }
-        public override bool Validar()
-        {
-
-            bool ok = base.Validar();
-
-            if (ok)
-            {
-                int numero;
-                ok = int.TryParse(this.Texto, out numero);
-                if (!ok)
-                {
-
-                    this.SetearColorTextBox(System.Drawing.Color.Red);
-                }
-                else { this.SetearColorTextBox(System.Drawing.Color.Black); }
-            }
-
-            return ok;
-        }
-
-
+      
         private void MiControlNumerico_Load(object sender, EventArgs e)
         {
 

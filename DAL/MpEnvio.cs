@@ -111,6 +111,37 @@ namespace DAL
 
             return envios;
         }
+        
+             public List<BE.Envio> ObtenerEnviosConPaquetesYDestinatario()
+            {
+                DataTable dataTable = new DataTable();
+                List<BE.Envio> envios = new List<BE.Envio>();
+
+                dataTable = acc.Leer("ObtenerEnviosConPaquetesYDestinatario", null);
+
+                foreach (DataRow row in dataTable.Rows)
+                {
+                    BE.Envio envio = new BE.Envio();
+
+                    envio.CodigoSeguimiento = Convert.ToInt32(row["CodigoSeguimiento"]);
+                    envio.Estado = (EnumEstados)Convert.ToInt32(row["Estado"]);
+                    envio.FechaCreacion = Convert.ToDateTime(row["FechaCreacion"]);
+                    envio.Cliente.Id = Convert.ToInt32(row["IdCliente"]);
+                    envio.Destinatario.Id = Convert.ToInt32(row["IdDestinatario"]);
+                    envio.DocumentoDestinatario = row["Documento"].ToString();
+                    envio.DomicilioDestinatario = row["Domicilio"].ToString();
+                    envio.CodigoPostal = row["CodigoPostal"].ToString();
+
+                    // si costo no es null osea recien creado
+                    if (row.Table.Columns.Contains("costo"))
+                        envio.Costo = row["costo"] == DBNull.Value ? 0 : Convert.ToDecimal(row["costo"]);
+
+                    envios.Add(envio);
+                }
+
+            return envios;
+            }
+
 
       
         public List<BE.Envio> ObtenerEnviosPorIdRepartidor(Usuario usuario)
@@ -193,6 +224,7 @@ namespace DAL
 
         }
 
+
         public void CambiarEstado(int idEnvio, int nuevoEstado)
         {
             SqlParameter[] parametros = new SqlParameter[2];
@@ -200,5 +232,18 @@ namespace DAL
             parametros[1] = new SqlParameter("@NuevoEstado",  nuevoEstado);
             acc.Escribir("CambiarEstadoEnvio", parametros);
         }
+
+        public int AsigarRepartidorEnvio(BE.Envio envio)
+        {
+            int fa = 0;
+            SqlParameter[] parametros = new SqlParameter[2];
+            parametros[0] = new SqlParameter("@CodigoSeguimiento", envio.CodigoSeguimiento);
+            parametros[1] = new SqlParameter("@IdRepartidor", envio.Repartidor.Id);
+            fa = acc.Escribir("AsigarRepartidorEnvio", parametros);
+            return fa;
+        }
+
+
+
     }
 }

@@ -51,6 +51,7 @@
             this.dgvEnvios.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvEnvios.Size = new System.Drawing.Size(1458, 286);
             this.dgvEnvios.TabIndex = 10;
+            this.dgvEnvios.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvEnvios_CellClick);
             // 
             // dgvRepartidores
             // 
@@ -64,6 +65,7 @@
             this.dgvRepartidores.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvRepartidores.Size = new System.Drawing.Size(1458, 239);
             this.dgvRepartidores.TabIndex = 11;
+            this.dgvRepartidores.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvRepartidores_CellClick);
             // 
             // btnAsignar
             // 

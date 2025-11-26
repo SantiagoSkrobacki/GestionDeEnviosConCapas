@@ -22,6 +22,7 @@ namespace GestionDeEnvios.Bajas
 
         BLL.Envio bllEnvio = new BLL.Envio();
         BLL.ItemPaquete bllItemPaquete = new BLL.ItemPaquete();
+        private int idEnvioActual;
         private void cargarDgvEnvios()
         {
             dgvEnvios.DataSource = null;
@@ -51,8 +52,8 @@ namespace GestionDeEnvios.Bajas
         private void dgvEnvios_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             BE.Envio tmpEnvio = (BE.Envio)dgvEnvios.Rows[e.RowIndex].DataBoundItem;
-            
 
+            idEnvioActual = tmpEnvio.CodigoSeguimiento;
             cargarDgvPaquetes(tmpEnvio.CodigoSeguimiento);
         }
 
@@ -74,6 +75,7 @@ namespace GestionDeEnvios.Bajas
 
  
                 cargarDgvEnvios();
+                cargarDgvPaquetes(idEnvioActual);
 
                 if (fa == 0)
                 {
@@ -81,7 +83,7 @@ namespace GestionDeEnvios.Bajas
                 }
                 else
                 {
-                    MessageBox.Show("Usuario eliminado exitosamente");
+                    MessageBox.Show("Paquete eliminado exitosamente");
                 }
 
 

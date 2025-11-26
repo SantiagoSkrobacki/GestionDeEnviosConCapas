@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using GestionDeEnvios.Controles;
 
 namespace GestionDeEnvios
 {
@@ -23,6 +24,7 @@ namespace GestionDeEnvios
 
         BLL.Envio bllEnvio = new BLL.Envio();
         BLL.Usuario bllUsuario = new BLL.Usuario();
+
 
 
         private void cargarDgvEnvios()
@@ -59,7 +61,48 @@ namespace GestionDeEnvios
 
         private void btnAsignar_Click(object sender, EventArgs e)
         {
+            if (ValiacionesUtils.ValidarEntradaUsuario(this))
+            {
+                BE.Envio envio = new BE.Envio();
+                envio.Repartidor.Id = Convert.ToInt32(controlIdRepartidor.Texto);
+                envio.CodigoSeguimiento = Convert.ToInt32(controlIdEnvio.Texto);
 
+                int fa = 0;
+                fa = bllEnvio.AsigarRepartidorEnvio(envio);
+
+
+                cargarDgvEnvios();
+                cargarDgvRepartidores();
+
+                if (fa == 0)
+                {
+                    MessageBox.Show("Error: no se encontró envio con el id = " + envio.CodigoSeguimiento +"\n O no se encontró el repartidor con id = " +envio.Repartidor.Id);
+                }
+                else
+                {
+                    MessageBox.Show("Envio asignado al repartido exitosamente");
+                }
+
+
+            }
+            else
+            {
+                MessageBox.Show("Campos completados incorrectamente...\nPor favor vuelva a intentar.");
+            }
+        }
+
+        private void dgvEnvios_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            BE.Envio tmpEnvio = (BE.Envio)dgvEnvios.Rows[e.RowIndex].DataBoundItem;
+
+            controlIdEnvio.Texto = tmpEnvio.CodigoSeguimiento.ToString();
+        }
+
+        private void dgvRepartidores_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            BE.Usuario tmpRepartidor = (BE.Usuario)dgvRepartidores.Rows[e.RowIndex].DataBoundItem;
+
+            controlIdRepartidor.Texto = tmpRepartidor.Id.ToString();
         }
     }
 }

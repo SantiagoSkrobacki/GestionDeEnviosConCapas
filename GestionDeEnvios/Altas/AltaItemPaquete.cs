@@ -90,7 +90,7 @@ namespace GestionDeEnvios.Altas
         {
             try
             {
-                if (ValiacionesUtils.ValidarEntradaUsuario(this))
+                if (ValiacionesUtils.ValidarEntradaUsuario(this) && lblCostoPaquete.Text != "-")
                 {
                     BE.ItemPaquete itemPaquete = new BE.ItemPaquete();
 
@@ -102,6 +102,7 @@ namespace GestionDeEnvios.Altas
 
                     itemPaquete.IdEnvio = int.Parse(controlIdEnvio.Texto);
 
+                    
                     itemPaquete.Costo = Convert.ToDecimal(lblCostoPaquete.Text);
 
 
@@ -114,7 +115,10 @@ namespace GestionDeEnvios.Altas
                 }
                 else
                 {
-                    MessageBox.Show("Campos completados incorrectamente...\nPor favor vuelva a intentar.");
+                    if (lblCostoPaquete.Text != "-")
+                        MessageBox.Show("Campos completados incorrectamente...\nPor favor vuelva a intentar.");
+                    else
+                        MessageBox.Show("Por favor calcule el costo del paquete antes de agregarlo al envío.");
                 }
             }
             catch (Exception ex)

@@ -59,6 +59,15 @@ namespace BLL
         {
             return mapper.ObtenerEnviosPorIdCliente(usuario);
         }
+
+        
+
+        public int AsigarRepartidorEnvio(BE.Envio envio)
+        {
+            return mapper.AsigarRepartidorEnvio(envio);
+        }
+
+
     }
 
 }

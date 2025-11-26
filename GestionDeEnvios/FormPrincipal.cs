@@ -39,7 +39,7 @@ namespace GestionDeEnvios
 
         private void eliminarToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            CancelarEnvio bajaEnvio = new CancelarEnvio();
+            BajaEnvio bajaEnvio = new BajaEnvio();
             bajaEnvio.MdiParent = this;
             bajaEnvio.Show();
         }

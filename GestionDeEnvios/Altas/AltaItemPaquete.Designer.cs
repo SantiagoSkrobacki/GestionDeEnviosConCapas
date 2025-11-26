@@ -33,12 +33,12 @@
             this.controlIdEnvio = new GestionDeEnvios.Controles.ControlId();
             this.ControlDescripcion = new GestionDeEnvios.MiControl();
             this.label1 = new System.Windows.Forms.Label();
-            this.ControlPeso = new GestionDeEnvios.MiControl();
             this.CheckBoxFragil = new ComponentFactory.Krypton.Toolkit.KryptonCheckBox();
             this.LabelTituloCosto = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.btnCalcularCosto = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.lblCostoPaquete = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.btnAgregarItemPaquete = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.ControlPeso = new GestionDeEnvios.Controles.MiControlNumerico();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEnvios)).BeginInit();
             this.SuspendLayout();
             // 
@@ -95,16 +95,6 @@
             this.label1.Size = new System.Drawing.Size(142, 22);
             this.label1.TabIndex = 17;
             this.label1.Text = "Datos Paquete";
-            // 
-            // ControlPeso
-            // 
-            this.ControlPeso.Etiqueta = "Peso";
-            this.ControlPeso.Location = new System.Drawing.Point(688, 286);
-            this.ControlPeso.Margin = new System.Windows.Forms.Padding(4);
-            this.ControlPeso.Name = "ControlPeso";
-            this.ControlPeso.Size = new System.Drawing.Size(828, 69);
-            this.ControlPeso.TabIndex = 18;
-            this.ControlPeso.Texto = "";
             // 
             // CheckBoxFragil
             // 
@@ -210,17 +200,27 @@
             this.btnAgregarItemPaquete.Values.Text = "Agregar Paquete";
             this.btnAgregarItemPaquete.Click += new System.EventHandler(this.btnAgregarItemPaquete_Click);
             // 
+            // ControlPeso
+            // 
+            this.ControlPeso.Etiqueta = "Peso";
+            this.ControlPeso.Location = new System.Drawing.Point(688, 285);
+            this.ControlPeso.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.ControlPeso.Name = "ControlPeso";
+            this.ControlPeso.Size = new System.Drawing.Size(804, 69);
+            this.ControlPeso.TabIndex = 24;
+            this.ControlPeso.Texto = "";
+            // 
             // AltaItemPaquete
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1482, 801);
+            this.Controls.Add(this.ControlPeso);
             this.Controls.Add(this.btnAgregarItemPaquete);
             this.Controls.Add(this.lblCostoPaquete);
             this.Controls.Add(this.btnCalcularCosto);
             this.Controls.Add(this.LabelTituloCosto);
             this.Controls.Add(this.CheckBoxFragil);
-            this.Controls.Add(this.ControlPeso);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.ControlDescripcion);
             this.Controls.Add(this.controlIdEnvio);
@@ -242,11 +242,11 @@
         private Controles.ControlId controlIdEnvio;
         private MiControl ControlDescripcion;
         private System.Windows.Forms.Label label1;
-        private MiControl ControlPeso;
         private ComponentFactory.Krypton.Toolkit.KryptonCheckBox CheckBoxFragil;
         private ComponentFactory.Krypton.Toolkit.KryptonLabel LabelTituloCosto;
         private ComponentFactory.Krypton.Toolkit.KryptonButton btnCalcularCosto;
         private ComponentFactory.Krypton.Toolkit.KryptonLabel lblCostoPaquete;
         private ComponentFactory.Krypton.Toolkit.KryptonButton btnAgregarItemPaquete;
+        private Controles.MiControlNumerico ControlPeso;
     }
 }
