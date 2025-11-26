@@ -38,6 +38,7 @@
             this.agregarPaquetesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.asignarEnvioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.eliminarPaqueteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.verTodosLosEnviosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.usuariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.agregarToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.modificarToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
@@ -49,7 +50,6 @@
             this.consultarEnvioToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.destinatarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.consultarEnvioToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
-            this.verTodosLosEnviosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -83,15 +83,16 @@
             // iniciarSesionToolStripMenuItem
             // 
             this.iniciarSesionToolStripMenuItem.Name = "iniciarSesionToolStripMenuItem";
-            this.iniciarSesionToolStripMenuItem.Size = new System.Drawing.Size(143, 22);
+            this.iniciarSesionToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.iniciarSesionToolStripMenuItem.Text = "Iniciar Sesion";
             this.iniciarSesionToolStripMenuItem.Click += new System.EventHandler(this.iniciarSesionToolStripMenuItem_Click);
             // 
             // cerrarSesionToolStripMenuItem
             // 
             this.cerrarSesionToolStripMenuItem.Name = "cerrarSesionToolStripMenuItem";
-            this.cerrarSesionToolStripMenuItem.Size = new System.Drawing.Size(143, 22);
+            this.cerrarSesionToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.cerrarSesionToolStripMenuItem.Text = "Cerrar Sesion";
+            this.cerrarSesionToolStripMenuItem.Click += new System.EventHandler(this.cerrarSesionToolStripMenuItem_Click);
             // 
             // envioToolStripMenuItem
             // 
@@ -141,6 +142,13 @@
             this.eliminarPaqueteToolStripMenuItem.Size = new System.Drawing.Size(182, 22);
             this.eliminarPaqueteToolStripMenuItem.Text = "Eliminar Paquete";
             this.eliminarPaqueteToolStripMenuItem.Click += new System.EventHandler(this.eliminarPaqueteToolStripMenuItem_Click);
+            // 
+            // verTodosLosEnviosToolStripMenuItem
+            // 
+            this.verTodosLosEnviosToolStripMenuItem.Name = "verTodosLosEnviosToolStripMenuItem";
+            this.verTodosLosEnviosToolStripMenuItem.Size = new System.Drawing.Size(182, 22);
+            this.verTodosLosEnviosToolStripMenuItem.Text = "Ver Todos Los Envios";
+            this.verTodosLosEnviosToolStripMenuItem.Click += new System.EventHandler(this.verTodosLosEnviosToolStripMenuItem_Click);
             // 
             // usuariosToolStripMenuItem
             // 
@@ -193,7 +201,7 @@
             // consultarEnvioToolStripMenuItem
             // 
             this.consultarEnvioToolStripMenuItem.Name = "consultarEnvioToolStripMenuItem";
-            this.consultarEnvioToolStripMenuItem.Size = new System.Drawing.Size(157, 22);
+            this.consultarEnvioToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.consultarEnvioToolStripMenuItem.Text = "Consultar Envio";
             this.consultarEnvioToolStripMenuItem.Click += new System.EventHandler(this.consultarEnvioToolStripMenuItem_Click);
             // 
@@ -227,13 +235,6 @@
             this.consultarEnvioToolStripMenuItem2.Text = "Consultar Envio";
             this.consultarEnvioToolStripMenuItem2.Click += new System.EventHandler(this.consultarEnvioToolStripMenuItem2_Click);
             // 
-            // verTodosLosEnviosToolStripMenuItem
-            // 
-            this.verTodosLosEnviosToolStripMenuItem.Name = "verTodosLosEnviosToolStripMenuItem";
-            this.verTodosLosEnviosToolStripMenuItem.Size = new System.Drawing.Size(182, 22);
-            this.verTodosLosEnviosToolStripMenuItem.Text = "Ver Todos Los Envios";
-            this.verTodosLosEnviosToolStripMenuItem.Click += new System.EventHandler(this.verTodosLosEnviosToolStripMenuItem_Click);
-            // 
             // FormPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -242,7 +243,7 @@
             this.Controls.Add(this.menuStrip1);
             this.IsMdiContainer = true;
             this.MainMenuStrip = this.menuStrip1;
-            this.Margin = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.Margin = new System.Windows.Forms.Padding(3);
             this.Name = "FormPrincipal";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.FormPrincipal_Load);

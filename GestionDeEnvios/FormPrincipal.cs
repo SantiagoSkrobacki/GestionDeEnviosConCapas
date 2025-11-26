@@ -116,7 +116,8 @@ namespace GestionDeEnvios
                     destinatarioToolStripMenuItem.Visible = true;
                     break;
             }
-
+            iniciarSesionToolStripMenuItem.Visible = false; // Ocultar Login
+            cerrarSesionToolStripMenuItem.Visible = true;   // Mostrar Logout
         }
 
         private void OcultarBotones()
@@ -126,6 +127,9 @@ namespace GestionDeEnvios
             clienteToolStripMenuItem.Visible = false;
             repartidorToolStripMenuItem.Visible = false;
             destinatarioToolStripMenuItem.Visible = false;
+            usuarioActual = null; 
+            iniciarSesionToolStripMenuItem.Visible = true;  
+            cerrarSesionToolStripMenuItem.Visible = false;  
         }
 
         private void envioToolStripMenuItem_Click(object sender, EventArgs e)
@@ -183,6 +187,15 @@ namespace GestionDeEnvios
             VerTodosLosEnvios verTodosLosEnvios = new VerTodosLosEnvios();
             verTodosLosEnvios.MdiParent = this;
             verTodosLosEnvios.Show();
+        }
+
+        private void cerrarSesionToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            foreach (Form hijo in this.MdiChildren)
+            {
+                hijo.Close();
+            }
+            OcultarBotones();            
         }
     }
 }
