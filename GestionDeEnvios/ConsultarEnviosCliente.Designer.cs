@@ -29,7 +29,19 @@
         private void InitializeComponent()
         {
             this.enviosDGV = new ComponentFactory.Krypton.Toolkit.KryptonDataGridView();
+            this.estadoLBL = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
+            this.kryptonLabel1 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
+            this.estadoFOT4 = new System.Windows.Forms.PictureBox();
+            this.estadoFOT3 = new System.Windows.Forms.PictureBox();
+            this.estado2FOT = new System.Windows.Forms.PictureBox();
+            this.estado1FOT = new System.Windows.Forms.PictureBox();
+            this.estado0FOT = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.enviosDGV)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.estadoFOT4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.estadoFOT3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.estado2FOT)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.estado1FOT)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.estado0FOT)).BeginInit();
             this.SuspendLayout();
             // 
             // enviosDGV
@@ -40,23 +52,115 @@
             this.enviosDGV.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.enviosDGV.Size = new System.Drawing.Size(776, 285);
             this.enviosDGV.TabIndex = 2;
+            this.enviosDGV.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.enviosDGV_CellContentClick);
+            // 
+            // estadoLBL
+            // 
+            this.estadoLBL.Location = new System.Drawing.Point(424, 303);
+            this.estadoLBL.Name = "estadoLBL";
+            this.estadoLBL.Size = new System.Drawing.Size(15, 20);
+            this.estadoLBL.TabIndex = 5;
+            this.estadoLBL.Values.Text = "-";
+            // 
+            // kryptonLabel1
+            // 
+            this.kryptonLabel1.Location = new System.Drawing.Point(325, 303);
+            this.kryptonLabel1.Name = "kryptonLabel1";
+            this.kryptonLabel1.Size = new System.Drawing.Size(50, 20);
+            this.kryptonLabel1.TabIndex = 4;
+            this.kryptonLabel1.Values.Text = "Estado:";
+            // 
+            // estadoFOT4
+            // 
+            this.estadoFOT4.ErrorImage = global::GestionDeEnvios.Properties.Resources.estado0;
+            this.estadoFOT4.Image = global::GestionDeEnvios.Properties.Resources.estado4;
+            this.estadoFOT4.Location = new System.Drawing.Point(303, 339);
+            this.estadoFOT4.Name = "estadoFOT4";
+            this.estadoFOT4.Size = new System.Drawing.Size(170, 90);
+            this.estadoFOT4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.estadoFOT4.TabIndex = 17;
+            this.estadoFOT4.TabStop = false;
+            // 
+            // estadoFOT3
+            // 
+            this.estadoFOT3.ErrorImage = global::GestionDeEnvios.Properties.Resources.estado0;
+            this.estadoFOT3.Image = global::GestionDeEnvios.Properties.Resources.estado3;
+            this.estadoFOT3.Location = new System.Drawing.Point(303, 339);
+            this.estadoFOT3.Name = "estadoFOT3";
+            this.estadoFOT3.Size = new System.Drawing.Size(170, 90);
+            this.estadoFOT3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.estadoFOT3.TabIndex = 16;
+            this.estadoFOT3.TabStop = false;
+            // 
+            // estado2FOT
+            // 
+            this.estado2FOT.ErrorImage = global::GestionDeEnvios.Properties.Resources.estado0;
+            this.estado2FOT.Image = global::GestionDeEnvios.Properties.Resources.estado2;
+            this.estado2FOT.Location = new System.Drawing.Point(303, 339);
+            this.estado2FOT.Name = "estado2FOT";
+            this.estado2FOT.Size = new System.Drawing.Size(170, 90);
+            this.estado2FOT.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.estado2FOT.TabIndex = 15;
+            this.estado2FOT.TabStop = false;
+            // 
+            // estado1FOT
+            // 
+            this.estado1FOT.ErrorImage = global::GestionDeEnvios.Properties.Resources.estado0;
+            this.estado1FOT.Image = global::GestionDeEnvios.Properties.Resources.estado1;
+            this.estado1FOT.Location = new System.Drawing.Point(303, 339);
+            this.estado1FOT.Name = "estado1FOT";
+            this.estado1FOT.Size = new System.Drawing.Size(170, 90);
+            this.estado1FOT.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.estado1FOT.TabIndex = 14;
+            this.estado1FOT.TabStop = false;
+            // 
+            // estado0FOT
+            // 
+            this.estado0FOT.ErrorImage = global::GestionDeEnvios.Properties.Resources.estado0;
+            this.estado0FOT.Image = global::GestionDeEnvios.Properties.Resources.estado0;
+            this.estado0FOT.Location = new System.Drawing.Point(303, 339);
+            this.estado0FOT.Name = "estado0FOT";
+            this.estado0FOT.Size = new System.Drawing.Size(170, 90);
+            this.estado0FOT.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.estado0FOT.TabIndex = 13;
+            this.estado0FOT.TabStop = false;
             // 
             // ConsultarEnviosCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.estadoFOT4);
+            this.Controls.Add(this.estadoFOT3);
+            this.Controls.Add(this.estado2FOT);
+            this.Controls.Add(this.estado1FOT);
+            this.Controls.Add(this.estado0FOT);
+            this.Controls.Add(this.estadoLBL);
+            this.Controls.Add(this.kryptonLabel1);
             this.Controls.Add(this.enviosDGV);
             this.Name = "ConsultarEnviosCliente";
             this.Text = "ConsultarEnviosCliente";
             this.Load += new System.EventHandler(this.ConsultarEnviosCliente_Load);
             ((System.ComponentModel.ISupportInitialize)(this.enviosDGV)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.estadoFOT4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.estadoFOT3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.estado2FOT)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.estado1FOT)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.estado0FOT)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
         private ComponentFactory.Krypton.Toolkit.KryptonDataGridView enviosDGV;
+        private ComponentFactory.Krypton.Toolkit.KryptonLabel estadoLBL;
+        private ComponentFactory.Krypton.Toolkit.KryptonLabel kryptonLabel1;
+        private System.Windows.Forms.PictureBox estadoFOT4;
+        private System.Windows.Forms.PictureBox estadoFOT3;
+        private System.Windows.Forms.PictureBox estado2FOT;
+        private System.Windows.Forms.PictureBox estado1FOT;
+        private System.Windows.Forms.PictureBox estado0FOT;
     }
 }
