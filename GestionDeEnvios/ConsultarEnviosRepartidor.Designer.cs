@@ -38,6 +38,7 @@
             this.estado2FOT = new System.Windows.Forms.PictureBox();
             this.estado1FOT = new System.Windows.Forms.PictureBox();
             this.estado0FOT = new System.Windows.Forms.PictureBox();
+            this.btnActualizar = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             ((System.ComponentModel.ISupportInitialize)(this.enviosDGV)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ComboBoxEstados)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.estadoFOT4)).BeginInit();
@@ -49,6 +50,7 @@
             // 
             // enviosDGV
             // 
+            this.enviosDGV.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.enviosDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.enviosDGV.Location = new System.Drawing.Point(16, 15);
             this.enviosDGV.Margin = new System.Windows.Forms.Padding(4);
@@ -186,11 +188,50 @@
             this.estado0FOT.TabIndex = 18;
             this.estado0FOT.TabStop = false;
             // 
+            // btnActualizar
+            // 
+            this.btnActualizar.Location = new System.Drawing.Point(1251, 385);
+            this.btnActualizar.Name = "btnActualizar";
+            this.btnActualizar.OverrideDefault.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
+            this.btnActualizar.OverrideDefault.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
+            this.btnActualizar.OverrideDefault.Back.ColorAngle = 45F;
+            this.btnActualizar.OverrideDefault.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
+            this.btnActualizar.OverrideDefault.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
+            this.btnActualizar.OverrideDefault.Border.ColorAngle = 45F;
+            this.btnActualizar.OverrideDefault.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.btnActualizar.OverrideDefault.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.btnActualizar.OverrideDefault.Border.Rounding = 20;
+            this.btnActualizar.OverrideDefault.Border.Width = 1;
+            this.btnActualizar.OverrideDefault.Content.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnActualizar.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.ProfessionalSystem;
+            this.btnActualizar.Size = new System.Drawing.Size(196, 67);
+            this.btnActualizar.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
+            this.btnActualizar.StateCommon.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
+            this.btnActualizar.StateCommon.Back.ColorAngle = 45F;
+            this.btnActualizar.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
+            this.btnActualizar.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
+            this.btnActualizar.StateCommon.Border.ColorAngle = 45F;
+            this.btnActualizar.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.btnActualizar.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.btnActualizar.StateCommon.Border.Rounding = 20;
+            this.btnActualizar.StateCommon.Border.Width = 1;
+            this.btnActualizar.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.White;
+            this.btnActualizar.StateCommon.Content.ShortText.Color2 = System.Drawing.Color.White;
+            this.btnActualizar.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnActualizar.TabIndex = 26;
+            this.btnActualizar.Values.Text = "Actualizar";
+            this.btnActualizar.Click += new System.EventHandler(this.btnActualizar_Click);
+            // 
             // ConsultarEnviosRepartidor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1482, 563);
+            this.Controls.Add(this.btnActualizar);
             this.Controls.Add(this.estadoFOT4);
             this.Controls.Add(this.estadoFOT3);
             this.Controls.Add(this.estado2FOT);
@@ -229,5 +270,6 @@
         private System.Windows.Forms.PictureBox estado2FOT;
         private System.Windows.Forms.PictureBox estado1FOT;
         private System.Windows.Forms.PictureBox estado0FOT;
+        private ComponentFactory.Krypton.Toolkit.KryptonButton btnActualizar;
     }
 }

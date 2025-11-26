@@ -47,6 +47,7 @@
             // 
             // enviosDGV
             // 
+            this.enviosDGV.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.enviosDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.enviosDGV.Location = new System.Drawing.Point(12, 12);
             this.enviosDGV.Name = "enviosDGV";

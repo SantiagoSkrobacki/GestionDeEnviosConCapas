@@ -29,7 +29,7 @@ namespace GestionDeEnvios
 
         private void refrescarGrid()
         {
-            MessageBox.Show(usuarioActual.Id.ToString());
+           
             listaEnvios = bllenvio.ObtenerEnviosPorIdCliente(usuarioActual);
             enviosDGV.DataSource = listaEnvios;
             enviosDGV.Columns["Cliente"].Visible = false;
@@ -106,6 +106,11 @@ namespace GestionDeEnvios
                 estadoLBL.Text = envioSeleccionado.Estado.ToString();
                 CargarOpcionesEstado(envioSeleccionado);
             }
+        }
+
+        private void btnActualizar_Click(object sender, EventArgs e)
+        {
+            refrescarGrid();
         }
     }
 }

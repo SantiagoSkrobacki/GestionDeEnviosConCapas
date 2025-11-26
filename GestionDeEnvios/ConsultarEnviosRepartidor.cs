@@ -181,6 +181,11 @@ namespace GestionDeEnvios
                 CargarOpcionesEstado(envioTmp);
             }
         }
+
+        private void btnActualizar_Click(object sender, EventArgs e)
+        {
+            RefrescarDataGrid();
+        }
     }
 }
 
