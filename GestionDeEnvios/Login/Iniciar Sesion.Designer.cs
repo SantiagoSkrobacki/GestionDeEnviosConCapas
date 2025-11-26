@@ -37,26 +37,27 @@
             // controlContraseña1
             // 
             this.controlContraseña1.Etiqueta = "Contraseña";
-            this.controlContraseña1.Location = new System.Drawing.Point(14, 127);
-            this.controlContraseña1.Margin = new System.Windows.Forms.Padding(5);
+            this.controlContraseña1.Location = new System.Drawing.Point(10, 103);
+            this.controlContraseña1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.controlContraseña1.Name = "controlContraseña1";
-            this.controlContraseña1.Size = new System.Drawing.Size(661, 60);
+            this.controlContraseña1.Size = new System.Drawing.Size(496, 49);
             this.controlContraseña1.TabIndex = 1;
             this.controlContraseña1.Texto = "";
             // 
             // controlEmail1
             // 
             this.controlEmail1.Etiqueta = "Mail";
-            this.controlEmail1.Location = new System.Drawing.Point(14, 57);
-            this.controlEmail1.Margin = new System.Windows.Forms.Padding(5);
+            this.controlEmail1.Location = new System.Drawing.Point(10, 46);
+            this.controlEmail1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.controlEmail1.Name = "controlEmail1";
-            this.controlEmail1.Size = new System.Drawing.Size(661, 60);
+            this.controlEmail1.Size = new System.Drawing.Size(496, 49);
             this.controlEmail1.TabIndex = 0;
             this.controlEmail1.Texto = "";
             // 
             // iniciarSesionBTN
             // 
-            this.iniciarSesionBTN.Location = new System.Drawing.Point(167, 192);
+            this.iniciarSesionBTN.Location = new System.Drawing.Point(125, 156);
+            this.iniciarSesionBTN.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.iniciarSesionBTN.Name = "iniciarSesionBTN";
             this.iniciarSesionBTN.OverrideDefault.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
             this.iniciarSesionBTN.OverrideDefault.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
@@ -72,7 +73,7 @@
             this.iniciarSesionBTN.OverrideDefault.Border.Width = 1;
             this.iniciarSesionBTN.OverrideDefault.Content.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.iniciarSesionBTN.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.ProfessionalSystem;
-            this.iniciarSesionBTN.Size = new System.Drawing.Size(196, 67);
+            this.iniciarSesionBTN.Size = new System.Drawing.Size(147, 54);
             this.iniciarSesionBTN.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
             this.iniciarSesionBTN.StateCommon.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
             this.iniciarSesionBTN.StateCommon.Back.ColorAngle = 45F;
@@ -94,7 +95,8 @@
             // 
             // registrarseBTN
             // 
-            this.registrarseBTN.Location = new System.Drawing.Point(371, 192);
+            this.registrarseBTN.Location = new System.Drawing.Point(278, 156);
+            this.registrarseBTN.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.registrarseBTN.Name = "registrarseBTN";
             this.registrarseBTN.OverrideDefault.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
             this.registrarseBTN.OverrideDefault.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
@@ -116,7 +118,7 @@
             this.registrarseBTN.OverrideFocus.Border.Width = 1;
             this.registrarseBTN.OverrideFocus.Content.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.registrarseBTN.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.ProfessionalSystem;
-            this.registrarseBTN.Size = new System.Drawing.Size(196, 67);
+            this.registrarseBTN.Size = new System.Drawing.Size(147, 54);
             this.registrarseBTN.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
             this.registrarseBTN.StateCommon.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
             this.registrarseBTN.StateCommon.Back.ColorAngle = 45F;
@@ -137,16 +139,17 @@
             // 
             // Iniciar_Sesion
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(734, 317);
+            this.ClientSize = new System.Drawing.Size(550, 258);
             this.Controls.Add(this.registrarseBTN);
             this.Controls.Add(this.iniciarSesionBTN);
             this.Controls.Add(this.controlContraseña1);
             this.Controls.Add(this.controlEmail1);
-            this.Margin = new System.Windows.Forms.Padding(4);
+            this.Margin = new System.Windows.Forms.Padding(3, 3, 3, 3);
             this.Name = "Iniciar_Sesion";
             this.Text = "Iniciar_Sesion";
+            this.Load += new System.EventHandler(this.Iniciar_Sesion_Load);
             this.ResumeLayout(false);
 
         }

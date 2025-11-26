@@ -25,6 +25,8 @@ namespace GestionDeEnvios.Login
         {
             BE.Usuario usuario = bllusuario.Login(controlEmail1.Texto, controlContraseña1.Texto);
 
+
+
             if (usuario != null)
             {
                 // 2. DISPARAR EL EVENTO
@@ -44,6 +46,11 @@ namespace GestionDeEnvios.Login
             Registrarse registrarse = new Registrarse();
             registrarse.MdiParent = this.MdiParent;
             registrarse.Show();
+        }
+
+        private void Iniciar_Sesion_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

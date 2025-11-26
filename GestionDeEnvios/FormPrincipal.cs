@@ -86,10 +86,21 @@ namespace GestionDeEnvios
 
         private void iniciarSesionToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Iniciar_Sesion iniciar_Sesion = new Iniciar_Sesion();
-            iniciar_Sesion.MdiParent = this;
-            iniciar_Sesion.Show();
-            iniciar_Sesion.OnLoginExitoso += ConfigurarPermisos;
+            foreach (Form formulario in this.MdiChildren)
+            {
+                
+                if (formulario is Iniciar_Sesion)
+                {
+                    formulario.Focus(); 
+                    return; 
+                }
+            }
+
+            
+            Iniciar_Sesion login = new Iniciar_Sesion();
+            login.MdiParent = this;
+            login.Show();
+            login.OnLoginExitoso += ConfigurarPermisos;
         }
 
         private void ConfigurarPermisos(BE.Usuario usuario1)
