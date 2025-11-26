@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using BE;
 
 namespace BLL
 {
@@ -12,6 +13,11 @@ namespace BLL
         public int Agregar(BE.Envio envio)
         {
             return mapper.Agregar(envio);
+        }
+
+        public void CambiarEstado(int codigoSeguimiento, EnumEstados nuevoEstado)
+        {
+            mapper.CambiarEstado(codigoSeguimiento, (int)nuevoEstado);
         }
 
         public int Editar(BE.Envio envio)

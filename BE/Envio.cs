@@ -16,11 +16,51 @@ namespace BE
         private DateTime fechaDespacho;
         private DateTime fechaEntrega;
         private DateTime fechaCancelacion;
-        private string destino;
         private Usuario cliente;
         private Usuario repartidor;
         private Usuario destinatario;
+        private string documentoDestinatario;
+        private string telefonoDestinatario;
+        private string nombreDestinatario;
+        private string domicilioDestinatario;
+        private string codigoPostal;
+        private decimal costo;
 
+        public decimal Costo
+        {
+            get { return costo; }
+            set { costo = value; }
+        }
+        public string DocumentoDestinatario
+        {
+            get { return destinatario.Documento; }
+            set { documentoDestinatario = value; }
+        }
+
+
+        public string TelefonoDestinatario
+        {
+            get { return destinatario.Telefono; }
+            set { telefonoDestinatario = value; }
+        }
+
+        public string NombreDestinatario
+        {
+            get { return destinatario.Nombre; }
+            set { nombreDestinatario = value; }
+        }
+
+        public string DomicilioDestinatario
+        {
+            get { return destinatario.Domicilio; }
+            set { domicilioDestinatario = value; }
+        }
+
+        public string CodigoPostal
+        {
+            get { return destinatario.CodigoPostal; }
+            set { codigoPostal = value; }
+        }
         public List<ItemPaquete> Paquetes
         {
             get { return paquetes; }
@@ -67,11 +107,11 @@ namespace BE
             get { return fechaCancelacion; }
             set { fechaCancelacion = value; }
         }
-        public string Destino
+     /*   public string Destino
         {
             get { return destino; }
             set { destino = value; }
-        }
+        }*/
 
         public Usuario Cliente
         {
@@ -91,5 +131,6 @@ namespace BE
             set { destinatario = value; }
         }
 
+      
     }
 }

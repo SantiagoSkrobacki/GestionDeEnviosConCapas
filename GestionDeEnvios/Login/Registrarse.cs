@@ -39,7 +39,6 @@ namespace GestionDeEnvios.Login
                         Password = controlContraseña1.Texto,
                         Nombre = controlNombre1.Texto,
                         Activo = true,
-                        Disponible = true,
                         Telefono = controlTelefono1.Texto,
                         Domicilio = controlDomicilio1.Texto,
                         Localidad = controlLocalidad1.Texto,

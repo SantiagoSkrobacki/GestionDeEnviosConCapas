@@ -38,7 +38,6 @@ namespace GestionDeEnvios.Modificaciones
                         Password = controlContraseña1.Texto,
                         Nombre = controlNombre1.Texto,
                         Activo = activoBOX.Checked,
-                        Disponible = disponibleBOX.Checked,
                         Telefono = controlTelefono1.Texto,
                         Domicilio = controlDomicilio1.Texto,
                         Localidad = controlLocalidad1.Texto,

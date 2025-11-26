@@ -97,6 +97,12 @@
     <Compile Include="Bajas\BajaUsuario.Designer.cs">
       <DependentUpon>BajaUsuario.cs</DependentUpon>
     </Compile>
+    <Compile Include="ConsultarEnvioDestinatario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConsultarEnvioDestinatario.Designer.cs">
+      <DependentUpon>ConsultarEnvioDestinatario.cs</DependentUpon>
+    </Compile>
     <Compile Include="ConsultarEnviosCliente.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -188,6 +194,12 @@
     <Compile Include="FormPrincipal.Designer.cs">
       <DependentUpon>FormPrincipal.cs</DependentUpon>
     </Compile>
+    <Compile Include="GenerarXMLUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GenerarXMLUsuario.Designer.cs">
+      <DependentUpon>GenerarXMLUsuario.cs</DependentUpon>
+    </Compile>
     <Compile Include="Login\Iniciar Sesion.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -229,6 +241,15 @@
     <EmbeddedResource Include="Bajas\BajaUsuario.resx">
       <DependentUpon>BajaUsuario.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ConsultarEnvioDestinatario.resx">
+      <DependentUpon>ConsultarEnvioDestinatario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConsultarEnviosCliente.resx">
+      <DependentUpon>ConsultarEnviosCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConsultarEnviosRepartidor.resx">
+      <DependentUpon>ConsultarEnviosRepartidor.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Controles\ControlCodigoPostal.resx">
       <DependentUpon>ControlCodigoPostal.cs</DependentUpon>
     </EmbeddedResource>
@@ -267,6 +288,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormPrincipal.resx">
       <DependentUpon>FormPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GenerarXMLUsuario.resx">
+      <DependentUpon>GenerarXMLUsuario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login\Iniciar Sesion.resx">
       <DependentUpon>Iniciar Sesion.cs</DependentUpon>

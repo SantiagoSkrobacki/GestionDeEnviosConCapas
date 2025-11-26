@@ -22,6 +22,7 @@ namespace GestionDeEnvios
             
         }
 
+        BE.Usuario usuarioActual = new BE.Usuario();
         private void agregarToolStripMenuItem_Click(object sender, EventArgs e)
         {
             AltaEnvio altaEnvio = new AltaEnvio();
@@ -66,14 +67,14 @@ namespace GestionDeEnvios
 
         private void consultarEnvioToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            ConsultarEnviosCliente consultarEnviosCliente = new ConsultarEnviosCliente();
+            ConsultarEnviosCliente consultarEnviosCliente = new ConsultarEnviosCliente(usuarioActual);
             consultarEnviosCliente.MdiParent = this;
             consultarEnviosCliente.Show();
         }
 
         private void consultarEnvioToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            ConsultarEnviosRepartidor consultarEnvioRepartidor = new ConsultarEnviosRepartidor();
+            ConsultarEnviosRepartidor consultarEnvioRepartidor = new ConsultarEnviosRepartidor(usuarioActual);
             consultarEnvioRepartidor.MdiParent = this;
             consultarEnvioRepartidor.Show();
         }
@@ -91,11 +92,11 @@ namespace GestionDeEnvios
             iniciar_Sesion.OnLoginExitoso += ConfigurarPermisos;
         }
 
-        private void ConfigurarPermisos(BE.Usuario usuario)
+        private void ConfigurarPermisos(BE.Usuario usuario1)
         {
-
+            usuarioActual = usuario1;
             // SWITCH POR ROLES
-            switch (usuario.TipoUsuario)
+            switch (usuario1.TipoUsuario)
             {
                 case "Administrador":
                     envioToolStripMenuItem.Visible = true;
@@ -115,6 +116,7 @@ namespace GestionDeEnvios
                     destinatarioToolStripMenuItem.Visible = true;
                     break;
             }
+
         }
 
         private void OcultarBotones()
@@ -134,6 +136,25 @@ namespace GestionDeEnvios
         private void kryptonGroup1_Panel_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void clienteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void consultarEnvioToolStripMenuItem2_Click(object sender, EventArgs e)
+        {
+            ConsultarEnvioDestinatario consultarEnvioDestinatario = new ConsultarEnvioDestinatario(usuarioActual);
+            consultarEnvioDestinatario.MdiParent = this;
+            consultarEnvioDestinatario.Show();
+        }
+
+        private void generarXMLToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            GenerarXMLUsuario generarXML = new GenerarXMLUsuario();
+            generarXML.MdiParent = this;
+            generarXML.Show();
         }
     }
 }

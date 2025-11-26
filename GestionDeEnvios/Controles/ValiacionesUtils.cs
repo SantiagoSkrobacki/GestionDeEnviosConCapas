@@ -10,7 +10,7 @@ namespace GestionDeEnvios.Controles
     public static class ValiacionesUtils
     {
 
-        public  static bool ValidarEntradaUsuario(Form formulario)
+        public static bool ValidarEntradaUsuario(Form formulario)
         {
 
             bool validado = true;
@@ -18,13 +18,21 @@ namespace GestionDeEnvios.Controles
             {
                 if (ctrl is MiControl miCtrl)
                 {
-                    validado = miCtrl.Validar();
+                    if (!validado)
+                    {
+                        miCtrl.Validar();
+                    }
+                    else
+                    {
+                        validado = miCtrl.Validar();
+                    }
+
                 }
             }
             return validado;
         }
 
-   
+
 
 
 

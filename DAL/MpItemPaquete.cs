@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using BE;
-
+using System.Data;
 namespace DAL
 {
     public class MpItemPaquete : IMappers <BE.ItemPaquete>
@@ -46,5 +46,7 @@ namespace DAL
             fa = acc.Escribir("EliminarItemPaquete", parametro);
             return fa;
         }
+
+      
     }
 }

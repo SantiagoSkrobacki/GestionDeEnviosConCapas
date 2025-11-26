@@ -1,6 +1,6 @@
 ﻿namespace GestionDeEnvios
 {
-    partial class ConsultarEnviosCliente
+    partial class ConsultarEnvioDestinatario
     {
         /// <summary>
         /// Required designer variable.
@@ -39,17 +39,17 @@
             this.enviosDGV.Name = "enviosDGV";
             this.enviosDGV.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.enviosDGV.Size = new System.Drawing.Size(776, 285);
-            this.enviosDGV.TabIndex = 2;
+            this.enviosDGV.TabIndex = 3;
             // 
-            // ConsultarEnviosCliente
+            // ConsultarEnvioDestinatario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.enviosDGV);
-            this.Name = "ConsultarEnviosCliente";
-            this.Text = "ConsultarEnviosCliente";
-            this.Load += new System.EventHandler(this.ConsultarEnviosCliente_Load);
+            this.Name = "ConsultarEnvioDestinatario";
+            this.Text = "ConsultarEnvioDestinatario";
+            this.Load += new System.EventHandler(this.ConsultarEnvioDestinatario_Load);
             ((System.ComponentModel.ISupportInitialize)(this.enviosDGV)).EndInit();
             this.ResumeLayout(false);
 

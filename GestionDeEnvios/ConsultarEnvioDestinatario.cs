@@ -7,25 +7,25 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using BLL;
+using BE;
 
 namespace GestionDeEnvios
 {
-    public partial class ConsultarEnviosCliente : FormBase
+    public partial class ConsultarEnvioDestinatario : Form
     {
 
-        BE.Usuario usuarioActual = new BE.Usuario();    
-        public List<BE.Envio> listaEnvios = new List<BE.Envio>();
+        BE.Usuario usuarioActual = new BE.Usuario();
+        List<BE.Envio> listaEnvios = new List<BE.Envio>();
         BLL.Usuario bllUsuario = new BLL.Usuario();
-        public ConsultarEnviosCliente(BE.Usuario usuario)
+        public ConsultarEnvioDestinatario(BE.Usuario usuario)
         {
-            usuarioActual = usuario;
+            usuarioActual = usuario;    
             InitializeComponent();
         }
 
-        private void ConsultarEnviosCliente_Load(object sender, EventArgs e)
+        private void ConsultarEnvioDestinatario_Load(object sender, EventArgs e)
         {
-            listaEnvios = bllUsuario.ObtenerEnviosPorIdCliente(usuarioActual);
+            listaEnvios = bllUsuario.ObtenerEnviosPorIdDestinario(usuarioActual);
             enviosDGV.DataSource = listaEnvios;
             enviosDGV.Columns["Cliente"].Visible = false;
             enviosDGV.Columns["Repartidor"].Visible = false;

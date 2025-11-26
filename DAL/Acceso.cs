@@ -153,6 +153,11 @@ namespace DAL
             
         }
 
+        public void EscribirUsuariosEnXML(DataTable usuarios)
+        {
+            usuarios.TableName = "Usuarios";
+            usuarios.WriteXml("Usuarios.XML");
+        }
 
         private bool EsErrorConocido(SqlException ex)
         {
