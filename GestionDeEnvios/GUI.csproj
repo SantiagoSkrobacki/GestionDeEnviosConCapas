@@ -253,6 +253,9 @@
     <EmbeddedResource Include="Altas\AltaUsuario.resx">
       <DependentUpon>AltaUsuario.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="AsignarRepartidorEnvio.resx">
+      <DependentUpon>AsignarRepartidorEnvio.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Bajas\BajaItemPaquete.resx">
       <DependentUpon>BajaItemPaquete.cs</DependentUpon>
     </EmbeddedResource>

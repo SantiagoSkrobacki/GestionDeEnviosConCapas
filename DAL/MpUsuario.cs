@@ -169,6 +169,25 @@ namespace DAL
             }
             return usuarios;
         }
+
+        public List<BE.Usuario> ObtenerRepartidoresActivos()
+        {
+            List<BE.Usuario> usuarios = new List<BE.Usuario>();
+            DataTable dataTable = new DataTable();
+            dataTable = acc.Leer("ObtenerRepartidoresActivos", null);
+            foreach (DataRow row in dataTable.Rows)
+            {
+                BE.Usuario usuario = new BE.Usuario();
+                usuario.Id = Convert.ToInt32(row["Id"]);
+                usuario.Nombre = row["Nombre"].ToString();
+                usuario.Telefono = row["Telefono"].ToString();
+                usuario.Email = row["Email"].ToString();
+                usuario.TipoUsuario = row["TipoUsuario"].ToString();
+                usuarios.Add(usuario);
+            }
+            return usuarios;
+        }
+
         public void EscribirXMLUsuarios()
         {
             DataTable dt = new DataTable();

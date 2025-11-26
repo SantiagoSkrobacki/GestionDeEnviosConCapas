@@ -100,6 +100,7 @@ namespace DAL
                 envio.FechaCreacion = Convert.ToDateTime(row["FechaCreacion"]);
                 envio.Cliente.Id = Convert.ToInt32(row["IdCliente"]);
                 envio.Destinatario.Id = Convert.ToInt32(row["IdDestinatario"]);
+            
 
     
                 if (row.Table.Columns.Contains("costo"))
