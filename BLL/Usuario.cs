@@ -68,6 +68,10 @@ namespace BLL
         {
             mapper.EscribirXMLUsuarios();
         }
+        public List<BE.Usuario> ObtenerRepartidoresActivos()
+        {
+            return mapper.ObtenerRepartidoresActivos();
+        }
 
     }
 

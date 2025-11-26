@@ -170,5 +170,12 @@ namespace GestionDeEnvios
             generarXML.MdiParent = this;
             generarXML.Show();
         }
+
+        private void asignarEnvioToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AsignarRepartidorEnvio asginarRepartidorEnvio = new AsignarRepartidorEnvio();
+            asginarRepartidorEnvio.MdiParent = this;
+            asginarRepartidorEnvio.Show();
+        }
     }
 }
