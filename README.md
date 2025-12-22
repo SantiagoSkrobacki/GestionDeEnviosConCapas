@@ -49,21 +49,6 @@ El sistema permite **registrar, administrar y seguir envíos** hasta su entrega.
 
 ---
 
-### 🧍‍♂️ `Cliente` (hereda de Usuario)
-- `Telefono : string`
-- `Domicilio : string`
-- `Localidad : string`
-- `Provincia : string`
-- `CodigoPostal : string`
-- `Documento : string`
-
----
-
-### 🚚 `Repartidor` (hereda de Usuario)
-- `Legajo : string`
-- `Telefono : string`
-- `Disponible : bool`
-
 ---
 
 ### 📦 `ItemPaquete`
