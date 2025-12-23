@@ -42,13 +42,14 @@
             // 
             this.dgvEnvios.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvEnvios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvEnvios.Location = new System.Drawing.Point(57, 132);
+            this.dgvEnvios.Location = new System.Drawing.Point(43, 107);
+            this.dgvEnvios.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dgvEnvios.MultiSelect = false;
             this.dgvEnvios.Name = "dgvEnvios";
             this.dgvEnvios.RowHeadersWidth = 51;
             this.dgvEnvios.RowTemplate.Height = 24;
             this.dgvEnvios.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvEnvios.Size = new System.Drawing.Size(646, 564);
+            this.dgvEnvios.Size = new System.Drawing.Size(484, 458);
             this.dgvEnvios.TabIndex = 9;
             this.dgvEnvios.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvEnvios_CellClick);
             // 
@@ -56,25 +57,26 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(296, 77);
+            this.label3.Location = new System.Drawing.Point(233, 63);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(202, 22);
+            this.label3.Size = new System.Drawing.Size(64, 18);
             this.label3.TabIndex = 10;
-            this.label3.Text = "Envios Con Paquetes";
+            this.label3.Text = "Envios ";
             // 
             // controlIdPaquete
             // 
             this.controlIdPaquete.Etiqueta = "ID Paquete";
-            this.controlIdPaquete.Location = new System.Drawing.Point(366, 722);
-            this.controlIdPaquete.Margin = new System.Windows.Forms.Padding(4);
+            this.controlIdPaquete.Location = new System.Drawing.Point(274, 587);
             this.controlIdPaquete.Name = "controlIdPaquete";
-            this.controlIdPaquete.Size = new System.Drawing.Size(828, 69);
+            this.controlIdPaquete.Size = new System.Drawing.Size(621, 56);
             this.controlIdPaquete.TabIndex = 16;
             this.controlIdPaquete.Texto = "";
             // 
             // btnEliminar
             // 
-            this.btnEliminar.Location = new System.Drawing.Point(1192, 722);
+            this.btnEliminar.Location = new System.Drawing.Point(894, 587);
+            this.btnEliminar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.OverrideDefault.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
             this.btnEliminar.OverrideDefault.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
@@ -90,7 +92,7 @@
             this.btnEliminar.OverrideDefault.Border.Width = 1;
             this.btnEliminar.OverrideDefault.Content.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEliminar.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.ProfessionalSystem;
-            this.btnEliminar.Size = new System.Drawing.Size(196, 67);
+            this.btnEliminar.Size = new System.Drawing.Size(147, 54);
             this.btnEliminar.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
             this.btnEliminar.StateCommon.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
             this.btnEliminar.StateCommon.Back.ColorAngle = 45F;
@@ -114,13 +116,14 @@
             // 
             this.dgvPaquetes.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvPaquetes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvPaquetes.Location = new System.Drawing.Point(742, 132);
+            this.dgvPaquetes.Location = new System.Drawing.Point(556, 107);
+            this.dgvPaquetes.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dgvPaquetes.MultiSelect = false;
             this.dgvPaquetes.Name = "dgvPaquetes";
             this.dgvPaquetes.RowHeadersWidth = 51;
             this.dgvPaquetes.RowTemplate.Height = 24;
             this.dgvPaquetes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvPaquetes.Size = new System.Drawing.Size(646, 564);
+            this.dgvPaquetes.Size = new System.Drawing.Size(484, 458);
             this.dgvPaquetes.TabIndex = 23;
             this.dgvPaquetes.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPaquetes_CellClick);
             // 
@@ -128,17 +131,18 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(953, 77);
+            this.label1.Location = new System.Drawing.Point(693, 63);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(202, 22);
+            this.label1.Size = new System.Drawing.Size(211, 18);
             this.label1.TabIndex = 24;
-            this.label1.Text = "Envios Con Paquetes";
+            this.label1.Text = "Paquetes Dentro Del Envio";
             // 
             // BajaItemPaquete
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1482, 801);
+            this.ClientSize = new System.Drawing.Size(1112, 651);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dgvPaquetes);
             this.Controls.Add(this.btnEliminar);

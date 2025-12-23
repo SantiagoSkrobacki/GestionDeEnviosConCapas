@@ -172,6 +172,7 @@ namespace DAL
                 usuario.Telefono = row["Telefono"].ToString();
                 usuario.Nombre = row["Nombre"].ToString();
                 usuario.CodigoPostal = row["CodigoPostal"].ToString();
+                usuario.Activo = Convert.ToBoolean(row["Activo"]);
                 usuarios.Add(usuario);
             }
             return usuarios;
