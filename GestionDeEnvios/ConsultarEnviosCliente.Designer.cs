@@ -78,7 +78,7 @@
             // 
             this.estadoFOT4.ErrorImage = global::GestionDeEnvios.Properties.Resources.estado0;
             this.estadoFOT4.Image = global::GestionDeEnvios.Properties.Resources.estado41;
-            this.estadoFOT4.Location = new System.Drawing.Point(453, 348);
+            this.estadoFOT4.Location = new System.Drawing.Point(466, 363);
             this.estadoFOT4.Name = "estadoFOT4";
             this.estadoFOT4.Size = new System.Drawing.Size(170, 90);
             this.estadoFOT4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -89,7 +89,7 @@
             // 
             this.estadoFOT3.ErrorImage = global::GestionDeEnvios.Properties.Resources.estado0;
             this.estadoFOT3.Image = global::GestionDeEnvios.Properties.Resources.estado31;
-            this.estadoFOT3.Location = new System.Drawing.Point(453, 348);
+            this.estadoFOT3.Location = new System.Drawing.Point(466, 363);
             this.estadoFOT3.Name = "estadoFOT3";
             this.estadoFOT3.Size = new System.Drawing.Size(170, 90);
             this.estadoFOT3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -100,7 +100,7 @@
             // 
             this.estado2FOT.ErrorImage = global::GestionDeEnvios.Properties.Resources.estado0;
             this.estado2FOT.Image = global::GestionDeEnvios.Properties.Resources.estado21;
-            this.estado2FOT.Location = new System.Drawing.Point(453, 348);
+            this.estado2FOT.Location = new System.Drawing.Point(466, 363);
             this.estado2FOT.Name = "estado2FOT";
             this.estado2FOT.Size = new System.Drawing.Size(170, 90);
             this.estado2FOT.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -111,7 +111,7 @@
             // 
             this.estado1FOT.ErrorImage = global::GestionDeEnvios.Properties.Resources.estado0;
             this.estado1FOT.Image = global::GestionDeEnvios.Properties.Resources.estado11;
-            this.estado1FOT.Location = new System.Drawing.Point(453, 348);
+            this.estado1FOT.Location = new System.Drawing.Point(466, 363);
             this.estado1FOT.Name = "estado1FOT";
             this.estado1FOT.Size = new System.Drawing.Size(170, 90);
             this.estado1FOT.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -122,7 +122,7 @@
             // 
             this.estado0FOT.ErrorImage = global::GestionDeEnvios.Properties.Resources.estado0;
             this.estado0FOT.Image = global::GestionDeEnvios.Properties.Resources.estado01;
-            this.estado0FOT.Location = new System.Drawing.Point(453, 348);
+            this.estado0FOT.Location = new System.Drawing.Point(466, 363);
             this.estado0FOT.Name = "estado0FOT";
             this.estado0FOT.Size = new System.Drawing.Size(170, 90);
             this.estado0FOT.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -132,7 +132,7 @@
             // btnActualizar
             // 
             this.btnActualizar.Location = new System.Drawing.Point(873, 313);
-            this.btnActualizar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnActualizar.Margin = new System.Windows.Forms.Padding(2);
             this.btnActualizar.Name = "btnActualizar";
             this.btnActualizar.OverrideDefault.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
             this.btnActualizar.OverrideDefault.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
@@ -182,7 +182,7 @@
             this.Controls.Add(this.estadoLBL);
             this.Controls.Add(this.kryptonLabel1);
             this.Controls.Add(this.enviosDGV);
-            this.Margin = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.Margin = new System.Windows.Forms.Padding(3);
             this.Name = "ConsultarEnviosCliente";
             this.Text = "ConsultarEnviosCliente";
             this.Load += new System.EventHandler(this.ConsultarEnviosCliente_Load);

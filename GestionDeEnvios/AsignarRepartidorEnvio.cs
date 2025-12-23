@@ -104,5 +104,10 @@ namespace GestionDeEnvios
 
             controlIdRepartidor.Texto = tmpRepartidor.Id.ToString();
         }
+
+        private void controlIdEnvio_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

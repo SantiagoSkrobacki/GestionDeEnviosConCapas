@@ -112,8 +112,6 @@ namespace GestionDeEnvios
                 case "Administrador":
                     envioToolStripMenuItem.Visible = true;
                     usuariosToolStripMenuItem.Visible = true;
-                    clienteToolStripMenuItem.Visible = true;
-                    repartidorToolStripMenuItem.Visible = true;
                     break;
 
                 case "Cliente":

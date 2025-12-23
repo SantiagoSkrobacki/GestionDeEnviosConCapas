@@ -67,7 +67,14 @@ namespace GestionDeEnvios
             switch (estadoActual)
             {
                 case BE.EnumEstados.Creado:
+                    estado0FOT.Visible = true;
+                    estado1FOT.Visible = false;
+                    estado2FOT.Visible = false;
+                    estadoFOT3.Visible = false;
+                    estadoFOT4.Visible = false;
+                    break;
                 case BE.EnumEstados.Asignado:
+                    estado0FOT.Visible = false;
                     estado1FOT.Visible = true;
                     estado2FOT.Visible = false;
                     estadoFOT3.Visible = false;
@@ -75,6 +82,7 @@ namespace GestionDeEnvios
                     break;
 
                 case BE.EnumEstados.EnCamino:
+                    estado0FOT.Visible = false;
                     estado1FOT.Visible = false;
                     estado2FOT.Visible = true;
                     estadoFOT3.Visible = false;
@@ -82,6 +90,7 @@ namespace GestionDeEnvios
                     break;
 
                 case BE.EnumEstados.Entregado:
+                    estado0FOT.Visible = false;
                     estado1FOT.Visible = false;
                     estado2FOT.Visible = false;
                     estadoFOT3.Visible = true;
@@ -89,6 +98,7 @@ namespace GestionDeEnvios
                     break;
 
                 case BE.EnumEstados.Cancelado:
+                    estado0FOT.Visible = false;
                     estado1FOT.Visible = false;
                     estado2FOT.Visible = false;
                     estadoFOT3.Visible = false;
