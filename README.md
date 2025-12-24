@@ -1,14 +1,14 @@
 # 📨 Sistema de Gestión de Envíos
 
 Aplicación de escritorio desarrollada en **C# (.NET Framework 4.7.2)** utilizando **Windows Forms**.  
-El sistema sigue una **arquitectura en capas** (GUI, BLL, DAL, BE) y gestiona el flujo completo de envíos de una empresa logística (similar a *Andreani* o *Correo Argentino*).
+El sistema sigue una **arquitectura en capas** (GUI, BLL, DAL, BE) y gestiona el flujo completo de envíos de una empresa logística (similar a Andreani o Correo Argentino).
 
 ---
 
 ## 🏗️ Arquitectura del Proyecto
 
 - **GUI:** Formularios WinForms (interfaz de usuario)
-- **BE (Business Entities):** Clases de entidades (POCO)
+- **BE (Business Entities):** Clases de entidades 
 - **BLL (Business Logic Layer):** Lógica de negocio y validaciones
 - **DAL (Data Access Layer):** Acceso a base de datos (SQL Server local)
 - **Acceso:** Clase monolítica de conexión con métodos `Leer`, `Escribir` y `ObtenerDato`
@@ -22,7 +22,7 @@ El sistema permite **registrar, administrar y seguir envíos** hasta su entrega.
 ### Roles de usuario
 
 - **Administrador**
-  - Registra y modifica envíos (recibidos de otros sistemas o archivos XML)
+  - Registra y modifica envíos 
   - Asigna repartidores
   - Realiza ABM (Alta, Baja, Modificación) de usuarios
 
@@ -41,35 +41,49 @@ El sistema permite **registrar, administrar y seguir envíos** hasta su entrega.
 ## 🧱 Entidades (Capa BE)
 
 ### 🧍 `Usuario`
-- `Id : int`
-- `Email : string`
-- `Password : string`
-- `Nombre : string`
-- `Activo : bool`
-
----
+- Id : int
+- Email : string
+- Password : string
+- Nombre : string
+- Activo : bool
+- Telefono : string
+- Domicilio : string
+- Localidad : string
+- Provincia : string
+- CodigoPostal : string
+- Documento : string
+- TipoUsuario : string
 
 ---
 
 ### 📦 `ItemPaquete`
-- `Descripcion : string`
-- `Peso : decimal`
-- `Fragil : bool`
-- `Costo : decimal`
+- Id : int
+- Descripcion : string
+- Peso : decimal
+- Fragil : bool
+- Costo : decimal
+- IdEnvio : int
 
 ---
 
 ### ✉️ `Envio`
-- `Paquetes : List<ItemPaquete>`
-- `CodigoSeguimiento : string`
-- `Estado : EnumEstados`
-- `FechaCreacion : DateTime`
-- `FechaAsignacion : DateTime`
-- `FechaDespacho : DateTime`
-- `FechaEntrega : DateTime`
-- `Destino : string`
-- `Cliente : Cliente`
-- `Repartidor : Repartidor`
+- CodigoSeguimiento : int
+- Estado : EnumEstados
+- Costo : decimal
+- Paquetes : List<ItemPaquete>
+- FechaCreacion : DateTime
+- FechaAsignacion : DateTime
+- FechaDespacho : DateTime
+- FechaEntrega : DateTime
+- FechaCancelacion : DateTime
+- Cliente : Usuario
+- Repartidor : Usuario
+- Destinatario : Usuario
+- NombreDestinatario : string
+- DocumentoDestinatario : string
+- TelefonoDestinatario : string
+- DomicilioDestinatario : string
+- CodigoPostal : string
 
 ---
 
